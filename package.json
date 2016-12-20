@@ -1,0 +1,49 @@
+{
+  "name": "toutiao-rss",
+  "version": "0.1.0",
+  "description": "RSS feed for toutiao.io",
+  "main": "index.js",
+  "scripts": {
+    "start": "node main.js",
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "test": "mocha --reporter list --require ts-node/register lib-src/test*.ts || true"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jokester/toutiao-rss.git"
+  },
+  "keywords": [
+    "rss"
+  ],
+  "author": "Wang Guan <momocraft@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "bugs": {
+    "url": "https://github.com/jokester/toutiao-rss/issues"
+  },
+  "engines": {
+    "node": ">= 4.0.0"
+  },
+  "homepage": "https://github.com/jokester/toutiao-rss#readme",
+  "dependencies": {
+    "cheerio": "^0.22.0",
+    "request": "^2.79.0",
+    "rss": "^1.2.1",
+    "simple-node-logger": "^0.93.14",
+    "uuid-1345": "^0.99.6"
+  },
+  "devDependencies": {
+    "@types/chai": "^3.4.34",
+    "@types/cheerio": "^0.17.31",
+    "@types/node": "^6.0.52",
+    "@types/request": "0.0.36",
+    "@types/rss": "0.0.27",
+    "@types/uuid-1345": "^0.99.20",
+    "chai": "^3.5.0",
+    "mocha": "^3.2.0",
+    "mocha-typescript": "^1.0.15",
+    "ts-node": "^1.7.2",
+    "typescript": "^2.1.4"
+  }
+}

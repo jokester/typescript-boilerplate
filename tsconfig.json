@@ -1,0 +1,23 @@
+{
+    "compilerOptions": {
+        "target": "es6",
+        "noImplicitAny": true,
+        "experimentalDecorators": true,
+        "outDir": "lib",
+        "rootDir": "lib-src",
+        "sourceMap": false,
+        "moduleResolution": "node",
+        "listEmittedFiles": true,
+        "emitDecoratorMetadata": true,
+        "pretty": true,
+        "module": "commonjs"
+    },
+    "exclude": [
+        "lib-src/test*",
+        "node_modules"
+    ],
+    "compileOnSave": false,
+    "atom": {
+        "rewriteTsconfig": false
+    }
+}
