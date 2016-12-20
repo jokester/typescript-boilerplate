@@ -87,5 +87,5 @@ export function mergeItems(existing: RSSItemOptions[], fetched: ToutiaoItem[]): 
         });
     }
 
-    return merged.slice(0, 20);
+    return merged.slice(0, 40);
 }

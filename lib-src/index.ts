@@ -41,6 +41,7 @@ async function createFeedServer(port: number) {
     }
 
     setInterval(updateRepo, 1800e3);
+    setTimeout(updateRepo);
 
     const server = http.createServer((req, res) => {
         if (!latestXML) {
