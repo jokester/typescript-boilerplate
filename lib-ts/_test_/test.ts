@@ -1,14 +1,16 @@
 import { suite, test } from 'mocha-typescript';
 import { expect } from 'chai';
 
+import { foo, fooAsync } from '../';
+
 @suite class TestSuite {
-    @test parseItems() {
-        expect(1).to.eq(2);
+    @test
+    testSync() {
+        expect(foo()).to.eq("foo!");
     }
 
-    @test merge() {
-        const items = parseItems(htmlText);
-        const merged = mergeItems([], items);
-        expect(merged).to.eq([]);
+    @test
+    async testAsync() {
+        expect(await fooAsync()).to.eq('foo!?');
     }
 }
