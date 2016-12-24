@@ -1,7 +1,14 @@
-# toutiao-rss
+# node-typescript-boilerplate
 
-将toutiao.io的最近项目转为RSS
+A basic repo with 
 
-### 
+- 
+- ts-node 
 
-## 
+
+# AOT or just-in-time?
+
+AOT transpiling . In practice I have found 
+
+*fixes* the trans
+- TODO measure 

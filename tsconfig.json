@@ -4,8 +4,8 @@
         "noImplicitAny": true,
         "experimentalDecorators": true,
         "outDir": "lib",
-        "rootDir": "lib-src",
-        "sourceMap": false,
+        "rootDir": "lib-ts",
+        "sourceMap": true,
         "moduleResolution": "node",
         "listEmittedFiles": true,
         "emitDecoratorMetadata": true,
@@ -13,7 +13,6 @@
         "module": "commonjs"
     },
     "exclude": [
-        "lib-src/test*",
         "node_modules"
     ],
     "compileOnSave": false,

@@ -1,16 +1,9 @@
 import { suite, test } from 'mocha-typescript';
 import { expect } from 'chai';
-import { readFileSync } from 'fs';
-
-import { parseItems } from './fetch';
-import { mergeItems } from './feed';
-
-const htmlText = readFileSync(`${__dirname}/../test/toutiao.html`).toString();
 
 @suite class TestSuite {
     @test parseItems() {
-        const items = parseItems(htmlText);
-        expect(items).to.eq([]);
+        expect(1).to.eq(2);
     }
 
     @test merge() {
