@@ -1,25 +1,37 @@
 # node-typescript-boilerplate
 
-A boilerplate for TypeScript / node
+A boilerplate for TypeScript / node.js project.
 
-- Latest TypeScript version
-- Test with `chai` / `mocha`
-- Can be easily extended for other modern JS runtime: Electron / ReactNative for instance.
+- Latest `TypeScript 2.1`
+- Out-of-box test with `chai` / `mocha`
+- Can be extended for other modern JS runtime: Electron / ReactNative for instance.
 
 #### Built-in scripts
 
+Run as TypeScript (.ts are compiled on the fly. Convinent for development):
+
+```bash
+# run .ts on the fly
+$ npm run start:ts
+
+# run tests in lib-ts/_test_
+$ npm run test:ts
 ```
+
+Build and run JavaScript (recommended for production):
+
+```bash
 # compile lib-ts/**/*.ts to lib/
 $ npm run build
 
 # compile + watch for change
 $ npm run build:watch
 
-# run testss in lib-ts/_test_  (.ts are compiled on the fly)
-$ npm run test:ts
+# run .ts on the fly
+$ npm run start
 
-# run compiled .js tests
-$ npm run test:js
+# run tests in lib/_test_
+$ npm run test
 ```
 
 #### License

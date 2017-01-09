@@ -4,10 +4,12 @@
   "description": "A starting point for node.js & TypeScript application",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
+    "start:ts": "ts-node lib-ts/index.ts",
     "build": "tsc",
     "build:watch": "tsc --watch",
     "test:ts": "               mocha --reporter list --require ts-node/register lib-ts/_test_/**/*.ts || true",
-    "test:js": "npm run build; mocha --reporter list                               lib/_test_/**/*.js || true"
+    "test": "npm run build; mocha --reporter list                               lib/_test_/**/*.js || true"
   },
   "repository": {
     "type": "git",
