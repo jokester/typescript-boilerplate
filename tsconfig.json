@@ -10,7 +10,8 @@
         "listEmittedFiles": true,
         "emitDecoratorMetadata": true,
         "pretty": true,
-        "module": "commonjs"
+        "module": "commonjs",
+        "importHelpers": true
     },
     "exclude": [
         "node_modules"

@@ -30,7 +30,9 @@
     "node": ">= 4.0.0"
   },
   "homepage": "https://github.com/jokester/node-typescript-boilerplate#readme",
-  "dependencies": {},
+  "dependencies": {
+    "tslib": "^1.5.0"
+  },
   "devDependencies": {
     "@types/node": "^6.0.52",
     "@types/chai": "^3.4.34",
