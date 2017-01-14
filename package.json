@@ -4,7 +4,7 @@
   "description": "A starting point for node.js & TypeScript application",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
+    "start": "node lib/index.js",
     "start:ts": "ts-node lib-ts/index.ts",
     "build": "tsc",
     "build:watch": "tsc --watch",
@@ -34,12 +34,12 @@
     "tslib": "^1.5.0"
   },
   "devDependencies": {
-    "@types/node": "^6.0.52",
     "@types/chai": "^3.4.34",
+    "@types/node": "^6.0.52",
     "chai": "^3.5.0",
     "mocha": "^3.2.0",
     "mocha-typescript": "^1.0.15",
-    "ts-node": "^1.7.2",
+    "ts-node": "^2.0.0",
     "typescript": "^2.1.4"
   }
 }

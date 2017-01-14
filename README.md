@@ -4,14 +4,14 @@ A boilerplate for TypeScript / node.js project.
 
 - Latest `TypeScript 2.1`
 - Out-of-box test with `chai` / `mocha`
-- Can be extended for other modern JS runtime: Electron / ReactNative for instance.
+- Can be easily extended for other JS runtime: Electron / ReactNative / etc
 
 #### Built-in scripts
 
-Run as TypeScript (.ts are compiled on the fly. Convinent for development):
+Run as TypeScript (`*.ts` are compiled on the fly with [ts-node](https://github.com/TypeStrong/ts-node). Convinent for development):
 
 ```bash
-# run .ts on the fly
+# run lib-ts/index.ts
 $ npm run start:ts
 
 # run tests in lib-ts/_test_
@@ -27,7 +27,7 @@ $ npm run build
 # compile + watch for change
 $ npm run build:watch
 
-# run .ts on the fly
+# run lib/index.js
 $ npm run start
 
 # run tests in lib/_test_
