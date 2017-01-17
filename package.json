@@ -35,11 +35,11 @@
   },
   "devDependencies": {
     "@types/chai": "^3.4.34",
-    "@types/node": "^6.0.52",
+    "@types/node": "^6.0.60",
     "chai": "^3.5.0",
     "mocha": "^3.2.0",
     "mocha-typescript": "^1.0.15",
     "ts-node": "^2.0.0",
-    "typescript": "^2.1.4"
+    "typescript": "^2.1.5"
   }
 }
