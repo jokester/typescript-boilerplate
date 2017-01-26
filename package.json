@@ -8,8 +8,8 @@
     "start:ts": "ts-node lib-ts/index.ts",
     "build": "tsc",
     "build:watch": "tsc --watch",
-    "test:ts": "               mocha --reporter list --require ts-node/register lib-ts/_test_/**/*.ts || true",
-    "test": "npm run build; mocha --reporter list                               lib/_test_/**/*.js || true"
+    "test:ts": "            mocha --opts mocha-ts.opts",
+    "test": "npm run build; mocha --opts mocha-js.opts"
   },
   "repository": {
     "type": "git",

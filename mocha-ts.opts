@@ -1,0 +1,4 @@
+--require ts-node/register
+--reporter list
+--watch-extensions tsx,ts
+lib-ts/**/*.ts
