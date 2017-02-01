@@ -1,4 +1,6 @@
 --require ts-node/register
+--compilers ts:ts-node/register,tsx:ts-node/register
 --reporter list
 --watch-extensions tsx,ts
-lib-ts/**/*.ts
+--recursive
+lib-ts/

@@ -7,7 +7,7 @@
         "rootDir": "lib-ts",
         "sourceMap": true,
         "moduleResolution": "node",
-        "listEmittedFiles": true,
+        "listEmittedFiles": false,
         "emitDecoratorMetadata": true,
         "pretty": true,
         "module": "commonjs",

@@ -1,2 +1,3 @@
 --reporter list
-lib/**/*.js
+--recursive
+lib/
