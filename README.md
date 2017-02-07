@@ -10,7 +10,7 @@ Variants:
 
 - Basic (this master branch): enough for node.js
 - [Heroku](https://github.com/jokester/node-typescript-boilerplate/tree/heroku): a simplest express.js app with heroku support
-- [Webpack](https://github.com/jokester/node-typescript-boilerplate/tree/webpack)
+- [Webpack](https://github.com/jokester/node-typescript-boilerplate/tree/webpack): basic webpack configuration with no frontend framework
 
 #### Built-in scripts: Basic
 
