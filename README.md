@@ -1,12 +1,18 @@
-# node-typescript-boilerplate
+# typescript-boilerplate
 
-A boilerplate for TypeScript / node.js project.
+A boilerplate for TypeScript / (node.js | browser | other) project.
 
 - Latest `TypeScript 2.1`
 - Out-of-box test with `chai` / `mocha`
 - Can be easily extended for other JS runtime: Electron / ReactNative / etc
 
-#### Built-in scripts
+Variants:
+
+- Basic (this master branch): enough for node.js
+- [Heroku](https://github.com/jokester/node-typescript-boilerplate/tree/heroku): a simplest express.js app with heroku support
+- [Webpack](https://github.com/jokester/node-typescript-boilerplate/tree/webpack)
+
+#### Built-in scripts: Basic
 
 Run as TypeScript (`*.ts` are compiled on the fly with [ts-node](https://github.com/TypeStrong/ts-node). Convinent for development):
 
