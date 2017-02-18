@@ -31,7 +31,7 @@
   "engines": {
     "node": ">= 4.0.0"
   },
-  "homepage": "https://github.com/jokester/node-typescript-boilerplate#readme",
+  "homepage": "https://github.com/jokester/typescript-boilerplate#readme",
   "dependencies": {
     "tslib": "^1.5.0"
   },
