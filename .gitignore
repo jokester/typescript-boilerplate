@@ -5,3 +5,5 @@ tmp
 .idea
 npm-*.log
 *.map
+/.nyc_output/
+/coverage

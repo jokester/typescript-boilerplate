@@ -5,7 +5,7 @@
         "experimentalDecorators": true,
         "outDir": "lib",
         "rootDir": "lib-ts",
-        "sourceMap": true,
+        "sourceMap": false,
         "moduleResolution": "node",
         "listEmittedFiles": false,
         "emitDecoratorMetadata": true,

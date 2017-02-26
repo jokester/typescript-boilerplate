@@ -8,8 +8,8 @@
     "start:ts": "ts-node lib-ts/index.ts",
     "build": "rm -rf lib/* && tsc",
     "watch": "rm -rf lib/* && tsc --watch",
-    "test:ts": "    mocha --opts mocha-ts.opts || true",
-    "test": "tsc && mocha --opts mocha-js.opts || true",
+    "test:ts": "                    nyc mocha --opts mocha-ts.opts || true",
+    "test": "rm -rf lib/* && tsc && nyc mocha --opts mocha-js.opts || true",
     "tslint": "tslint -c tslint.json ts-lib/**/*.ts"
   },
   "repository": {
@@ -28,6 +28,20 @@
   "bugs": {
     "url": "https://github.com/jokester/typescript-boilerplate/issues"
   },
+  "nyc": {
+    "extension": [
+      ".ts",
+      ".tsx",
+      ".js",
+      ".jsx"
+    ],
+    "reporter": [
+      "text-summary",
+      "html"
+    ],
+    "sourceMap": false,
+    "instrument": false
+  },
   "engines": {
     "node": ">= 4.0.0"
   },
@@ -41,8 +55,9 @@
     "chai": "^3.5.0",
     "mocha": "^3.2.0",
     "mocha-typescript": "^1.0.15",
+    "nyc": "^10.1.2",
     "ts-node": "^2.0.0",
     "tslint": "^4.4.2",
-    "typescript": "^2.1.5"
+    "typescript": "^2.2.0"
   }
 }
