@@ -17,12 +17,16 @@ Variants have their own branches:
     - All other variants are based on this.
 - [webpack](https://github.com/jokester/typescript-boilerplate/tree/webpack)
     - Bundle TypeScript files with `webpack` for browser use
+    - Minimize ES6 code with [babili](https://github.com/babel/babili)
     - No frontend framework
+- [webpack + preact](https://github.com/jokester/typescript-boilerplate/tree/webpack-preact)
+    - [Preact](https://preactjs.com/): Fast 3kB alternative to React with the same ES6 API.
 - [heroku](https://github.com/jokester/typescript-boilerplate/tree/heroku)
     - a simplest express.js app with heroku support
-- Webpack + Preact: TODO
-- Webpack + React: TODO
-- Electron: TODO
+
+TODO:
+- Webpack + React
+- Electron
 
 #### Built-in npm scripts
 
