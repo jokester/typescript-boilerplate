@@ -3,4 +3,4 @@
 --reporter list
 --watch-extensions tsx,ts
 --recursive
-lib-ts/
+lib-ts/_test_/
