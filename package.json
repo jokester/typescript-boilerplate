@@ -39,8 +39,9 @@
       "text-summary",
       "html"
     ],
+    "cache": false,
     "sourceMap": false,
-    "instrument": false
+    "instrument": true
   },
   "engines": {
     "node": ">= 4.0.0"
