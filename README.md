@@ -2,7 +2,7 @@
 
 A boilerplate for TypeScript projects.
 
-- Latest `TypeScript 2.1`
+- Latest `TypeScript 2.2`
 - Out-of-box test with `mocha` (test framework) / `istanbul` (code coverage) / `chai` (assertion)
 - Supports various JavaScript environment: node.js / browser / etc
     - see **Variants** for detail

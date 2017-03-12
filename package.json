@@ -48,7 +48,7 @@
   },
   "homepage": "https://github.com/jokester/typescript-boilerplate#readme",
   "dependencies": {
-    "tslib": "^1.5.0"
+    "tslib": "^1.6.0"
   },
   "devDependencies": {
     "@types/chai": "^3.4.34",
@@ -59,6 +59,6 @@
     "nyc": "^10.1.2",
     "ts-node": "^2.0.0",
     "tslint": "^4.4.2",
-    "typescript": "^2.2.0"
+    "typescript": "^2.2.1"
   }
 }
