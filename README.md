@@ -19,13 +19,13 @@ Variants have their own branches:
     - Bundle TypeScript files with `webpack` for browser use
     - Minimize ES6 code with [babili](https://github.com/babel/babili)
     - No frontend framework
-- [webpack + preact](https://github.com/jokester/typescript-boilerplate/tree/webpack-preact)
+- [webpack + React](https://github.com/jokester/typescript-boilerplate/tree/webpack-react)
+- [webpack + Preact](https://github.com/jokester/typescript-boilerplate/tree/webpack-preact)
     - [Preact](https://preactjs.com/): Fast 3kB alternative to React with the same ES6 API.
 - [heroku](https://github.com/jokester/typescript-boilerplate/tree/heroku)
     - a simplest express.js app with heroku support
 
 TODO:
-- Webpack + React
 - Electron
 
 #### Built-in npm scripts
@@ -60,6 +60,8 @@ $ npm run watch
 # coverage will be generated in coverage/
 $ npm run test
 ```
+
+(Variants may have their own npm scripts, please refer to their `README.md` as well.)
 
 #### License
 
