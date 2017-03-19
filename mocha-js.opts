@@ -1,3 +1,3 @@
 --reporter list
 --recursive
-lib/_test_/
+lib/
