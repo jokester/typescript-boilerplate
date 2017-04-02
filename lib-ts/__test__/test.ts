@@ -1,16 +1,14 @@
-import { suite, test } from 'mocha-typescript';
-import { expect } from 'chai';
-
 import { foo, fooAsync } from '../';
+import { expect as chaiexpect } from 'chai';
 
-@suite class TestSuite {
-    @test
-    testSync() {
-        expect(foo()).to.eq("foo!");
-    }
+describe("it", () => {
 
-    @test
-    async testAsync() {
-        expect(await fooAsync()).to.eq('foo!?');
-    }
-}
+    it("tests sync function", () => {
+        expect(foo()).toEqual("foo!");
+    });
+
+    it("tests async function", async done => {
+        expect(await fooAsync()).toEqual('foo!?');
+        done();
+    })
+});

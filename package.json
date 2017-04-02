@@ -45,8 +45,6 @@
     "@types/node": "^6.0.60",
     "babili-webpack-plugin": "0.0.11",
     "chai": "^3.5.0",
-    "mocha": "^3.2.0",
-    "mocha-typescript": "^1.0.15",
     "jest": "^19.0.2",
     "ts-jest": "^19.0.7",
     "ts-node": "^2.0.0",
