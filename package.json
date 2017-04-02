@@ -7,10 +7,14 @@
     "start": "node lib/index.js",
     "start:ts": "ts-node lib-ts/index.ts",
     "build": "rm -rf lib/* && tsc",
-    "watch": "rm -rf lib/* && tsc --watch",
-    "test:ts": "                    nyc mocha --opts mocha-ts.opts || true",
-    "test": "rm -rf lib/* && tsc && nyc mocha --opts mocha-js.opts || true",
-    "tslint": "tslint -c tslint.json ts-lib/**/*.ts"
+    "build:watch": "rm -rf lib/* && tsc --watch",
+    "test": "npm run build && jest",
+    "test:coverage": "npm run build && jest --coverage",
+    "test:watch": "npm run build && jest --watch",
+    "tslint": "tslint -c tslint.json ts-lib/**/*.ts",
+    "webpack": "webpack --config webpack/browser-dev.js",
+    "webpack:watch": "webpack --watch --config webpack/browser-dev.js",
+    "webpack:prod": "webpack --config webpack/browser-prod.js"
   },
   "repository": {
     "type": "git",
@@ -28,23 +32,8 @@
   "bugs": {
     "url": "https://github.com/jokester/typescript-boilerplate/issues"
   },
-  "nyc": {
-    "extension": [
-      ".ts",
-      ".tsx",
-      ".js",
-      ".jsx"
-    ],
-    "reporter": [
-      "text-summary",
-      "html"
-    ],
-    "cache": false,
-    "sourceMap": false,
-    "instrument": true
-  },
   "engines": {
-    "node": ">= 4.0.0"
+    "node": ">= 6.0.0"
   },
   "homepage": "https://github.com/jokester/typescript-boilerplate#readme",
   "dependencies": {
@@ -52,13 +41,29 @@
   },
   "devDependencies": {
     "@types/chai": "^3.4.34",
+    "@types/jest": "^19.2.2",
     "@types/node": "^6.0.60",
+    "babili-webpack-plugin": "0.0.11",
     "chai": "^3.5.0",
     "mocha": "^3.2.0",
     "mocha-typescript": "^1.0.15",
-    "nyc": "^10.1.2",
+    "jest": "^19.0.2",
+    "ts-jest": "^19.0.7",
     "ts-node": "^2.0.0",
     "tslint": "^4.4.2",
-    "typescript": "^2.2.1"
+    "typescript": "^2.2.1",
+    "webpack": "^2.2.1",
+    "ts-loader": "^2.0.0",
+    "webpack-merge": "^2.6.1",
+    "webpack-visualizer-plugin": "^0.1.10"
+  },
+  "jest": {
+    "transform": { ".(ts|tsx)": "<rootDir>/node_modules/ts-jest/preprocessor.js" },
+    "roots": [ "lib-ts", "lib" ],
+    "testMatch": [
+        "/**/__test__/*.(ts|js|tsx|jsx)", "\\.(spec|test)\\.(ts|js|tsx|jsx)$"
+    ],
+    "moduleFileExtensions": [ "ts", "tsx", "js" ],
+    "coverageReporters": ["json", "lcov", "text", "html"]
   }
 }

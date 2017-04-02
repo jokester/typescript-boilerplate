@@ -3,7 +3,7 @@
 A boilerplate for TypeScript projects.
 
 - Latest `TypeScript 2.2`
-- Out-of-box test with `mocha` (test framework) / `istanbul` (code coverage) / `chai` (assertion)
+- Out-of-box test with `jest` (test runner) / `mocha` (test framework) / `chai` (assertion)
 - Supports various JavaScript environment: node.js / browser / etc
     - see **Variants** for detail
 - Can be easily extended for other JS runtime: Electron / ReactNative / etc
@@ -13,55 +13,69 @@ A boilerplate for TypeScript projects.
 Variants have their own branches:
 
 - [master](https://github.com/jokester/typescript-boilerplate/tree/master)
-    - Basic configuration (node.js + TypeScript + mocha + tslint)
-    - All other variants are based on this.
-- [webpack](https://github.com/jokester/typescript-boilerplate/tree/webpack)
+    - Basic configuration (compile + test)
     - Bundle TypeScript files with `webpack` for browser use
-    - Minimize ES6 code with [babili](https://github.com/babel/babili)
     - No frontend framework
-- [webpack + React](https://github.com/jokester/typescript-boilerplate/tree/webpack-react)
-- [webpack + Preact](https://github.com/jokester/typescript-boilerplate/tree/webpack-preact)
+    - All other variants are based on this.
+- [React](https://github.com/jokester/typescript-boilerplate/tree/webpack-react)
+- [Preact](https://github.com/jokester/typescript-boilerplate/tree/webpack-preact)
     - [Preact](https://preactjs.com/): Fast 3kB alternative to React with the same ES6 API.
 - [heroku](https://github.com/jokester/typescript-boilerplate/tree/heroku)
     - a simplest express.js app with heroku support
 
-TODO:
-- Electron
+TODO: Electron
 
 #### Built-in npm scripts
 
-Run as TypeScript (`*.ts` are compiled on the fly with [ts-node](https://github.com/TypeStrong/ts-node). Convinent for development):
+###### Build & Run
 
 ```bash
-# run lib-ts/index.ts
-$ npm run start:ts
-
-# run tests in lib-ts/_test_
-# coverage will be generated in coverage/
-$ npm run test:ts
-
-# run tslint
-$ npm run tslint
-```
-
-Compile and run JavaScript (recommended for production):
-
-```bash
-# run lib/index.js
-$ npm run start
 
 # compile lib-ts/**/*.ts to lib/
 $ npm run build
 
-# compile + watch for change
-$ npm run watch
+# compile while watching
+$ npm run build:watch
 
-# run tests in lib/_test_
-# coverage will be generated in coverage/
-$ npm run test
+# run lib-ts/index.ts
+$ npm run start:ts
+
+# run lib/index.js
+$ npm run start
 ```
 
-(Variants may have their own npm scripts, please refer to their `README.md` as well.)
+###### Test & Lint
+
+```bash
+# run tslint
+$ npm run tslint
+
+# run test suites
+$ npm run test
+
+# re-run test suites when code changes
+$ npm run test:watch
+
+# generate coverage report in /coverage/
+$ npm run test:coverage
+```
+
+###### Webpack
+
+```bash
+# create dev bundle for browser
+# lib-ts/browser-entrypoint.ts -> dev/browser-entrypoint.js
+$ npm run webpack
+
+# create dev bundle with watching file modification
+$ npm run webpack:watch
+
+# create minimized prod bundle
+# lib-ts/browser-entrypoint.ts -> prod/browser-entrypoint.js
+$ npm run webpack:prod
+```
+
+(Variants may have more npm scripts, please refer to their `README.md` as well.)
 
 #### License
 
