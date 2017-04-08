@@ -4,16 +4,16 @@
   "description": "A starting point for node.js & TypeScript application",
   "main": "index.js",
   "scripts": {
-    "start": "node lib/index.js",
+    "start": "node       lib/index.js",
     "start:ts": "ts-node lib-ts/index.ts",
-    "build": "rm -rf lib/* && tsc",
+    "build": "      rm -rf lib/* && tsc",
     "build:watch": "rm -rf lib/* && tsc --watch",
-    "test": "npm run build && jest",
+    "test": "         npm run build && jest",
     "test:coverage": "npm run build && jest --coverage",
-    "test:watch": "npm run build && jest --watch",
+    "test:watch": "   npm run build && jest --watch",
     "tslint": "tslint -c tslint.json ts-lib/**/*.ts",
-    "webpack": "webpack --watch --config webpack/browser-dev.js",
-    "webpack:prod": "webpack --config webpack/browser-prod.js"
+    "webpack": "     webpack --watch --config webpack/browser-dev.js",
+    "webpack:prod": "webpack         --config webpack/browser-prod.js"
   },
   "repository": {
     "type": "git",
