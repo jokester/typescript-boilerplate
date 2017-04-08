@@ -1,5 +1,5 @@
 /**
  * Entrypoint for this package.
  */
-const lib = module.exports = require('./lib');
-
+console.log("This pack is not intended for requiring. Silently quitting.");
+process.exit(0);
