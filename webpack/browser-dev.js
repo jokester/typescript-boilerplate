@@ -16,5 +16,10 @@ module.exports = webpackMerge([
         filename: '[name].js',
         sourceMapFilename: '[name].map',
     },
+    devServer: {
+        contentBase: path.join(__dirname, "..", "dev"),
+        compress: true,
+        port: 9000
+    }
   }
 ]);
