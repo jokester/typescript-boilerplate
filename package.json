@@ -4,17 +4,17 @@
   "description": "A starting point for node.js & TypeScript application",
   "main": "index.js",
   "scripts": {
-    "start": "node lib/index.js",
+    "start": "node       lib/index.js",
     "start:ts": "ts-node lib-ts/index.ts",
-    "build": "rm -rf lib/* && tsc",
+    "build": "      rm -rf lib/* && tsc",
     "build:watch": "rm -rf lib/* && tsc --watch",
-    "test": "npm run build && jest",
+    "test": "         npm run build && jest",
     "test:coverage": "npm run build && jest --coverage",
-    "test:watch": "npm run build && jest --watch",
+    "test:watch": "   npm run build && jest --watch",
     "tslint": "tslint -c tslint.json ts-lib/**/*.ts",
-    "webpack": "webpack --config webpack/browser-dev.js",
-    "webpack:watch": "webpack --watch --config webpack/browser-dev.js",
-    "webpack:prod": "webpack --config webpack/browser-prod.js"
+    "dev-server": "  webpack-dev-server --config webpack/dev.js",
+    "webpack": "     webpack  --watch   --config webpack/dev.js",
+    "webpack:prod": "webpack            --config webpack/prod.js"
   },
   "repository": {
     "type": "git",
@@ -40,28 +40,45 @@
     "tslib": "^1.6.0"
   },
   "devDependencies": {
-    "@types/chai": "^3.4.34",
+    "@types/chai": "^3.5.0",
     "@types/jest": "^19.2.2",
-    "@types/node": "^6.0.60",
+    "@types/node": "^7.0.12",
     "babili-webpack-plugin": "0.0.11",
     "chai": "^3.5.0",
     "jest": "^19.0.2",
     "ts-jest": "^19.0.7",
-    "ts-node": "^2.0.0",
-    "tslint": "^4.4.2",
-    "typescript": "^2.2.1",
-    "webpack": "^2.2.1",
     "ts-loader": "^2.0.0",
-    "webpack-merge": "^2.6.1",
+    "ts-node": "^3.0.2",
+    "tslint": "^5.1.0",
+    "typescript": "^2.3.0",
+    "webpack": "^2.3.3",
+    "webpack-dev-server": "^2.4.2",
+    "webpack-merge": "^4.1.0",
     "webpack-visualizer-plugin": "^0.1.10"
   },
   "jest": {
-    "transform": { ".(ts|tsx)": "<rootDir>/node_modules/ts-jest/preprocessor.js" },
-    "roots": [ "lib-ts", "lib" ],
-    "testMatch": [
-        "/**/__test__/*.(ts|js|tsx|jsx)", "\\.(spec|test)\\.(ts|js|tsx|jsx)$"
+    "transform": {
+      ".(ts|tsx)": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    },
+    "roots": [
+      "lib-ts",
+      "lib"
     ],
-    "moduleFileExtensions": [ "ts", "tsx", "js" ],
-    "coverageReporters": ["json", "lcov", "text", "html"]
+    "testMatch": [
+      "/**/__test__/*.(ts|js|tsx|jsx)",
+      "\\.(spec|test)\\.(ts|js|tsx|jsx)$"
+    ],
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx"
+    ],
+    "coverageReporters": [
+      "json",
+      "lcov",
+      "text",
+      "html"
+    ]
   }
 }

@@ -63,17 +63,16 @@ $ npm run test:coverage
 ###### Webpack
 
 ```bash
-# create dev bundle for browser
-# lib-ts/browser-entrypoint.ts -> dev/browser-entrypoint.js
+# create dev bundle, and update when file changes
+#   lib-ts/browser-entrypoint.ts -> dev/browser-entrypoint.js
 $ npm run webpack
 
-# create dev bundle with watching file modification
-$ npm run webpack:watch
-
-# create minimized prod bundle
-# lib-ts/browser-entrypoint.ts -> prod/browser-entrypoint.js
+# create minimized bundle for production
+#   lib-ts/browser-entrypoint.ts -> prod/browser-entrypoint.js
 $ npm run webpack:prod
 ```
+
+<!-- TODO: add a hot-reload server -->
 
 (Variants may have more npm scripts, please refer to their `README.md` as well.)
 
