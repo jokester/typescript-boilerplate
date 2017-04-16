@@ -3,6 +3,8 @@
  */
 const webpackMerge = require("webpack-merge");
 const path = require("path");
+const webpack = require("webpack");
+const BabiliPlugin = require("babili-webpack-plugin");
 
 module.exports = webpackMerge([
   require("./common"),
@@ -18,21 +20,20 @@ module.exports = webpackMerge([
     output: {
       path: path.join(__dirname, "..", "prod"),
       filename: "[name].min.js",
-      sourceMapFilename: "[name].map"
+      sourceMapFilename: "[name].min.map"
     },
     plugins: [
       new webpack.DefinePlugin({ $$webpack_dev: JSON.stringify(false) }),
-      /**
-     * we are using Babili for its ES6 support
-    new webpack.optimize.UglifyJsPlugin({
-      minimize: true,
-      compress: {
-        warnings: true,
-        drop_console: false,
-      }
-    }),
-    */
-      new BabiliPlugin({})
-    ]
+      new BabiliPlugin({}),
+      /* disable uglifyJS in favor of babili, for ES6 support */
+      null &&
+        new webpack.optimize.UglifyJsPlugin({
+          minimize: true,
+          compress: {
+            warnings: true,
+            drop_console: false
+          }
+        })
+    ].filter(v => !!v)
   }
 ]);

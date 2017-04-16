@@ -11,7 +11,7 @@ module.exports = webpackMerge([
     entry: {
       "browser-entrypoint": path.join(
         __dirname,
-        "../lib-ts/",
+        "..",
         "lib-ts",
         "browser-entrypoint.ts"
       )

@@ -8,7 +8,7 @@
         "listEmittedFiles": false,
         "emitDecoratorMetadata": true,
         "pretty": true,
-        "module": "commonjs",
+        "module": "es6",
         "importHelpers": true
     },
     "exclude": [
