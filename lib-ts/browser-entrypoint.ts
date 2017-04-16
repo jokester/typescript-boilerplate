@@ -6,20 +6,17 @@ type HMRModule = typeof module & {
     }
 }
 
-// NOTE: initial m have to be used, or HMR wont work
-// TODO: why?
 import * as m from './m';
 
-function l(...args: any[]) {
-    console.log.apply(console, args);
-}
-
 if ($$webpack_dev && (module as HMRModule).hot) {
-    l('initialM=', m);
+    function l(...args: any[]) {
+        console.log.apply(console, args);
+    }
+
     l("configuring webpack HMR");
+    l('m=', m);
     (module as HMRModule).hot.accept("./m", () => {
-        const newM = require('./m') as typeof m;
-        l("newM=", newM);
+        l("m=", m);
     });
 } else {
     l("HMR not enabled")
