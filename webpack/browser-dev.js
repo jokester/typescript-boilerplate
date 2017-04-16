@@ -3,6 +3,7 @@
  */
 const webpackMerge = require('webpack-merge');
 const path = require('path');
+const webpack = require('webpack');
 
 module.exports = webpackMerge([
   require('./common'),
@@ -19,7 +20,12 @@ module.exports = webpackMerge([
     devServer: {
         contentBase: path.join(__dirname, "..", "dev"),
         compress: true,
-        port: 9000
-    }
+        port: 9000,
+        hot: true,
+    },
+    plugins: [
+      new webpack.NamedModulesPlugin(),
+      new webpack.HotModuleReplacementPlugin(),
+    ],
   }
 ]);

@@ -3,8 +3,6 @@
         "target": "es6",
         "noImplicitAny": true,
         "experimentalDecorators": true,
-        "outDir": "lib",
-        "rootDir": "lib-ts",
         "sourceMap": false,
         "moduleResolution": "node",
         "listEmittedFiles": false,
@@ -14,7 +12,7 @@
         "importHelpers": true
     },
     "exclude": [
-        "node_modules"
+        "../node_modules"
     ],
     "compileOnSave": false,
     "atom": {

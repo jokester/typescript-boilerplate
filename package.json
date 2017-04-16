@@ -71,7 +71,8 @@
     "moduleFileExtensions": [
       "ts",
       "tsx",
-      "js"
+      "js",
+      "jsx"
     ],
     "coverageReporters": [
       "json",
