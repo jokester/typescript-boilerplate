@@ -4,6 +4,7 @@ A boilerplate for TypeScript projects.
 
 - Latest `TypeScript 2.2`
 - Out-of-box test with `jest` (test runner) / `mocha` (test framework) / `chai` (assertion)
+- Configured webpack hot module replacement (HMR)
 - Supports various JavaScript environment: node.js / browser / etc
     - see **Variants** for detail
 - Can be easily extended for other JS runtime: Electron / ReactNative / etc
@@ -67,12 +68,14 @@ $ npm run test:coverage
 #   lib-ts/browser-entrypoint.ts -> dev/browser-entrypoint.js
 $ npm run webpack
 
+# create and update dev bundle, with configured HotModuleReplacementPlugin
+# modify lib-ts/m.ts and see how it get hot-replaced in console
+$ npm run dev-server
+
 # create minimized bundle for production
 #   lib-ts/browser-entrypoint.ts -> prod/browser-entrypoint.js
 $ npm run webpack:prod
 ```
-
-<!-- TODO: add a hot-reload server -->
 
 (Variants may have more npm scripts, please refer to their `README.md` as well.)
 

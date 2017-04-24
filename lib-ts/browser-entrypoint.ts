@@ -1,13 +1,14 @@
 declare const $$webpack_dev: boolean;
 
 type HMRModule = typeof module & {
-    hot: {
+    hot?: {
         accept(moduleName: string, callback: () => void): void
     }
 }
 
 import * as m from './m';
 
+// Example of HMR: hot-reload './m' and show updated module in console
 if ($$webpack_dev && (module as HMRModule).hot) {
     function l(...args: any[]) {
         console.log.apply(console, args);
@@ -18,6 +19,4 @@ if ($$webpack_dev && (module as HMRModule).hot) {
     (module as HMRModule).hot.accept("./m", () => {
         l("m=", m);
     });
-} else {
-    l("HMR not enabled")
 }
