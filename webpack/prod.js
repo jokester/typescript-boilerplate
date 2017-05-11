@@ -23,7 +23,12 @@ module.exports = webpackMerge([
       sourceMapFilename: "[name].min.map"
     },
     plugins: [
-      new webpack.DefinePlugin({ $$webpack_dev: JSON.stringify(false) }),
+      new webpack.DefinePlugin({
+        $$webpack_dev: JSON.stringify(false),
+        "process.env": {
+          NODE_ENV: JSON.stringify("production")
+        },
+      }),
       new BabiliPlugin({}),
       /* disable uglifyJS in favor of babili, for ES6 support */
       null &&

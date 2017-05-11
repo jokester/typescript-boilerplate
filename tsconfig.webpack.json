@@ -1,4 +1,9 @@
 {
+    "__comment": {
+        "##outDir": "remove from tsconfig.json, due to conflict with webpack HMR",
+        "##rootDir": "removed due to the same conflict",
+        "##module": "webpack 2 already supports ES6 import, just use it"
+    },
     "compilerOptions": {
         "target": "es6",
         "noImplicitAny": true,
@@ -12,7 +17,7 @@
         "importHelpers": true
     },
     "exclude": [
-        "../node_modules"
+        "node_modules"
     ],
     "compileOnSave": false,
     "atom": {

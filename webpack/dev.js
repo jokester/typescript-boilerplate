@@ -25,12 +25,10 @@ module.exports = webpackMerge([
       contentBase: path.join(__dirname, "..", "dev"),
       compress: true,
       port: 9000,
-      hot: true
     },
     plugins: [
       new webpack.DefinePlugin({ $$webpack_dev: JSON.stringify(true) }),
       new webpack.NamedModulesPlugin(),
-      new webpack.HotModuleReplacementPlugin()
     ]
   }
 ]);

@@ -1,4 +1,7 @@
 {
+    "__comment": {
+        "##module": "some old node version does not support ES6 import yet"
+    },
     "compilerOptions": {
         "target": "es6",
         "noImplicitAny": true,

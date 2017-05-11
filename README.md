@@ -68,8 +68,10 @@ $ npm run test:coverage
 #   lib-ts/browser-entrypoint.ts -> dev/browser-entrypoint.js
 $ npm run webpack
 
-# create and update dev bundle, with configured HotModuleReplacementPlugin
-# modify lib-ts/m.ts and see how it get hot-replaced in console
+# create and update dev bundle, and host it with webpack dev-server
+#   HotModuleReplacementPlugin is enabled:
+#   open http://localhost:9000/ in browser, and see how page gets updated
+#   when (lib-ts/m.ts) is modified.
 $ npm run dev-server
 
 # create minimized bundle for production
