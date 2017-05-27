@@ -2,7 +2,7 @@
 
 A boilerplate for TypeScript projects.
 
-- Latest `TypeScript 2.2`
+- Latest `TypeScript 2.3`
 - Out-of-box test with `jest` (test runner) / `mocha` (test framework) / `chai` (assertion)
 - Configured webpack hot module replacement (HMR)
 - Supports various JavaScript environment: node.js / browser / etc
