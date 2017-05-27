@@ -43,10 +43,10 @@
     "@types/chai": "^3.5.0",
     "@types/jest": "^19.2.2",
     "@types/node": "^7.0.12",
-    "babili-webpack-plugin": "0.0.11",
-    "chai": "^3.5.0",
-    "jest": "^19.0.2",
-    "ts-jest": "^19.0.7",
+    "babili-webpack-plugin": "0.1.1",
+    "chai": "^4.0.0",
+    "jest": "^20.0.4",
+    "ts-jest": "^20.0.4",
     "ts-loader": "^2.0.0",
     "ts-node": "^3.0.2",
     "tslint": "^5.1.0",
@@ -74,6 +74,7 @@
       "js",
       "jsx"
     ],
+    "mapCoverage": true,
     "coverageReporters": [
       "json",
       "lcov",
