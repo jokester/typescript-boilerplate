@@ -8,10 +8,11 @@
     "start:ts": "ts-node lib-ts/index.ts",
     "build": "      rm -rf lib/* && tsc",
     "build:watch": "rm -rf lib/* && tsc --watch",
-    "test": "         npm run build && jest",
-    "test:coverage": "npm run build && jest --coverage",
-    "test:watch": "   npm run build && jest --watch",
-    "tslint": "tslint -c tslint.json ts-lib/**/*.ts",
+    "test": "         npm run build && jest --forceExit",
+    "test:coverage": "npm run build && jest --forceExit --coverage",
+    "test:watch": "   npm run build && jest --forceExit --watch",
+    "tslint": "    tslint -c tslint.json       'lib-ts/**/*.ts?(x)'",
+    "tslint:fix": "tslint -c tslint.json --fix 'lib-ts/**/*.ts?(x)'",
     "dev-server": "  webpack-dev-server --config webpack/dev.js  --hot",
     "webpack": "     webpack  --watch   --config webpack/dev.js",
     "webpack:prod": "webpack            --config webpack/prod.js"
@@ -37,24 +38,24 @@
   },
   "homepage": "https://github.com/jokester/typescript-boilerplate#readme",
   "dependencies": {
-    "tslib": "^1.6.0"
+    "tslib": "^1.7.1"
   },
   "devDependencies": {
-    "@types/chai": "^3.5.0",
-    "@types/jest": "^19.2.2",
-    "@types/node": "^7.0.12",
+    "@types/chai": "^4.0.0",
+    "@types/jest": "^19.2.4",
+    "@types/node": "^7.0.31",
     "babili-webpack-plugin": "0.1.1",
-    "chai": "^4.0.0",
+    "chai": "^4.0.2",
     "jest": "^20.0.4",
-    "ts-jest": "^20.0.4",
-    "ts-loader": "^2.0.0",
-    "ts-node": "^3.0.2",
-    "tslint": "^5.1.0",
-    "typescript": "^2.3.2",
-    "webpack": "^2.3.3",
-    "webpack-dev-server": "^2.4.2",
+    "ts-jest": "^20.0.6",
+    "ts-loader": "^2.1.0",
+    "ts-node": "^3.0.6",
+    "tslint": "^5.4.3",
+    "typescript": "^2.3.4",
+    "webpack": "^2.6.1",
+    "webpack-dev-server": "^2.4.5",
     "webpack-merge": "^4.1.0",
-    "webpack-visualizer-plugin": "^0.1.10"
+    "webpack-visualizer-plugin": "^0.1.11"
   },
   "jest": {
     "transform": {
