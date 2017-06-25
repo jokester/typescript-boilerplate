@@ -2,7 +2,7 @@
 
 A boilerplate for TypeScript projects.
 
-- Latest `TypeScript 2.3`
+- Latest `TypeScript 2.3` / `Webpack 3`
 - Out-of-box test with `jest` (test runner) / `mocha` (test framework) / `chai` (assertion)
 - Configured webpack hot module replacement (HMR)
 - Supports various JavaScript environment: node.js / browser / etc
@@ -13,15 +13,15 @@ A boilerplate for TypeScript projects.
 
 Variants have their own branches:
 
-- [master](https://github.com/jokester/typescript-boilerplate/tree/master)
+- [master branch](https://github.com/jokester/typescript-boilerplate/tree/master)
     - Basic configuration (compile + test)
     - Bundle TypeScript files with `webpack` for browser use
     - No frontend framework
     - All other variants are based on this.
-- [React](https://github.com/jokester/typescript-boilerplate/tree/webpack-react)
-- [Preact](https://github.com/jokester/typescript-boilerplate/tree/webpack-preact)
+- [react branch](https://github.com/jokester/typescript-boilerplate/tree/webpack-react)
+- [preact branch](https://github.com/jokester/typescript-boilerplate/tree/webpack-preact)
     - [Preact](https://preactjs.com/): Fast 3kB alternative to React with the same ES6 API.
-- [heroku](https://github.com/jokester/typescript-boilerplate/tree/heroku)
+- [heroku branch](https://github.com/jokester/typescript-boilerplate/tree/heroku)
     - a simplest express.js app with heroku support
 
 TODO: Electron
@@ -50,6 +50,9 @@ $ npm run start
 ```bash
 # run tslint
 $ npm run tslint
+
+# let tslint fix simple warnings
+$ npm run tslint:fix
 
 # run test suites
 $ npm run test

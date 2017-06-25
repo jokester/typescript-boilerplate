@@ -6,16 +6,16 @@ type HMRModule = typeof module & {
             callback: (updatedDependencies: any[]) => void): void
         accept(moduleName: string, callback: () => void): void
     }
-}
+};
 
-import * as m from './m';
+import * as m from "./m";
 
 
 if ($$webpack_dev && (module as HMRModule).hot) {
     // dev w/ HMR: hot-reload './m' and create <li> from it
 
     console.info("configuring webpack HMR");
-    console.info('m=', m);
+    console.info("m=", m);
     (module as HMRModule).hot.accept("./m", function () {
         console.log("accept handler get called", [].slice.call(arguments));
         console.info("m=", m);
@@ -27,13 +27,13 @@ if ($$webpack_dev && (module as HMRModule).hot) {
 }
 
 function createLI(currentM: typeof m) {
-    let ul: HTMLUListElement = document.querySelector('#m-history') as any;
+    let ul: HTMLUListElement = document.querySelector("#m-history") as any;
     if (!ul) {
-        ul = document.createElement('ul');
+        ul = document.createElement("ul");
         ul.id = "m-history";
         document.body.appendChild(ul);
     }
-    const li = document.createElement('li');
+    const li = document.createElement("li");
     li.innerText = `${new Date}: m = ${JSON.stringify(m)}`;
     ul.appendChild(li);
 }
