@@ -30,6 +30,7 @@ module.exports = webpackMerge([
         },
       }),
       new BabiliPlugin({}),
+      // new webpack.optimize.ModuleConcatenationPlugin(),
       /* disable uglifyJS in favor of babili, for ES6 support */
       null &&
         new webpack.optimize.UglifyJsPlugin({
