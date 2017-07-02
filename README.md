@@ -13,18 +13,18 @@ A boilerplate for TypeScript projects.
 
 Variants have their own branches:
 
-- [master branch](https://github.com/jokester/typescript-boilerplate/tree/master)
+- [master](https://github.com/jokester/typescript-boilerplate/tree/master) branch
     - Basic configuration (compile + test)
-    - Bundle TypeScript files with `webpack` for browser use
+    - Bundle TypeScript files with `webpack` for browser use, with configured hot-reload in dev build.
     - No frontend framework
     - All other variants are based on this.
-- [react branch](https://github.com/jokester/typescript-boilerplate/tree/webpack-react)
-- [preact branch](https://github.com/jokester/typescript-boilerplate/tree/webpack-preact)
+- [webpack-react](https://github.com/jokester/typescript-boilerplate/tree/webpack-react) branch
+- [webpack-preact](https://github.com/jokester/typescript-boilerplate/tree/webpack-preact) branch
     - [Preact](https://preactjs.com/): Fast 3kB alternative to React with the same ES6 API.
-- [heroku branch](https://github.com/jokester/typescript-boilerplate/tree/heroku)
-    - a simplest express.js app with heroku support
+- [heroku](https://github.com/jokester/typescript-boilerplate/tree/heroku) branch
+    - a simplest (server-only) express.js app with heroku support
 
-TODO: Electron
+<!-- TODO: Electron -->
 
 #### Built-in npm scripts
 
