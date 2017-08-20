@@ -1,15 +1,17 @@
 {
     "__comment": {
-        "##module": "some old node version does not support ES6 import yet"
+        "readme": "this file is used for node.js-targeted compile",
+        "##module": "compile to commons module, for old node versions without ES6 `import` support"
     },
     "compilerOptions": {
         "target": "es6",
         "noImplicitAny": true,
+        "noImplicitReturns": true,
+        "noImplicitThis": true,
         "experimentalDecorators": true,
         "outDir": "lib",
         "rootDir": "lib-ts",
         "sourceMap": false,
-        "moduleResolution": "node",
         "listEmittedFiles": false,
         "emitDecoratorMetadata": true,
         "pretty": true,

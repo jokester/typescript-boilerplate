@@ -4,7 +4,7 @@
 const webpackMerge = require("webpack-merge");
 const path = require("path");
 const webpack = require("webpack");
-const BabiliPlugin = require("babili-webpack-plugin");
+const MinifyPlugin = require("babel-minify-webpack-plugin");
 
 module.exports = webpackMerge([
   require("./common"),
@@ -29,17 +29,17 @@ module.exports = webpackMerge([
           NODE_ENV: JSON.stringify("production")
         },
       }),
-      new BabiliPlugin({}),
-      // new webpack.optimize.ModuleConcatenationPlugin(),
-      /* disable uglifyJS in favor of babili, for ES6 support */
-      null &&
-        new webpack.optimize.UglifyJsPlugin({
-          minimize: true,
-          compress: {
-            warnings: true,
-            drop_console: false
-          }
-        })
-    ].filter(v => !!v)
+      new MinifyPlugin({}),
+      new webpack.optimize.ModuleConcatenationPlugin(),
+      /* disable uglifyJS in favor of babili, for ES6 support
+      new webpack.optimize.UglifyJsPlugin({
+        minimize: true,
+        compress: {
+          warnings: true,
+          drop_console: false
+        }
+      })
+      */
+    ]
   }
 ]);
