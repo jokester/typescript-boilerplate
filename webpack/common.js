@@ -15,10 +15,11 @@ module.exports = {
         test: /\.tsx?$/,
         loader: "ts-loader",
         options: {
-          configFile: "tsconfig.webpack.json",
-          // FIXME: needed for HMR but conflicts with `rootDir` in tsconfig.json
           transpileOnly: true,
-          isolatedModules: true
+          compilerOptions: {
+            // override module to ES6 to enable tree-shaking and stuff
+            module: "ES6"
+          }
         }
       }
     ]
