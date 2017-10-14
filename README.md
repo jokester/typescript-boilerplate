@@ -3,11 +3,12 @@
 A boilerplate for TypeScript projects.
 
 - Latest `TypeScript 2.5` / `Webpack 3`
-- Out-of-box test with `jest` (test runner) / `mocha` (test framework) / `chai` (assertion)
+- Out-of-box test with `jest` (test runner) / `chai` (assertion)
 - Configured webpack hot module replacement (HMR)
+- CircleCI support [![CircleCI](https://circleci.com/gh/jokester/typescript-boilerplate.svg?style=svg)](https://circleci.com/gh/jokester/typescript-boilerplate)
 - Supports various JavaScript environment: node.js / browser / etc
     - see **Variants** for detail
-- Can be easily extended for other JS runtime: Electron / ReactNative / etc
+- Can be easily extended for other JS runtime: Electron / ReactNative / you name it
 
 #### Variants
 
@@ -15,7 +16,7 @@ Variants have their own branches:
 
 - [master](https://github.com/jokester/typescript-boilerplate/tree/master) branch
     - Basic configuration (compile + test)
-    - Bundle TypeScript files with `webpack` for browser use, with configured hot-reload in dev build.
+    - Bundle TypeScript files with `webpack` for browser use, with HMR
     - No frontend framework
     - All other variants are based on this.
 - [webpack-react](https://github.com/jokester/typescript-boilerplate/tree/webpack-react) branch
@@ -67,12 +68,15 @@ $ npm run test:coverage
 ###### Webpack
 
 ```bash
-# create dev bundle, and update when file changes
+# create dev bundle
 #   lib-ts/browser-entrypoint.ts -> dev/browser-entrypoint.js
 $ npm run webpack
 
-# create and update dev bundle, and host it with webpack dev-server
-#   HotModuleReplacementPlugin is enabled:
+# create dev bundle, with file watching
+#   lib-ts/browser-entrypoint.ts -> dev/browser-entrypoint.js
+$ npm run webpack:watch
+
+# host dev bundle with webpack dev-server, with file watching and HMR:
 #   open http://localhost:9000/ in browser, and see how page gets updated
 #   when (lib-ts/m.ts) is modified.
 $ npm run dev-server
