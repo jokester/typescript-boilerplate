@@ -2,11 +2,18 @@
  * Common setting for all webpack build
  */
 const webpack = require("webpack");
+const path = require("path");
 const Visualizer = require("webpack-visualizer-plugin");
 
 module.exports = {
   resolve: {
     extensions: [".ts", ".tsx", ".js", ".jsx"]
+  },
+  entry: {
+    "browser-entrypoint": [
+      "core-js/client/shim",
+      path.join(__dirname, "..", "lib-ts", "browser-entrypoint.ts"),
+    ],
   },
   module: {
     loaders: [
@@ -17,7 +24,9 @@ module.exports = {
         options: {
           transpileOnly: true,
           compilerOptions: {
-            // override module to ES6 to enable tree-shaking and stuff
+            // use target=es5 for old browsers
+            target: "es5",
+            // use module=es6 for tree-shaking and stuff
             module: "ES6"
           }
         }

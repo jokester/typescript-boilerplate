@@ -9,14 +9,6 @@ const MinifyPlugin = require("babel-minify-webpack-plugin");
 module.exports = webpackMerge([
   require("./common"),
   {
-    entry: {
-      "browser-entrypoint": path.join(
-        __dirname,
-        "..",
-        "lib-ts",
-        "browser-entrypoint.ts"
-      )
-    },
     output: {
       path: path.join(__dirname, "..", "prod"),
       filename: "[name].min.js",

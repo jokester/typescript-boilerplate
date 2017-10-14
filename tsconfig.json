@@ -1,7 +1,8 @@
 {
     "__comment": {
+        "this-file": "basic tsc configuration for both nodejs- and browser- targeted build",
         "note-module": "compile to commonjs module by default, for old node versions without ES6 `import` support.",
-        "note-for-browser": "browser-targeted build uses `module: ES6` to enable tree-shaking and stuff in webpack. see webpack/common.js"
+        "note-for-browser": "browser-targeted build is overridden to use `{ target: ES5, module: ES6 }`. See webpack/common.js"
     },
     "compilerOptions": {
         "target": "es6",
