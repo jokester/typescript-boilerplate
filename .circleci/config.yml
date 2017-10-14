@@ -8,16 +8,16 @@ jobs:
       - checkout
 
       - restore_cache:
-          key: dependency-cache-{{ checksum "yarn.lock" }}
+          key: dependency-cache-yarn-{{ checksum "yarn.lock" }}
 
       - run:
           name: Install deps
           command: yarn install --ignore-engines
 
       - save_cache:
-          key: dependency-cache-{{ checksum "yarn.lock" }}
+          key: dependency-cache-yarn-{{ checksum "yarn.lock" }}
           paths:
-            - ~/.yarn-cache
+            - ~/.cache/yarn
 
       - run:
           name: Build (tsc)
