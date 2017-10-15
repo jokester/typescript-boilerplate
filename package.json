@@ -69,7 +69,11 @@
     ],
     "testMatch": [
       "/**/__test__/*.(ts|js|tsx|jsx)",
-      "**/*\\.(spec|test)\\.(ts|js|tsx|jsx)"
+      "/**/*\\.(spec|test)\\.(ts|js|tsx|jsx)"
+    ],
+    "collectCoverageFrom": [
+      "lib/**/*.(js|ts)",
+      "lib-ts/**/*.(js|ts)"
     ],
     "moduleFileExtensions": [
       "ts",
