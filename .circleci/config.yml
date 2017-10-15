@@ -40,8 +40,12 @@ jobs:
           command: npm run test
 
       - run:
-          name: Test Coverage
+          name: Measure Test Coverage
           command: npm run test:coverage
+
+      - run:
+          name: Upload Coverage
+          command: npm run test:codecov-upload
 
       - store_artifacts:
           path: coverage
