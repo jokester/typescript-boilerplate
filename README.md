@@ -5,7 +5,7 @@ A boilerplate for TypeScript projects.
 - Latest `TypeScript 2.5` / `Webpack 3`
 - Out-of-box test with `jest` (test runner) / `chai` (assertion)
 - Configured webpack hot module replacement (HMR)
-- CircleCI / coverage.io support: [![CircleCI](https://circleci.com/gh/jokester/typescript-boilerplate.svg?style=svg)](https://circleci.com/gh/jokester/typescript-boilerplate) / [![codecov](https://codecov.io/gh/jokester/typescript-boilerplate/branch/master/graph/badge.svg)](https://codecov.io/gh/jokester/typescript-boilerplate)
+- CircleCI / codecov.io support: [![CircleCI](https://circleci.com/gh/jokester/typescript-boilerplate.svg?style=svg)](https://circleci.com/gh/jokester/typescript-boilerplate) / [![codecov](https://codecov.io/gh/jokester/typescript-boilerplate/branch/master/graph/badge.svg)](https://codecov.io/gh/jokester/typescript-boilerplate)
 - Supports various JavaScript environment: node.js / browser / etc
     - see **Variants** for detail
 - Can be easily extended for other JS runtime: Electron / ReactNative / you name it
