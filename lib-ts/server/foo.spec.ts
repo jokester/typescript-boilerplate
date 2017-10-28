@@ -1,7 +1,10 @@
 import { foo, fooAsync } from "../server/foo";
 import { expect as chaiexpect } from "chai";
 
-describe("it runs test suite in /lib-ts/__test__/", () => {
+describe("runs test case named *.spec.ts", () => {
+    it("runs", () => {
+        expect(1).toEqual(1);
+    });
 
     it("tests sync function", () => {
         expect(foo()).toEqual("foo!");

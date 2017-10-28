@@ -5,9 +5,9 @@
 /.nyc_output/
 /coverage
 
-# built
-/dev
-/prod
+# browser bundles
+/public/static/
+/public/stats.html
 
 # misc
 /tmp

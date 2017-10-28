@@ -5,5 +5,3 @@ export function foo() {
 export async function fooAsync() {
     return "foo!?";
 }
-
-console.log(`running ${__filename}`);

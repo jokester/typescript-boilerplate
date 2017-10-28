@@ -1,22 +1,25 @@
-import * as m from "./m";
-import { webpack_dev, haveHMR, } from "./webpack-hmr";
+import * as m from "./browser/m";
+import { webpack_dev, haveHMR, } from "./browser/webpack-hmr";
 
 if (webpack_dev && haveHMR(module)) {
     // dev w/ HMR: hot-reload './m' and create <li> from it
     console.info("configuring webpack HMR");
     console.info("m=", m);
-    module.hot.accept("./m", function () {
+    module.hot.accept("./browser/m", function () {
         console.log("accept handler get called", [].slice.call(arguments));
         console.info("m=", m);
-        createLI(m);
+        createLI(m.v);
     });
 } else if (webpack_dev) {
     // dev w/o HMR
     console.info("webpack HMR not available");
-}
+} /* else do nothing in production */
 
-function createLI(currentM: typeof m) {
-    let ul: HTMLUListElement = document.querySelector("#m-history") as any;
+/**
+ * append a <li> item to <ul>
+ */
+function createLI(value: number) {
+    let ul: HTMLUListElement = document.querySelector("#m-history");
     if (!ul) {
         ul = document.createElement("ul");
         ul.id = "m-history";
@@ -27,4 +30,4 @@ function createLI(currentM: typeof m) {
     ul.appendChild(li);
 }
 
-createLI(m);
+createLI(m.v);

@@ -15,6 +15,12 @@ module.exports = {
       path.join(__dirname, "..", "lib-ts", "browser-entrypoint.ts"),
     ],
   },
+  output: {
+    path: path.join(__dirname, "..", "public"),
+    filename: "static/[name].js",
+    // prefix "sourcemap" can be used to distinguish and reject public access
+    sourceMapFilename: "static/sourcemap/[name].map"
+  },
   module: {
     loaders: [
       // load ts/tsx with ts-loader
@@ -33,6 +39,9 @@ module.exports = {
       }
     ]
   },
-  plugins: [new Visualizer()],
+  plugins: [
+    new Visualizer(),
+    new webpack.NoEmitOnErrorsPlugin()
+  ],
   devtool: "source-map"
 };
