@@ -1,10 +1,11 @@
 /**
- * Sample React Native App
+ * TS version of "Sample React Native App" created by `react-native init`
  * https://github.com/facebook/react-native
  * @flow
  */
 
-import React, { Component } from 'react';
+import * as React from 'react';
+import { Component } from 'react';
 import {
   Platform,
   StyleSheet,
@@ -20,7 +21,7 @@ const instructions = Platform.select({
 });
 
 type Props = {};
-export default class App extends Component<Props> {
+export class App extends Component<Props> {
   render() {
     return (
       <View style={styles.container}>
@@ -56,3 +57,4 @@ const styles = StyleSheet.create({
     marginBottom: 5,
   },
 });
+
