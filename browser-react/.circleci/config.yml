@@ -1,0 +1,52 @@
+version: 2
+jobs:
+  build:
+    working_directory: ~/typescript-boilerplate
+    docker:
+      - image: circleci/node:6-stretch-browsers
+    steps:
+      - checkout
+
+      - restore_cache:
+          key: dependency-cache-yarn-{{ checksum "yarn.lock" }}
+
+      - run:
+          name: Install deps
+          command: yarn install --ignore-engines
+
+      - save_cache:
+          key: dependency-cache-yarn-{{ checksum "yarn.lock" }}
+          paths:
+            - ~/.cache/yarn
+
+      - run:
+          name: Build (tsc)
+          command: npm run build
+
+      - run:
+          name: Build (webpack dev)
+          command: npm run webpack
+
+      - run:
+          name: Build (webpack prod)
+          command: npm run webpack:prod
+
+      - run:
+          name: Run tslint
+          command: npm run tslint
+
+      - run:
+          name: Test
+          command: npm run test
+
+      - run:
+          name: Measure Test Coverage
+          command: npm run test:coverage
+
+      - run:
+          name: Upload Coverage
+          command: npm run test:codecov-upload
+
+      - store_artifacts:
+          path: coverage
+          prefix: coverage
