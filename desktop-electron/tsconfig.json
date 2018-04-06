@@ -1,0 +1,30 @@
+{
+    "__comment": {
+        "this-file": "basic tsc configuration for both nodejs- and browser- targeted build",
+        "note-module": "compile to commonjs module by default, for old node versions without ES6 `import` support.",
+        "note-for-browser": "browser-targeted build is overridden to use `{ target: ES5, module: ES6 }`. See webpack/common.js"
+    },
+    "compilerOptions": {
+        "target": "es6",
+        "noImplicitAny": true,
+        "noImplicitReturns": true,
+        "noImplicitThis": true,
+        "experimentalDecorators": true,
+        "outDir": "lib",
+        "rootDir": "lib-ts",
+        "sourceMap": false,
+        "listEmittedFiles": false,
+        "emitDecoratorMetadata": true,
+        "jsx": "react",
+        "pretty": true,
+        "module": "commonjs",
+        "importHelpers": true
+    },
+    "exclude": [
+        "node_modules"
+    ],
+    "compileOnSave": false,
+    "atom": {
+        "rewriteTsconfig": false
+    }
+}
