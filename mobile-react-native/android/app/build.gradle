@@ -73,7 +73,13 @@ import com.android.build.OutputFile
  */
 
 project.ext.react = [
-    entryFile: "index.js"
+    entryFile: "index.js",
+    // sourcemap: see https://stackoverflow.com/a/49487208
+    // NOTE: this is used to ensure identical (JS + sourcemap) result in gradle / codepush build
+    extraPackagerArgsRelease: [
+        "--sourcemap-output",
+        file("$buildDir/../../sourcemap.android.js")
+    ],
 ]
 
 apply from: "../../node_modules/react-native/react.gradle"
@@ -91,16 +97,15 @@ def enableSeparateBuildPerCPUArchitecture = false
 /**
  * Run Proguard to shrink the Java bytecode in release builds.
  */
-def enableProguardInReleaseBuilds = false
+def enableProguardInReleaseBuilds = true
 
 android {
-    compileSdkVersion 23
-    buildToolsVersion "23.0.1"
+    compileSdkVersion 27
 
     defaultConfig {
         applicationId "com.typescriptrn"
         minSdkVersion 16
-        targetSdkVersion 22
+        targetSdkVersion 27
         versionCode 1
         versionName "1.0"
         ndk {
