@@ -1,0 +1,21 @@
+{
+  "name": "browser-react",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "preact": "^8.2.7",
+    "preact-compat": "^3.18.0"
+  },
+  "scripts": {
+    "start": "react-scripts-ts start",
+    "build": "react-scripts-ts build",
+    "test": "react-scripts-ts test --env=jsdom",
+    "eject": "react-scripts-ts eject"
+  },
+  "devDependencies": {
+    "@types/jest": "^22.2.3",
+    "@types/node": "^9.6.6",
+    "react-scripts-ts": "^2.15.1",
+    "typescript": "^2.8.3"
+  }
+}

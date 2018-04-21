@@ -1,0 +1,73 @@
+{
+  "name": "TypeScriptRN",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "android": "node node_modules/react-native/local-cli/cli.js run-android",
+    "ios": "node node_modules/react-native/local-cli/cli.js run-ios",
+    "test": "jest",
+    "test:all": "tsc && yarn lint && jest",
+    "updateSnapshot": "jest --updateSnapshot",
+    "testCoverage": "jest --coverage",
+    "lint": "    tslint -c tslint.json       -e 'node_modules/**/*' -e 'scripts/**/*' '**/*.ts?(x)'",
+    "lint:fix": "tslint -c tslint.json --fix -e 'node_modules/**/*' -e 'scripts/**/*' '**/*.ts?(x)'"
+  },
+  "author": "Wang Guan <momocraft@gmail.com>",
+  "private": true,
+  "engines": {
+    "node": ">= 8.0.0"
+  },
+  "dependencies": {
+    "react": "16.3.1",
+    "react-native": "0.55.1",
+    "tslib": "^1.9.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^22.2.2",
+    "@types/react": "^16.3.4",
+    "@types/react-native": "^0.52.23",
+    "@types/react-test-renderer": "^16.0.1",
+    "babel-jest": "22.4.3",
+    "babel-preset-react-native": "4.0.0",
+    "jest": "22.4.3",
+    "react-native-typescript-transformer": "^1.2.4",
+    "react-test-renderer": "^16.3.1",
+    "ts-jest": "^22.4.2",
+    "tslint": "^5.9.1",
+    "tslint-config-airbnb": "^5.8.0",
+    "typescript": "^2.8.1"
+  },
+  "jest": {
+    "preset": "react-native",
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest"
+    },
+    "transformIgnorePatterns": [
+      "node_modules/(?!.*)"
+    ],
+    "testMatch": [
+      "/**/__test__/*.(ts|js|tsx|jsx)",
+      "/**/*\\.(spec|test)\\.(ts|js|tsx|jsx)"
+    ],
+    "collectCoverageFrom": [
+      "src/**/*.(ts|tsx)",
+      "!**/node_modules",
+      "!/coverage"
+    ],
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ],
+    "coverageReporters": [
+      "json",
+      "lcov",
+      "text",
+      "html"
+    ]
+  }
+}
