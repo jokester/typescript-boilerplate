@@ -1,31 +1,29 @@
 {
-    "__comment": {
-        "this-file": "basic tsc configuration for both nodejs- and browser- targeted build",
-        "note-module": "compile to commonjs module by default, for old node versions without ES6 `import` support.",
-        "note-for-browser": "browser-targeted build is overridden to use `{ target: ES5, module: ES6 }`. See webpack/common.js"
-    },
-    "compilerOptions": {
-        "target": "es6",
-        "noImplicitAny": true,
-        "noImplicitReturns": true,
-        "noImplicitThis": true,
-        "experimentalDecorators": true,
-        "outDir": "lib",
-        "rootDir": "lib-ts",
-        "sourceMap": false,
-        "listEmittedFiles": false,
-        "emitDecoratorMetadata": true,
-        "jsx": "react",
-        "pretty": true,
-        "jsxFactory": "React.createElement",
-        "module": "commonjs",
-        "importHelpers": true
-    },
-    "exclude": [
-        "node_modules"
-    ],
-    "compileOnSave": false,
-    "atom": {
-        "rewriteTsconfig": false
-    }
+  "compilerOptions": {
+    "outDir": "build/dist",
+    "module": "esnext",
+    "target": "es5",
+    "lib": ["es6", "dom"],
+    "sourceMap": true,
+    "allowJs": true,
+    "jsx": "react",
+    "moduleResolution": "node",
+    "rootDir": "src",
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "noUnusedLocals": true
+  },
+  "exclude": [
+    "node_modules",
+    "build",
+    "scripts",
+    "acceptance-tests",
+    "webpack",
+    "jest",
+    "src/setupTests.ts"
+  ]
 }
