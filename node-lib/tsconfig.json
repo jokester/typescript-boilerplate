@@ -54,6 +54,7 @@
     "coverage",
     "build",
     "__test__",
-    "bin"
+    "bin",
+    "jest.config.js"
   ]
 }
