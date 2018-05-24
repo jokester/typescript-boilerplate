@@ -4,7 +4,7 @@
   "private": true,
   "index": "build/lib/index",
   "bin": {
-    "example-bin": "bin/example-bin.js"
+    "example-bin": "bin/example-bin"
   },
   "files": [
     "bin",
