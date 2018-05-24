@@ -1,0 +1,1 @@
+export { cliMain } from './cli';

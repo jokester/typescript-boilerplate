@@ -1,0 +1,36 @@
+{
+  "name": "node-lib",
+  "version": "0.1.0",
+  "private": true,
+  "index": "build/lib/index",
+  "bin": {
+    "example-bin": "bin/example-bin.js"
+  },
+  "files": [
+    "bin",
+    "build",
+    "!build/__test__/"
+  ],
+  "scripts": {
+    "start": "node build/bin/example-bin",
+    "start:ts": "ts-node src/bin/example-bin",
+    "build": "rm -rvf build && tsc",
+    "test": "jest",
+    "lint": "    tslint       'src/**/*.ts?(x)'",
+    "lint:fix": "tslint --fix 'src/**/*.ts?(x)'"
+  },
+  "author": "Wang Guan <momocraft@gmail.com>",
+  "dependencies": {
+    "tslib": "^1.9.1"
+  },
+  "devDependencies": {
+    "@types/jest": "^22.2.3",
+    "@types/node": "^9.6.6",
+    "jest": "^22.4.4",
+    "ts-jest": "^22.4.2",
+    "ts-node": "^6.0.3",
+    "tslint": "^5.9.1",
+    "tslint-config-airbnb": "^5.8.0",
+    "typescript": "^2.8.3"
+  }
+}
