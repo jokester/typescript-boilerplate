@@ -1,26 +1,18 @@
 {
-  "name": "browser-react",
-  "version": "0.1.0",
-  "private": true,
   "scripts": {
-    "start": "react-scripts-ts start",
-    "build": "react-scripts-ts build",
-    "test": "react-scripts-ts test --env=jsdom",
-    "eject": "react-scripts-ts eject",
+    "test": "jest",
+    "test:coverage": "jest --coverage",
     "lint": "    tslint       'src/**/*.ts?(x)'",
     "lint:fix": "tslint --fix 'src/**/*.ts?(x)'"
   },
   "author": "Wang Guan <momocraft@gmail.com>",
   "dependencies": {
-    "preact": "^8.2.7",
-    "preact-compat": "^3.18.0",
     "tslib": "^1.9.2"
   },
   "devDependencies": {
     "@types/jest": "^23.1.1",
     "@types/node": "^10.3.4",
     "jest": "^23.1.0",
-    "react-scripts-ts": "2.15.1",
     "ts-jest": "^22.4.6",
     "tslint": "^5.10.0",
     "tslint-config-airbnb": "^5.9.2",

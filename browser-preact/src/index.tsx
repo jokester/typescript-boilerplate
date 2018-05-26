@@ -1,5 +1,5 @@
 import * as React from 'preact';
-import * as ReactDOM from 'preact';
+const ReactDOM = React;
 import App from './App';
 import './index.css';
 import registerServiceWorker from './registerServiceWorker';
@@ -12,18 +12,17 @@ function registerHMR() {
   };
 
   if ((module as ModuleHMR).hot) {
-    (module as ModuleHMR).hot!.accept('./App', () => {
-      ReactDOM.render(
-        <App />,
-        document.getElementById('root') as HTMLElement
-      );
-    });
+    (module as ModuleHMR).hot!.accept('./App', render);
   }
 }
 
-ReactDOM.render(
-  <App />,
-  document.getElementById('root') as HTMLElement
-);
+function render() {
+  ReactDOM.render(
+    <App />,
+    document.getElementById('root') as HTMLElement
+  );
+}
+
 registerServiceWorker();
 registerHMR();
+render();

@@ -1,5 +1,5 @@
 import * as React from 'preact';
-import * as ReactDOM from 'preact';
+const ReactDOM = React;
 import App from './App';
 
 it('renders without crashing', () => {

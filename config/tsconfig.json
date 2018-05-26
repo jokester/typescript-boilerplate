@@ -55,6 +55,10 @@
     "build",
     "__test__",
     "bin",
-    "jest.config.js"
+    "jest.config.js",
+    "acceptance-tests",
+    "webpack",
+    "jest",
+    "src/setupTests.ts"
   ]
 }
