@@ -35,13 +35,11 @@
       }
     ]
   },
-  "rulesDirectory": [],
-  "cliOptions": {
+  "linterOptions": {
     "exclude": [
-      "bin",
-      "build",
-      "config",
-      "node_modules"
+      "config/**/*.js",
+      "node_modules/**/*.ts",
+      "coverage/lcov-report/*.js"
     ]
   }
 }
