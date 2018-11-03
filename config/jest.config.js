@@ -1,13 +1,13 @@
 module.exports = {
   "transform": {
-    ".(ts|tsx)": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    ".(ts|tsx)": "ts-jest"
   },
   "roots": [
     "src",
     "build"
   ],
   "testMatch": [
-    "**/__test__/*.(ts|js|tsx|jsx)",
+    "**/__test__/*\\.(ts|js|tsx|jsx)",
     "**/*\\.(spec|test)\\.(ts|js|tsx|jsx)"
   ],
   "collectCoverageFrom": [

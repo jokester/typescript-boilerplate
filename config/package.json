@@ -1,11 +1,14 @@
 {
+  "name": "config-major-versions-i-use",
+  "version": "0.1.0",
+  "author": "Wang Guan <momocraft@gmail.com>",
+  "private": true,
   "scripts": {
     "test": "jest",
     "test:coverage": "jest --coverage",
-    "lint": "    tslint       'src/**/*.ts?(x)'",
-    "lint:fix": "tslint --fix 'src/**/*.ts?(x)'"
+    "lint": "    tslint --project .       'src/**/*.ts?(x)'",
+    "lint:fix": "tslint --project . --fix 'src/**/*.ts?(x)'"
   },
-  "author": "Wang Guan <momocraft@gmail.com>",
   "dependencies": {
     "tslib": "^1.9.3"
   },
@@ -16,6 +19,8 @@
     "ts-jest": "^23.10.4",
     "tslint": "^5.11.0",
     "tslint-config-airbnb": "^5.11.0",
+    "tslint-config-prettier": "^1.15.0",
+    "tslint-no-circular-imports": "^0.6.1",
     "typescript": "^3.1.6"
   }
 }

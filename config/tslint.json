@@ -3,7 +3,8 @@
   "extends": [
     "tslint-react",
     "tslint-config-prettier",
-    "tslint-config-airbnb"
+    "tslint-config-airbnb",
+    "tslint-no-circular-imports"
   ],
   "formatter": "stylish",
   "jsRules": {},

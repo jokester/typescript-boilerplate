@@ -1,7 +1,10 @@
 {
   "defaultSeverity": "error",
   "extends": [
-    "tslint-config-airbnb"
+    "tslint",
+    "tslint-config-prettier",
+    "tslint-config-airbnb",
+    "tslint-no-circular-imports"
   ],
   "formatter": "stylish",
   "jsRules": {},
