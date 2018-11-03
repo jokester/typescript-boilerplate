@@ -8,10 +8,9 @@
     "test": "react-scripts-ts test --env=jsdom",
     "test:coverage": "react-scripts-ts test --env=jsdom --coverage",
     "eject": "react-scripts-ts eject",
-    "lint": "    tslint       'src/**/*.ts?(x)'",
-    "lint:fix": "tslint --fix 'src/**/*.ts?(x)'"
+    "lint": "    tslint --project .       'src/**/*.ts?(x)'",
+    "lint:fix": "tslint --project . --fix 'src/**/*.ts?(x)'"
   },
-  "author": "Wang Guan <momocraft@gmail.com>",
   "dependencies": {
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
@@ -19,12 +18,15 @@
   },
   "devDependencies": {
     "@types/jest": "^23.3.2",
-    "@types/node": "^8",
-    "@types/react": "^16.4.14",
-    "@types/react-dom": "^16.0.8",
-    "react-scripts-ts": "2.17.0",
+    "@types/node": "^10.12.3",
+    "@types/react": "^16.4.18",
+    "@types/react-dom": "^16.0.9",
+    "react-scripts-ts": "^3.1.0",
+    "tslint": "^5.11.0",
     "tslint-config-airbnb": "^5.11.0",
-    "typescript": "^3.0.3"
+    "tslint-config-prettier": "^1.15.0",
+    "tslint-no-circular-imports": "^0.6.1",
+    "typescript": "^3.1.6"
   },
   "resolutions": {
     "@types/node": "8"
