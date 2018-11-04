@@ -20,7 +20,8 @@ module.exports = {
     "ts",
     "tsx",
     "js",
-    "jsx"
+    "jsx",
+    "json"
   ],
   "coverageReporters": [
     "json",
