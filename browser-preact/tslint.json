@@ -16,6 +16,8 @@
       "allow-leading-underscore"
     ],
     "arrow-parens": false,
+    "import-name": false,
+    "no-duplicate-imports": false,
     "ter-arrow-parens": false,
     "quotemark": false,
     "max-line-length": [true, 160],
@@ -35,11 +37,11 @@
       }
     ]
   },
-  "rulesDirectory": [],
-  "cliOptions": {
+  "linterOptions": {
     "exclude": [
       "config/**/*.js",
-      "node_modules/**/*.ts"
+      "node_modules/**/*.ts",
+      "coverage/lcov-report/*.js"
     ]
   }
 }

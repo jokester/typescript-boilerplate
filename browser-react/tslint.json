@@ -16,6 +16,7 @@
       "allow-leading-underscore"
     ],
     "arrow-parens": false,
+    "import-name": false,
     "ter-arrow-parens": false,
     "quotemark": false,
     "max-line-length": [true, 160],
