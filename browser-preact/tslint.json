@@ -1,9 +1,11 @@
 {
-  "defaultSeverity": "error",
+  "defaultSeverity": "warn",
   "extends": [
+    "tslint",
     "tslint-react",
     "tslint-config-prettier",
-    "tslint-config-airbnb"
+    "tslint-config-airbnb",
+    "tslint-no-circular-imports"
   ],
   "formatter": "stylish",
   "jsRules": {},
@@ -37,11 +39,14 @@
       }
     ]
   },
+  "rulesDirectory": [],
   "linterOptions": {
     "exclude": [
-      "config/**/*.js",
-      "node_modules/**/*.ts",
-      "coverage/lcov-report/*.js"
+      "bin",
+      "build",
+      "config",
+      "coverage",
+      "node_modules"
     ]
   }
 }
