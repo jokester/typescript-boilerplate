@@ -1,35 +1,48 @@
 {
-  "__comment": "this file must be pure json",
-  "compilerOptions": {
-    "outDir": "build/dist",
-    "baseUrl": ".",
-    "module": "esnext",
-    "target": "es5",
-    "lib": ["es6", "dom"],
-    "sourceMap": true,
-    "allowJs": true,
-    "jsx": "react",
-    "moduleResolution": "node",
-    "rootDir": "src",
-    "forceConsistentCasingInFileNames": true,
-    "noImplicitReturns": true,
-    "noImplicitThis": true,
-    "noImplicitAny": true,
-    "strictNullChecks": true,
-    "suppressImplicitAnyIndexErrors": true,
-    "noUnusedLocals": true
-  },
-  "exclude": [
-    "node_modules",
-    "scripts",
-    "coverage",
-    "build",
-    "__test__",
-    "bin",
-    "jest.config.js",
-    "acceptance-tests",
-    "webpack",
-    "jest",
-    "src/setupTests.ts"
-  ]
+   "exclude" : [
+      "node_modules",
+      "build",
+      "scripts",
+      "coverage",
+      "__test__",
+      "bin",
+      "jest.config.js",
+      "acceptance-tests",
+      "webpack",
+      "jest",
+      "src/setupTests.ts"
+   ],
+   "compilerOptions" : {
+      "strict" : true,
+      "outDir" : "build/dist",
+      "jsx" : "preserve",
+      "forceConsistentCasingInFileNames" : true,
+      "noImplicitAny" : true,
+      "lib" : [
+         "es6",
+         "dom"
+      ],
+      "moduleResolution" : "node",
+      "noUnusedLocals" : false,
+      "noImplicitThis" : true,
+      "noImplicitReturns" : true,
+      "sourceMap" : true,
+      "target" : "es5",
+      "noEmit" : true,
+      "module" : "esnext",
+      "resolveJsonModule" : true,
+      "esModuleInterop" : true,
+      "skipLibCheck" : false,
+      "isolatedModules" : true,
+      "strictNullChecks" : true,
+      "allowJs" : true,
+      "suppressImplicitAnyIndexErrors" : true,
+      "allowSyntheticDefaultImports" : true,
+      "rootDir" : "src",
+      "importHelpers" : true
+   },
+   "include" : [
+      "src"
+   ],
+   "__comment" : "this file must be pure json"
 }

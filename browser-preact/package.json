@@ -3,27 +3,35 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "start": "react-scripts-ts start",
-    "build": "react-scripts-ts build",
-    "test": "react-scripts-ts test --env=jsdom",
-    "eject": "react-scripts-ts eject",
-    "lint": "    tslint       'src/**/*.ts?(x)'",
-    "lint:fix": "tslint --fix 'src/**/*.ts?(x)'"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "test:coverage": "react-scripts test --env=jsdom --coverage",
+    "eject": "react-scripts eject",
+    "lint": "    tslint --project .       'src/**/*.ts?(x)'",
+    "lint:fix": "tslint --project . --fix 'src/**/*.ts?(x)'"
   },
-  "author": "Wang Guan <momocraft@gmail.com>",
   "dependencies": {
-    "preact": "^8.2.7",
-    "preact-compat": "^3.18.0",
-    "tslib": "^1.9.2"
+    "preact": "^8.4.2",
+    "preact-compat": "^3.18.4",
+    "tslib": "^1.9.3"
   },
   "devDependencies": {
-    "@types/jest": "^23.1.1",
-    "@types/node": "^10.3.4",
-    "jest": "^23.1.0",
-    "react-scripts-ts": "2.15.1",
-    "ts-jest": "^22.4.6",
-    "tslint": "^5.10.0",
-    "tslint-config-airbnb": "^5.9.2",
-    "typescript": "^2.9.2"
-  }
+    "@types/jest": "^23.3.9",
+    "@types/node": "^10.12.6",
+    "node-sass": "^4.11.0",
+    "react-scripts": "2.1.1",
+    "tslint": "^5.11.0",
+    "tslint-config-airbnb": "^5.11.0",
+    "tslint-config-prettier": "^1.16.0",
+    "tslint-no-circular-imports": "^0.6.1",
+    "tslint-react": "^3.6.0",
+    "typescript": "^3.1.6"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
 }

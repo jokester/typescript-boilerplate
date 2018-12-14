@@ -1,9 +1,11 @@
 {
-  "defaultSeverity": "error",
+  "defaultSeverity": "warn",
   "extends": [
+    "tslint",
     "tslint-react",
     "tslint-config-prettier",
-    "tslint-config-airbnb"
+    "tslint-config-airbnb",
+    "tslint-no-circular-imports"
   ],
   "formatter": "stylish",
   "jsRules": {},
@@ -16,6 +18,8 @@
       "allow-leading-underscore"
     ],
     "arrow-parens": false,
+    "import-name": false,
+    "no-duplicate-imports": false,
     "ter-arrow-parens": false,
     "quotemark": false,
     "max-line-length": [true, 160],
@@ -36,10 +40,13 @@
     ]
   },
   "rulesDirectory": [],
-  "cliOptions": {
+  "linterOptions": {
     "exclude": [
-      "config/**/*.js",
-      "node_modules/**/*.ts"
+      "bin",
+      "build",
+      "config",
+      "coverage",
+      "node_modules"
     ]
   }
 }
