@@ -1,0 +1,7 @@
+/out
+/build
+/*.tgz
+.idea
+*.map
+/coverage
+/.next
