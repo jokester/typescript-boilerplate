@@ -3,22 +3,25 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "node server.js",
     "build": "next build",
     "export": "next export",
-    "start": "next start",
+    "start": "NODE_ENV=production node server.js",
     "test": "jest",
     "test:coverage": "jest --coverage",
     "lint": "    tslint --project .       'src/**/*.ts?(x)'",
     "lint:fix": "tslint --project . --fix 'src/**/*.ts?(x)'"
   },
   "dependencies": {
+    "express": "^4.16.4",
+    "next-routes": "^1.4.2",
     "react": "^16.8.1",
     "react-dom": "^16.8.1",
     "tslib": "^1.9.3"
   },
   "devDependencies": {
     "@types/jest": "^24.0.1",
+    "@types/next": "^8.0.1",
     "@types/node": "^11.9.0",
     "@types/react": "^16.8.2",
     "@types/react-dom": "^16.8.0",

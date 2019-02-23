@@ -1,7 +1,7 @@
 import React from 'react';
 import { ExampleLinks, ExampleProps } from "../src/example-links";
 
-const Index: React.FunctionComponent = (props) => (
+const Show: React.FunctionComponent = (props) => (
   <div>
     <pre>{__filename}</pre>
     <ExampleLinks/>
@@ -9,4 +9,4 @@ const Index: React.FunctionComponent = (props) => (
   </div>
 );
 
-export default Index;
+export default Show;
