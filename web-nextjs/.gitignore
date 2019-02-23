@@ -5,3 +5,4 @@
 *.map
 /coverage
 /.next
+node_modules
