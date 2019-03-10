@@ -1,6 +1,6 @@
 /**
  * This file is written in plain js, so that 'node server.js' can require it without tsc/babel/ts-node and stuff
-  */
+ */
 const Routes = require('next-routes');
 
 const r = new Routes()
