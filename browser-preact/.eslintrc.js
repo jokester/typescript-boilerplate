@@ -10,9 +10,6 @@ module.exports =  {
     ecmaVersion:  2018,  // Allows for the parsing of modern ECMAScript features
     sourceType:  'module',  // Allows for the use of imports
   },
-  ecmaFeatures: {
-    jsx: true,
-  },
   rules:  {
     // Place to specify ESLint rules. Can be used to overwrite rules specified from the extended configs
     // e.g. "@typescript-eslint/explicit-function-return-type": "off",
@@ -22,6 +19,9 @@ module.exports =  {
     "@typescript-eslint/explicit-member-accessibility": false,
     "@typescript-eslint/no-non-null-assertion": false,
     "@typescript-eslint/no-use-before-define": false,
+    "@typescript-eslint/no-empty-interface": false,
+    "@typescript-eslint/no-parameter-properties": false,
+    "@typescript-eslint/no-namespace": false,
   },
   settings:  {
     react:  {
@@ -29,4 +29,3 @@ module.exports =  {
     },
   },
 };
-
