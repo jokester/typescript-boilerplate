@@ -1,10 +1,6 @@
-
-declare module "preact-compat" {
-
-  import {
-    VNode,
-    Component,
-  } from 'preact';
+// prettier-ignore
+declare module 'preact-compat' {
+  import { VNode, Component } from 'preact';
 
   const version: string;
   function unmountComponentAtNode(container: HTMLElement): boolean;
@@ -36,19 +32,16 @@ declare module "preact-compat" {
     // extend as __spread,
   } from 'preact';
 
+  // not export
+
   // and add ours
-  export {
-    version,
-    unmountComponentAtNode,
-    createPortal,
-    findDOMNode,
-  };
+  export { version, unmountComponentAtNode, createPortal, findDOMNode };
 
   const preactCompat: typeof preact & {
-    version: typeof version,
-    unmountComponentAtNode: typeof unmountComponentAtNode,
-    createPortal: typeof createPortal,
-    findDOMNode: typeof findDOMNode,
+    version: typeof version;
+    unmountComponentAtNode: typeof unmountComponentAtNode;
+    createPortal: typeof createPortal;
+    findDOMNode: typeof findDOMNode;
   };
 
   export default preactCompat;

@@ -1,10 +1,10 @@
 import React from 'react';
-import { ExampleLinks, ExampleProps } from "../src/example-links";
+import { ExampleLinks, ExampleProps } from '../src/example-links';
 
-const Index: React.FunctionComponent = (props) => (
+const Index: React.FunctionComponent = props => (
   <div>
     <pre>{__filename}</pre>
-    <ExampleLinks/>
+    <ExampleLinks />
     <ExampleProps {...props} />
   </div>
 );

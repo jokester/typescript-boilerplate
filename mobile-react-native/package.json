@@ -1,6 +1,7 @@
 {
   "name": "TypeScriptRN",
-  "version": "0.0.1",
+  "version": "0.1.0",
+  "author": "Wang Guan <momocraft@gmail.com>",
   "private": true,
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
@@ -13,8 +14,6 @@
     "lint": "    tslint -c tslint.json       -e 'node_modules/**/*' -e 'scripts/**/*' '**/*.ts?(x)'",
     "lint:fix": "tslint -c tslint.json --fix -e 'node_modules/**/*' -e 'scripts/**/*' '**/*.ts?(x)'"
   },
-  "author": "Wang Guan <momocraft@gmail.com>",
-  "private": true,
   "engines": {
     "node": ">= 8.0.0"
   },

@@ -2,7 +2,7 @@
 
 Boilerplates to write stuff in TypeScript.
 
-All variants use `jest` / `ts-jest` for testing, and `ts-lint` for lint.
+All variants use `jest` / `ts-jest` for testing, and `eslint + prettier` for lint.
 
 ## Variants
 
@@ -25,3 +25,7 @@ Client + Web Server:
 Node.js library / CLI:
 
 - [node-lib](node-lib/)
+
+Mobile:
+
+- [mobile-react-native](mobile-react-native/)

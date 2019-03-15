@@ -3,5 +3,5 @@ import * as NextRoutes from 'next-routes';
 
 declare module './routes' {
   export const Router: NextRoutes.Router;
-  export const RouteLink: NextRoutes.Registry["Link"];
+  export const RouteLink: NextRoutes.Registry['Link'];
 }

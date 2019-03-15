@@ -8,6 +8,7 @@ const handler = routes.getRequestHandler(app);
 // With express
 const express = require('express');
 app.prepare().then(() => {
-  express().use(handler).listen(3000);
+  express()
+    .use(handler)
+    .listen(3000);
 });
-

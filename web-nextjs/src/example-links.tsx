@@ -3,13 +3,13 @@ import { RouteLink } from './routes';
 
 export const ExampleLinks: React.FunctionComponent = props => (
   <div>
-    <RouteLink route="index" >
+    <RouteLink route="index">
       <button>index page</button>
     </RouteLink>
-    <RouteLink route="about" >
+    <RouteLink route="about">
       <button>about page</button>
     </RouteLink>
-    <RouteLink route="show" params={{ customId: 3 }} >
+    <RouteLink route="show" params={{ customId: 3 }}>
       <button>show page with customId=3 </button>
     </RouteLink>
   </div>
