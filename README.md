@@ -2,7 +2,7 @@
 
 Boilerplates to write stuff in TypeScript.
 
-All variants use `jest` / `ts-jest` for testing, and `eslint + prettier` for lint.
+All variants use `jest` / `ts-jest` for testing, and `eslint + prettier` for formatting + lint.
 
 ## Variants
 
@@ -21,6 +21,7 @@ Client + Web Server:
     - based on [next-typescript](https://github.com/zeit/next-plugins/tree/master/packages/next-typescript)
     - with [next-sass](https://github.com/zeit/next-plugins/tree/master/packages/next-sass) to load sass
     - with [next-optimized-images](https://www.npmjs.com/package/next-optimized-images) to load and optimize images
+    - with (somehow opinionated) dynamic routing from [next-routes](https://github.com/fridays/next-routes)
 
 Node.js library / CLI:
 
