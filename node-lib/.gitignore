@@ -1,3 +1,4 @@
+!.gitkeep
 /node_modules
 /build
 /*.tgz
