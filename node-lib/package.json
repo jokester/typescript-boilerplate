@@ -16,6 +16,7 @@
     "start": "node build/bin/example-bin",
     "start:ts": "ts-node src/bin/example-bin",
     "build": "rm -rvf build && tsc",
+    "local:install": "yarn build && yarn global add $PWD",
     "test": "jest",
     "test:coverage": "jest --coverage",
     "lint": "    eslint '**/*.@(ts|js|tsx|jsx)' 'bin/*'",

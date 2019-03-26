@@ -1,6 +1,7 @@
 {
   "name": "browser-react",
   "version": "0.1.0",
+  "author": "Wang Guan <momocraft@gmail.com>",
   "private": true,
   "scripts": {
     "start": "react-scripts start",
