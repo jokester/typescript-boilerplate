@@ -44,6 +44,13 @@ const nextConf = {
   },
 };
 
+{
+  // silly way to prevent next.js clearing screen
+  const lodash = require('lodash');
+  const readline = require('readline');
+  readline.cursorTo = readline.clearScreenDown = lodash.noop;
+}
+
 module.exports = withPlugins(
   [
     [sass],

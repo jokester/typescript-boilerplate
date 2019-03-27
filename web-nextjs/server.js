@@ -2,7 +2,7 @@
 const next = require('next');
 const routes = require('./src/routes');
 const dev = process.env.NODE_ENV !== 'production';
-const app = next({ dev: dev });
+const app = next({ dev: dev, quiet: false });
 const handler = routes.getRequestHandler(app);
 
 // With express
