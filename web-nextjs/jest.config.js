@@ -1,7 +1,5 @@
 module.exports = {
-  transform: {
-    '.(ts|tsx)': 'ts-jest',
-  },
+  preset: 'ts-jest/presets/js-with-ts',
   roots: ['src', 'build'],
   transformIgnorePatterns: ['<rootDir>/node_modules/.*\\.js', '<rootDir>/build/.*\\.js'],
   testMatch: ['**/__test__/*\\.(ts|js|tsx|jsx)', '**/*\\.(spec|test)\\.(ts|js|tsx|jsx)'],
