@@ -8,7 +8,7 @@
     "build": "next build",
     "export": "next export",
     "analyze": "BUNDLE_ANALYZE=both next build",
-    "start": "NODE_ENV=production node server.js",
+    "start": "NODE_ENV=production next start",
     "test": "jest",
     "test:coverage": "jest --coverage",
     "lint": "    eslint '**/*.@(ts|js|tsx|jsx)'",
