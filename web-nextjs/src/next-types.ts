@@ -6,7 +6,7 @@ type FullPageProps<PerPageProps> = PerPageProps & {
   route: Pick<NextPageContext, 'pathname' | 'query' | 'asPath'>;
 };
 
-export type PageGetInitialProps<UrlParam = {}, PageProps = {}> = (ctx: NextPageContext & { query: UrlParam }) => PageProps | Promise<PageProps>;
+type PageGetInitialProps<UrlParam = {}, PageProps = {}> = (ctx: NextPageContext & { query: UrlParam }) => PageProps | Promise<PageProps>;
 
 export type PageType<UrlParam = {}, PageProps = {}> = ComponentType<FullPageProps<PageProps>> & {
   getInitialProps?: PageGetInitialProps<UrlParam, PageProps>;
