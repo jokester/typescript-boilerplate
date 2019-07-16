@@ -1,19 +1,23 @@
 import React from 'react';
-import { RouteLink } from '../routes';
+import Link from 'next/link';
+import { TypedRoutes } from '../typed-routes';
 
 export const ExampleLinks: React.FunctionComponent = props => {
-  const customId = Math.floor(Math.random() * 20);
+  const postId = Math.floor(Math.random() * 20);
   return (
     <div>
-      <RouteLink route="index">
+      <Link href={TypedRoutes.index}>
         <button>index page</button>
-      </RouteLink>
-      <RouteLink route="about">
+      </Link>
+      <Link href={TypedRoutes.about}>
         <button>about page</button>
-      </RouteLink>
-      <RouteLink route="show" params={{ customId }}>
-        <button>show page with customId=random()</button>
-      </RouteLink>
+      </Link>
+      <Link href={TypedRoutes.posts.index}>
+        <button>post index</button>
+      </Link>
+      <Link href={TypedRoutes.posts.show({ postId })}>
+        <button>post show (postId={postId})</button>
+      </Link>
     </div>
   );
 };

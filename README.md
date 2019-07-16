@@ -17,12 +17,11 @@ Browser:
 Browser + Web Server:
 
 - [web-nextjs](web-nextjs/)
-    - based on [next-typescript](https://github.com/zeit/next-plugins/tree/master/packages/next-typescript)
+    - based on next.js 9 and [next-typescript](https://github.com/zeit/next-plugins/tree/master/packages/next-typescript)
     - with [next-sass](https://github.com/zeit/next-plugins/tree/master/packages/next-sass) to load sass
     - with [next-optimized-images](https://www.npmjs.com/package/next-optimized-images) to load and optimize images
-    - with (somehow opinionated) dynamic routing from [next-routes](https://github.com/fridays/next-routes)
-    - with a simplest stateless [server.js](web-nextjs/server.js) to do SSR with dynamic route
-        - currently I am not writing server-only code in ts. Ideas/PRs welcome if you need such feature.
+    - with (opinionated) static typed dynamic routing [example](src/typed-routes.ts)
+    - not including a custom server
 
 <!-- - [web-express-react](web-express-react/) -->
 

@@ -1,6 +1,5 @@
 import { PreJson } from '../src/dummy/pre-json';
 import { PageType } from '../src/next-types';
-import { ExampleLinks } from '../src/dummy/example-links';
 
 /**
  * URL params from route (path) and query
@@ -20,8 +19,7 @@ interface PageProps {
 const UnnamedPage: PageType<UrlParam, PageProps> = props => {
   return (
     <>
-      <ExampleLinks />
-      <h2>AboutPage in {__filename}</h2>
+      <h2>UnnamedPage in {__filename}</h2>
       <PreJson value={props} />
     </>
   );

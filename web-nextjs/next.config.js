@@ -4,7 +4,6 @@ const webpack = require('webpack');
 const withSourceMap = require('@zeit/next-source-maps');
 const sass = require('@zeit/next-sass');
 const optimizedImages = require('next-optimized-images');
-const withTypescript = require('@zeit/next-typescript');
 const withBundleAnalyzer = require('@zeit/next-bundle-analyzer');
 const withTM = require('next-transpile-modules');
 
@@ -55,7 +54,6 @@ module.exports = withPlugins(
   [
     [sass],
     [optimizedImages, { optimizeImages: false }],
-    [withTypescript],
     [withBundleAnalyzer],
     // [withSourceMap],  // this does not work
     [withTM, { transpileModules: ['lodash-es'] }],

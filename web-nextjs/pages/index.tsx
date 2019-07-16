@@ -1,19 +1,17 @@
 import React from 'react';
 import { ExampleLinks } from '../src/dummy/example-links';
-import { BasePageProps, PageGetInitialProps } from '../src/next-types';
 import { PreJson } from '../src/dummy/pre-json';
+import { PageType } from '../src/next-types';
 
-export default class IndexPage extends React.Component<BasePageProps> {
-  static getInitialProps: PageGetInitialProps = async ctx => {
-    return {};
-  };
+const IndexPage: PageType = props => {
+  return (
+    <>
+      <ExampleLinks />
+      <PreJson value={props} />
+    </>
+  );
+};
 
-  render() {
-    return (
-      <>
-        <ExampleLinks />
-        <PreJson value={this.props} />
-      </>
-    );
-  }
-}
+IndexPage.getInitialProps = async ctx => ({});
+
+export default IndexPage;

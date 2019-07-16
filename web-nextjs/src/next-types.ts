@@ -1,30 +1,17 @@
-import * as NextApp from 'next/app';
-import { DefaultQuery } from 'next-server/router';
+import { ComponentType, ClassicComponent, FunctionComponent } from 'react';
+import { NextPageContext } from 'next';
 
-type UrlParam = DefaultQuery;
+type FullPageProps<PerPageProps> = PerPageProps & {
+  // injected by getInitialProps @ _app.tsx
+  route: Pick<NextPageContext, 'pathname' | 'query' | 'asPath'>;
+};
 
-export interface BaseAppProps extends NextApp.AppProps<UrlParam>, NextApp.DefaultAppIProps {}
+type PageGetInitialProps<UrlParam = {}, PageProps = {}> = (ctx: NextPageContext & { query: UrlParam }) => PageProps | Promise<PageProps>;
 
-/**
- * @typedef RouteParam parameters in path (extracted by next-routes) and in query
- */
-export interface BasePageProps<RouteParam extends Record<string, string> = Record<string, string>> {
-  // provided by next-routes , and _app.getInitialProps
-  url: {
-    query: RouteParam;
-    pathname: string;
-    asName: string;
-  };
-}
+export type PageType<UrlParam = {}, PageProps = {}> = ComponentType<FullPageProps<PageProps>> & {
+  getInitialProps?: PageGetInitialProps<UrlParam, PageProps>;
+};
 
-export interface AppGetInitialProps<AppProps extends BaseAppProps> {
-  (appContext: NextApp.NextAppContext<UrlParam>): Promise<Pick<AppProps, Exclude<keyof AppProps, keyof NextApp.AppProps>>>;
-}
-
-export interface PageGetInitialProps<PageProps extends BasePageProps = BasePageProps> {
-  (ctx: NextApp.NextAppContext<UrlParam>['ctx']): Promise<Pick<PageProps, Exclude<keyof PageProps, keyof BasePageProps>>>;
-}
-
-export function inServer(ctx: NextApp.NextAppContext<UrlParam>['ctx']) {
-  return !!ctx.req;
-}
+// no need to distinguish
+// export type FunctionalPageType<UrlParam, P = {}, IP = P> = PageType<UrlParam, P | IP> & FunctionComponent<P | IP>;
+// export type ClassicPageType<UrlParam, P = {}, IP = P> = PageType<UrlParam, P | IP> & ClassicComponent<P | IP>;
