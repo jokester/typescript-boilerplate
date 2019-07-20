@@ -16,3 +16,5 @@ for d in node-lib web-nextjs browser-react browser-preact ; do
 done
 
 wait
+
+tail -n 20 TEST-*.log
