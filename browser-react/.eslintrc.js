@@ -14,14 +14,14 @@ module.exports =  {
     // Place to specify ESLint rules. Can be used to overwrite rules specified from the extended configs
     // e.g. "@typescript-eslint/explicit-function-return-type": "off",
     "@typescript-eslint/indent": ["warn", 2],
-    "@typescript-eslint/no-var-requires": false,
-    "@typescript-eslint/no-unused-vars": false,
-    "@typescript-eslint/explicit-member-accessibility": false,
-    "@typescript-eslint/no-non-null-assertion": false,
-    "@typescript-eslint/no-use-before-define": false,
-    "@typescript-eslint/no-empty-interface": false,
-    "@typescript-eslint/no-parameter-properties": false,
-    "@typescript-eslint/no-namespace": false,
+    "@typescript-eslint/no-var-requires": 2,
+    "@typescript-eslint/no-unused-vars": 0,
+    "@typescript-eslint/explicit-member-accessibility": 0,
+    "@typescript-eslint/no-non-null-assertion": 1,
+    "@typescript-eslint/no-use-before-define": 1,
+    "@typescript-eslint/no-empty-interface": 0,
+    "@typescript-eslint/no-parameter-properties": 1,
+    "@typescript-eslint/no-namespace": 1,
   },
   settings:  {
     react:  {
