@@ -3,10 +3,10 @@ jobs:
   build:
     working_directory: ~/typescript-boilerplate
     docker:
-      - image: circleci/node:6-stretch-browsers
+      - image: circleci/node:8-stretch-browsers
     steps:
       - checkout
       - run:
-          name: install dep
-          command: bash scripts/deps.sh
+          name: run smoking test
+          command: bash scripts/smoking-test.sh
 
