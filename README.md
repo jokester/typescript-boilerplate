@@ -9,21 +9,20 @@ All variants use `jest` / `ts-jest` for testing, and `eslint + prettier` for for
 Browser:
 
 - [browser-react](browser-react/)
-    - based on result of [create-react-app](#)
+    - based on result of [create-react-app](https://facebook.github.io/create-react-app/)
 - [browser-preact](browser-preact/)
-    - based on result of [create-react-app](#), but use preact instead of react
-- [mobile-react-native](mobile-react-native/)
+    - based on result of [create-react-app](https://facebook.github.io/create-react-app/), but use preact instead of react
 
 Browser + Web Server:
 
 - [web-nextjs](web-nextjs/)
     - based on next.js 9 and [next-typescript](https://github.com/zeit/next-plugins/tree/master/packages/next-typescript)
-    - with [next-sass](https://github.com/zeit/next-plugins/tree/master/packages/next-sass) to load sass
-    - with [next-optimized-images](https://www.npmjs.com/package/next-optimized-images) to load and optimize images
-    - with (opinionated) static typed dynamic routing [example](src/typed-routes.ts)
+    - containes configured plugins:
+        - [next-sass](https://github.com/zeit/next-plugins/tree/master/packages/next-sass)
+        - [next-optimized-images](https://www.npmjs.com/package/next-optimized-images)
+        - [next-source-maps](https://github.com/zeit/next-plugins/tree/master/packages/next-source-maps)
+    - contains a (opinionated) static typed dynamic routing, see [route definition](web-nextjs/src/typed-routes.ts) / [route consumer](web-nextjs/pages/posts/[postId].tsx)
     - not including a custom server
-
-<!-- - [web-express-react](web-express-react/) -->
 
 Node.js library / CLI:
 
@@ -32,4 +31,8 @@ Node.js library / CLI:
 Mobile:
 
 - [mobile-react-native](mobile-react-native/)
-    - not up-to-date. PRs welcome.
+    - not updated recently. PRs welcome.
+
+## LICENSE
+
+WTFPL
