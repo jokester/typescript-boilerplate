@@ -20,7 +20,9 @@ Browser + Web Server:
     - containes configured plugins:
         - [next-sass](https://github.com/zeit/next-plugins/tree/master/packages/next-sass)
         - [next-optimized-images](https://www.npmjs.com/package/next-optimized-images)
+        - [next-bundle-analyzer](https://github.com/zeit/next-plugins/tree/master/packages/next-bundle-analyzer)
         - [next-source-maps](https://github.com/zeit/next-plugins/tree/master/packages/next-source-maps)
+        - [next-transpile-modules](https://github.com/martpie/next-transpile-modules)
     - contains a (opinionated) static typed dynamic routing, see [route definition](web-nextjs/src/typed-routes.ts) / [route consumer](web-nextjs/pages/posts/[postId].tsx)
     - not including a custom server
 
