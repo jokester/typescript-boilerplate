@@ -16,7 +16,6 @@ const PostsShowPage: PageType<UrlParam, PageProps> = props => (
     <pre>{__filename}</pre>
     <ExampleLinks />
     <PreJson value={props} />
-    <PreJson value={props.route} />
     <h1>title: {props.postId}</h1>
     <code>{props.postContent}</code>
   </div>

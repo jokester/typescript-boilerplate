@@ -12,6 +12,6 @@ const IndexPage: PageType = props => {
   );
 };
 
-IndexPage.getInitialProps = async ctx => ({});
+// IndexPage.getInitialProps = async ctx => ({});
 
 export default IndexPage;

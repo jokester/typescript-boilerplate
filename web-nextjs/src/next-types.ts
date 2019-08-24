@@ -2,7 +2,7 @@ import { ComponentType, ClassicComponent, FunctionComponent } from 'react';
 import { NextPageContext } from 'next';
 
 type FullPageProps<PerPageProps> = PerPageProps & {
-  // injected by getInitialProps @ _app.tsx
+  // injected by _app.tsx
   route: Pick<NextPageContext, 'pathname' | 'query' | 'asPath'>;
 };
 
