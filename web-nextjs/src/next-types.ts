@@ -1,14 +1,14 @@
-import { ComponentType, ClassicComponent, FunctionComponent } from 'react';
+import { ComponentType } from 'react';
 import { NextPageContext } from 'next';
 
-type FullPageProps<PerPageProps> = PerPageProps & {
-  // injected by getInitialProps @ _app.tsx
-  route: Pick<NextPageContext, 'pathname' | 'query' | 'asPath'>;
+type FullPageProps<UrlParam, PerPageProps> = PerPageProps & {
+  // injected by _app.tsx
+  route: Pick<NextPageContext, 'pathname' | 'asPath'> & { query: UrlParam & Record<string, string> };
 };
 
 type PageGetInitialProps<UrlParam = {}, PageProps = {}> = (ctx: NextPageContext & { query: UrlParam }) => PageProps | Promise<PageProps>;
 
-export type PageType<UrlParam = {}, PageProps = {}> = ComponentType<FullPageProps<PageProps>> & {
+export type PageType<UrlParam = {}, PageProps = {}> = ComponentType<FullPageProps<UrlParam, PageProps>> & {
   getInitialProps?: PageGetInitialProps<UrlParam, PageProps>;
 };
 

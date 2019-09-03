@@ -11,12 +11,14 @@
     "start": "NODE_ENV=production next start",
     "test": "jest",
     "test:coverage": "jest --coverage",
+    "typecheck": "tsc --watch --noEmit",
     "lint": "    eslint '**/*.@(ts|js|tsx|jsx)'",
     "lint:fix": "eslint '**/*.@(ts|js|tsx|jsx)' --fix"
   },
   "dependencies": {
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
+    "reset-css": "^4.0.1",
     "tslib": "^1.10.0"
   },
   "devDependencies": {
@@ -32,11 +34,12 @@
     "@zeit/next-sass": "^1.0.1",
     "@zeit/next-source-maps": "^0.0.3",
     "@zeit/next-typescript": "^1.1.1",
+    "autoprefixer": "^9.6.1",
     "eslint": "6.0.1",
     "eslint-config-prettier": "^6.0.0",
     "eslint-plugin-prettier": "^3.1.0",
     "jest": "^24",
-    "next": "^9.0.0",
+    "next": "^9.0.5",
     "next-compose-plugins": "^2.2.0",
     "next-optimized-images": "^2.5.3",
     "next-transpile-modules": "^2.3.1",

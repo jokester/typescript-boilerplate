@@ -8,7 +8,7 @@ export const TypedRoutes = {
   about: '/about',
   posts: {
     index: '/posts',
-    show: ({ postId }: { postId: number | string }) => `/posts/${postId}`,
+    show: ({ postId }: { postId: number | string }) => `/posts/${postId}?timestamp=${Date.now()}`,
   },
 } as const;
 
