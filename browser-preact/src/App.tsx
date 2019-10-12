@@ -1,4 +1,4 @@
-import React, { Component } from 'preact-compat';
+import React, { Component } from 'preact/compat';
 import logo from './logo.svg';
 import './App.scss';
 

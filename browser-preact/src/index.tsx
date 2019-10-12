@@ -1,5 +1,5 @@
-import React from 'preact-compat';
-import ReactDOM from 'preact-compat';
+import React from 'preact/compat';
+import ReactDOM from 'preact/compat';
 import './index.scss';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
