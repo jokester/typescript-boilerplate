@@ -13,7 +13,7 @@ module.exports = {
   globals: {
     'ts-jest': {
       tsConfig: {
-        isolatedModules: false, // to warkaround 'Cannot compile namespaces when the '--isolatedModules' flag is provided' error
+        jsx: 'react',
       },
     },
   },

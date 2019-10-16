@@ -8,31 +8,30 @@
     "build": "react-scripts build",
     "analyze": "react-scripts build && source-map-explorer 'build/static/js/*.js'",
     "test": "CI=true react-scripts test",
-    "test:coverage": "react-scripts test --env=jsdom --coverage",
+    "test:coverage": "react-scripts test --env=jsdom --coverage --watchAll=false --coverageReporters=json --coverageReporters=lcov --coverageReporters=text --coverageReporters=html",
     "eject": "react-scripts eject",
     "lint": "    eslint '**/*.@(ts|js|tsx|jsx)'",
     "lint:fix": "eslint '**/*.@(ts|js|tsx|jsx)' --fix"
   },
   "dependencies": {
-    "preact": "^8.4.2",
-    "preact-compat": "^3.18.5",
+    "preact": "^10.0.0",
     "tslib": "^1.10.0"
   },
   "devDependencies": {
     "@types/jest": "^24",
     "@types/node": "<11",
-    "@typescript-eslint/eslint-plugin": "^1.12.0",
-    "@typescript-eslint/parser": "^1.12.0",
-    "eslint": "6.0.1",
-    "eslint-config-prettier": "^6.0.0",
-    "eslint-plugin-prettier": "^3.1.0",
+    "@typescript-eslint/eslint-plugin": "^2.3.3",
+    "@typescript-eslint/parser": "^2.3.3",
+    "eslint": "6.5.1",
+    "eslint-config-prettier": "^6.4.0",
+    "eslint-plugin-prettier": "^3.1.1",
     "jest": "^24",
     "node-sass": "^4.12.0",
     "prettier": "^1.18.2",
-    "react-scripts": "3.0.1",
-    "source-map-explorer": "^2.0.1",
+    "react-scripts": "3.2.0",
+    "source-map-explorer": "^2.1.0",
     "ts-jest": "^24",
-    "typescript": "^3.5.3"
+    "typescript": "^3.6.4"
   },
   "browserslist": [
     ">0.2%",
