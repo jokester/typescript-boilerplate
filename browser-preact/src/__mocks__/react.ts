@@ -1,8 +1,3 @@
-// @ts-ignore
-const ReactMock = {
-  forwardRef: nop,
-};
-
-function nop() {}
+import ReactMock from 'preact/compat';
 
 module.exports = ReactMock;
