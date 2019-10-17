@@ -12,7 +12,8 @@ ensure-it-works () {
 
 for d in node-lib web-nextjs browser-react browser-preact ; do
   echo "testing in '$d' . see 'TEST-$d.log' for result"
-  ensure-it-works $d &> "TEST-$d.log" &
+  ensure-it-works $d &> "TEST-$d.log"
+  wait
 done
 
 wait
