@@ -11,7 +11,8 @@
     "start": "NODE_ENV=production next start",
     "test": "jest",
     "test:coverage": "jest --coverage",
-    "typecheck": "tsc --watch --noEmit",
+    "typecheck": "tsc --noEmit",
+    "typecheck:watch": "tsc --watch --noEmit",
     "lint": "    eslint '**/*.@(ts|js|tsx|jsx)'",
     "lint:fix": "eslint '**/*.@(ts|js|tsx|jsx)' --fix"
   },

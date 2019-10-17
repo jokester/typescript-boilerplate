@@ -13,5 +13,6 @@ vimdiff */.eslintrc.js
 
 vimdiff */.prettierrc.js
 vimdiff */jest.config.js
+vimdiff */.browserslistrc
 
 
