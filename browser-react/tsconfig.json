@@ -1,48 +1,48 @@
 {
-   "exclude" : [
-      "node_modules",
-      "build",
-      "scripts",
-      "coverage",
-      "__test__",
-      "bin",
-      "jest.config.js",
-      "acceptance-tests",
-      "webpack",
-      "jest",
-      "src/setupTests.ts"
-   ],
-   "compilerOptions" : {
-      "strict" : true,
-      "outDir" : "build/dist",
-      "jsx" : "preserve",
-      "forceConsistentCasingInFileNames" : true,
-      "noImplicitAny" : true,
-      "lib" : [
-         "es6",
-         "dom"
-      ],
-      "moduleResolution" : "node",
-      "noUnusedLocals" : false,
-      "noImplicitThis" : true,
-      "noImplicitReturns" : true,
-      "sourceMap" : true,
-      "target" : "es5",
-      "noEmit" : true,
-      "module" : "esnext",
-      "resolveJsonModule" : true,
-      "esModuleInterop" : true,
-      "skipLibCheck" : false,
-      "isolatedModules" : true,
-      "strictNullChecks" : true,
-      "allowJs" : true,
-      "suppressImplicitAnyIndexErrors" : true,
-      "allowSyntheticDefaultImports" : true,
-      "rootDir" : "src",
-      "importHelpers" : true
-   },
-   "include" : [
-      "src"
-   ],
-   "__comment" : "this file must be pure json"
+  "compilerOptions": {
+    "allowJs": true,
+    "allowSyntheticDefaultImports": true,
+    "alwaysStrict": true,
+    "checkJs": true,
+    "emitDecoratorMetadata": true,
+    "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "forceConsistentCasingInFileNames": true,
+    "importHelpers": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "module": "esnext",
+    "moduleResolution": "node",
+    "noEmit": true,
+    "noImplicitReturns": true,
+    "noUnusedLocals": false,
+    "outDir": "build/dist",
+    "resolveJsonModule": true,
+    "rootDir": "src",
+    "skipLibCheck": false,
+    "sourceMap": true,
+    "strict": true,
+    "target": "esnext"
+  },
+  "exclude": [
+    "node_modules",
+    "build",
+    "scripts",
+    "coverage",
+    "__test__",
+    "bin",
+    "jest.config.js",
+    "acceptance-tests",
+    "webpack",
+    "jest",
+    "src/setupTests.ts"
+  ],
+  "include": [
+    "src"
+  ]
 }
