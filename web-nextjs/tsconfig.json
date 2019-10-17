@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "es6",
+    "target": "esnext",
     "module": "esnext",
     "allowJs": true,
     "checkJs": true,
@@ -20,21 +20,16 @@
     "noImplicitThis": false,
     "noImplicitReturns": true,
     "moduleResolution": "node",
-    "typeRoots": [
-      "vendor/types",
-      "node_modules/@types"
-    ],
     "esModuleInterop": true,
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
     "forceConsistentCasingInFileNames": true,
     "resolveJsonModule": true,
-    "isolatedModules": true
+    "isolatedModules": true,
+    "typeRoots": [
+      "vendor/types",
+      "node_modules/@types"
+    ]
   },
   "include": [
     "pages",
