@@ -9,6 +9,7 @@
     "experimentalDecorators": true,
     "forceConsistentCasingInFileNames": true,
     "importHelpers": true,
+    "isolatedModules": false,
     "jsx": "react",
     "module": "commonjs",
     "moduleResolution": "node",
