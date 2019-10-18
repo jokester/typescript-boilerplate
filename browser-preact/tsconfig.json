@@ -24,7 +24,7 @@
     "outDir": "build/dist",
     "resolveJsonModule": true,
     "rootDir": "src",
-    "skipLibCheck": false,
+    "skipLibCheck": true,
     "sourceMap": true,
     "strict": true,
     "target": "esnext"
@@ -39,8 +39,7 @@
     "jest.config.js",
     "acceptance-tests",
     "webpack",
-    "jest",
-    "src/setupTests.ts"
+    "jest"
   ],
   "include": [
     "src"
