@@ -18,7 +18,10 @@
     "build": "rm -rvf build && tsc",
     "local:install": "yarn build && yarn global add $PWD",
     "test": "jest",
+    "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
+    "typecheck": "tsc --noEmit",
+    "typecheck:watch": "tsc --watch --noEmit",
     "lint": "    eslint '**/*.@(ts|js|tsx|jsx)' 'bin/*'",
     "lint:fix": "eslint '**/*.@(ts|js|tsx|jsx)' 'bin/*' --fix"
   },

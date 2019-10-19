@@ -6,7 +6,7 @@ cd $(dirname "$0")/..
 
 yarn-upgrade () {
   pushd $d
-  yarn && yarn upgrade
+  yarn --mutex network && yarn --mutex network upgrade
   grep "^@types/" yarn.lock # to see if we need to resolve manually
   popd
 }

@@ -1,23 +1,46 @@
 # typescript-boilerplate
 
-Boilerplates to write stuff in TypeScript.
+Boilerplates to write stuff in TypeScript, without bothered by configurations (until one really needs to).
 
-All variants use `jest` / `ts-jest` for testing, and `eslint + prettier` for formatting + lint.
+All the variants contains:
+
+- known-to-work configurations
+    - `tsconfig.json`
+    - `jest` / `ts-jest` for testing
+    - `eslint` for linting
+    - `prettier` for formatting
+- known-to-work package versions (`yarn.lock`)
+- useful npm scripts (see `package.json` in each variant for exact list)
+    - `npm dev`
+    - `npm typecheck` / `npm typecheck:watch`
+    - `npm lint` / `npm lint:fix`
+    - `npm test` / `npm test:watch` / `npm test:coverage`
+    - `npm build` / `npm analyze`
+
+## Configurations
+
+The principles behind current (opinionated) settings are:
+
+- Be as strict as possible in TypeScript
+- When there is a upstream (like in the case of `create-react-app`), follow it
+    - When some upstream configuration can and often needs to be overridden, make it explicit
+- Only add really useful and non-conflicting plugins / configurations (webpack HMR for example)
 
 ## Variants
 
 Browser:
 
 - [browser-react](browser-react/)
-    - based on result of [create-react-app](https://facebook.github.io/create-react-app/)
+    - based on [create-react-app / template-typescript](https://github.com/facebook/create-react-app/tree/master/packages/react-scripts/template-typescript)
+    - use scss instead of css
 - [browser-preact](browser-preact/)
-    - based on result of [create-react-app](https://facebook.github.io/create-react-app/), but use preact instead of react
+    - almost same as browser-react, except using [preact](https://github.com/preactjs/preact) instead of React.
 
 Browser + Web Server:
 
 - [web-nextjs](web-nextjs/)
-    - based on next.js 9 and [next-typescript](https://github.com/zeit/next-plugins/tree/master/packages/next-typescript)
-    - containes configured plugins:
+    - based on next.js 9.1 and its builtin ts support
+    - contains configured plugins:
         - [next-sass](https://github.com/zeit/next-plugins/tree/master/packages/next-sass)
         - [next-optimized-images](https://www.npmjs.com/package/next-optimized-images)
         - [next-bundle-analyzer](https://github.com/zeit/next-plugins/tree/master/packages/next-bundle-analyzer)
@@ -37,4 +60,4 @@ Mobile:
 
 ## LICENSE
 
-WTFPL
+WTFPL unless upstream states other licenses.

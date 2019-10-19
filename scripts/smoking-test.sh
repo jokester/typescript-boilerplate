@@ -6,7 +6,7 @@ cd $(dirname "$0")/..
 
 ensure-it-works () {
   pushd $d
-  yarn && yarn lint:fix && yarn build && yarn test && yarn test:coverage
+  yarn --mutex network && yarn lint:fix && yarn build && yarn test && yarn test:coverage
   popd
 }
 

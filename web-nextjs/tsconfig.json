@@ -1,45 +1,37 @@
 {
   "compilerOptions": {
-    "target": "es6",
-    "module": "esnext",
     "allowJs": true,
-    "checkJs": true,
-    "jsx": "preserve",
-    "outDir": "./build",
-    "noEmit": true,
-    "importHelpers": true,
-    "strict": true,
-    "noImplicitAny": true,
-    "strictNullChecks": true,
-    "strictFunctionTypes": true,
-    "strictPropertyInitialization": true,
-    "skipLibCheck": true,
+    "allowSyntheticDefaultImports": true,
     "alwaysStrict": true,
-    "noUnusedLocals": false,
-    "noUnusedParameters": false,
-    "noImplicitThis": false,
-    "noImplicitReturns": true,
-    "moduleResolution": "node",
-    "typeRoots": [
-      "vendor/types",
-      "node_modules/@types"
-    ],
+    "checkJs": true,
+    "emitDecoratorMetadata": true,
     "esModuleInterop": true,
     "experimentalDecorators": true,
-    "emitDecoratorMetadata": true,
+    "forceConsistentCasingInFileNames": true,
+    "importHelpers": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
     "lib": [
       "dom",
       "dom.iterable",
       "esnext"
     ],
-    "forceConsistentCasingInFileNames": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "noEmit": true,
+    "noImplicitReturns": true,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "outDir": "./build",
     "resolveJsonModule": true,
-    "isolatedModules": true
+    "skipLibCheck": true,
+    "strict": true,
+    "target": "esnext",
+    "typeRoots": [
+      "vendor/types",
+      "node_modules/@types"
+    ]
   },
-  "include": [
-    "pages",
-    "src"
-  ],
   "exclude": [
     "node_modules",
     "scripts",
@@ -48,5 +40,9 @@
     "__test__",
     "bin",
     "jest.config.js"
+  ],
+  "include": [
+    "pages",
+    "src"
   ]
 }
