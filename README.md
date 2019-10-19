@@ -1,10 +1,11 @@
 # typescript-boilerplate
 
-Boilerplates to write stuff in TypeScript, without bothered by tsc / webpack / jest / eslint configuration (until one really needs to).
+Boilerplates to write stuff in TypeScript, without bothered by configurations (until one really needs to).
 
 All the variants contains:
 
 - known-to-work configurations
+    - `tsconfig.json`
     - `jest` / `ts-jest` for testing
     - `eslint` for linting
     - `prettier` for formatting
