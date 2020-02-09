@@ -51,10 +51,11 @@ provider:
 # you can add packaging information here
 package:
   include:
-    - dist/**
+    - "dist/**"
   exclude:
     - "*"
-    - "node_modules/**/*"
+    - ".*"
+    - "node_modules/.bin/*"
     - "src/**/*"
 
 functions:
@@ -101,13 +102,13 @@ functions:
 #      variable2: value2
 
 # you can add CloudFormation resource templates here
-#resources:
-#  Resources:
-#    NewResource:
-#      Type: AWS::S3::Bucket
-#      Properties:
-#        BucketName: my-new-bucket
-#  Outputs:
-#     NewOutput:
-#       Description: "Description for the output"
-#       Value: "Some output value"
+resources:
+  Resources:
+    NewResource:
+      Type: AWS::S3::Bucket
+      Properties:
+        BucketName: try-lambda-upload-my-new-bucket # CHANGE ME
+        # Outputs:
+        # NewOutput:
+        # Description: "Description for the output"
+        # Value: "Some output value"

@@ -22,9 +22,11 @@
     "lint:fix": "eslint '**/*.@(ts|js|tsx|jsx)' 'bin/*' --fix"
   },
   "dependencies": {
+    "uuidv4": "^6.0.2"
   },
   "devDependencies": {
     "@types/aws-lambda": "^8.10.40",
+    "@types/aws-sdk": "^2.7.0",
     "@types/jest": "^24",
     "@types/node": "<11",
     "@typescript-eslint/eslint-plugin": "^2.3.3",

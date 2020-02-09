@@ -1,18 +1,25 @@
-import {APIGatewayEvent, APIGatewayEventRequestContext} from "aws-lambda"
+import { APIGatewayEvent, APIGatewayProxyResult } from 'aws-lambda';
+import { uuid } from 'uuidv4';
+import aws from 'aws-sdk';
 
-export const hello = async (event: APIGatewayEvent, context: unknown) => {
+export const hello = async (event: APIGatewayEvent, context: unknown): Promise<APIGatewayProxyResult> => {
+  const s3 = new aws.S3();
+  const bucketName = 'try-lambda-upload-my-new-bucket';
+
+  const objKey = uuid();
+
+  const uploadUrl = await s3.getSignedUrlPromise('putBucket', {
+    Bucket: bucketName,
+    Key: objKey,
+    Expires: 3600,
+    ContentType: 'application/json',
+  });
+
   return {
     statusCode: 200,
-    body: JSON.stringify(
-      {
-        message: 'Go Serverless v1.0! Your function executed successfully!',
-        input: event,
-      },
-      null,
-      2
-    ),
+    headers: {
+      'Access-Control-Allow-Origin': '*',
+    },
+    body: JSON.stringify({ uploadUrl }),
   };
-
-  // Use this code if you don't use the http event with the LAMBDA-PROXY integration
-  // return { message: 'Go Serverless v1.0! Your function executed successfully!', event };
 };
