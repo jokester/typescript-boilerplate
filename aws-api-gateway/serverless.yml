@@ -25,8 +25,8 @@ provider:
   runtime: nodejs12.x
 
 # you can overwrite defaults here
-#  stage: dev
-#  region: us-east-1
+  stage: dev
+  region: ap-northeast-1 # tokyo
 
 # you can add statements to the Lambda function's IAM Role here
 #  iamRoleStatements:
@@ -49,13 +49,13 @@ provider:
 #    variable1: value1
 
 # you can add packaging information here
-#package:
-#  include:
-#    - include-me.js
-#    - include-me-dir/**
-#  exclude:
-#    - exclude-me.js
-#    - exclude-me-dir/**
+package:
+  include:
+    - dist/**
+  exclude:
+    - "*"
+    - "node_modules/**/*"
+    - "src/**/*"
 
 functions:
   hello:
