@@ -8,7 +8,7 @@ export const hello = async (event: APIGatewayEvent, context: unknown): Promise<A
 
   const objKey = uuid();
 
-  const uploadUrl = await s3.getSignedUrlPromise('putBucket', {
+  const uploadUrl = await s3.getSignedUrlPromise('putObject', {
     Bucket: bucketName,
     Key: objKey,
     Expires: 3600,
