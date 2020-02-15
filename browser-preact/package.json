@@ -28,9 +28,9 @@
     "eslint-config-prettier": "^6.10.0",
     "eslint-plugin-prettier": "^3.1.2",
     "jest": "^25",
-    "node-sass": "^4.13.1",
     "prettier": "^1.19.1",
     "react-scripts": "3.4.0",
+    "sass": "^1.25.0",
     "source-map-explorer": "^2.2.2",
     "ts-jest": "^25",
     "typescript": "^3.7"
