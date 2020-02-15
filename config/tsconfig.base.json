@@ -1,4 +1,5 @@
 {
+  // defaults to be strict as possible
   "compilerOptions": {
     "allowJs": true,
     "allowSyntheticDefaultImports": true,
@@ -9,31 +10,15 @@
     "experimentalDecorators": true,
     "forceConsistentCasingInFileNames": true,
     "importHelpers": true,
-    "isolatedModules": false,
-    "jsx": "react",
-    "module": "esnext",
-    "moduleResolution": "node",
-    "noEmit": false,
     "noImplicitReturns": true,
     "noUnusedLocals": false,
     "noUnusedParameters": false,
-    "outDir": "./build",
     "resolveJsonModule": true,
-    "rootDir": "./src",
+    "skipLibCheck": false,
+    "sourceMap": true,
+    "strictBindCallApply": true,
     "strict": true,
-    "target": "esnext"
-  },
-  "exclude": [
-    "node_modules",
-    "scripts",
-    "coverage",
-    "build",
-    "__test__",
-    "bin",
-    "jest.config.js",
-    "acceptance-tests",
-    "webpack",
-    "jest",
-    "src/setupTests.ts"
-  ]
+    "pretty": true,
+    "noEmitOnError": true
+  }
 }

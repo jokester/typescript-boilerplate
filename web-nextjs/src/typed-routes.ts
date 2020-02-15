@@ -15,6 +15,4 @@ export const TypedRoutes = {
 /**
  * extract route (in URL path) param if there is one
  */
-export type TypedRouteParam<RouteNode> = RouteNode extends (param: infer Param) => string
-  ? (Param & ParsedUrlQuery)
-  : {};
+export type TypedRouteParam<RouteNode> = RouteNode extends (param: infer Param) => string ? Param & ParsedUrlQuery : {};
