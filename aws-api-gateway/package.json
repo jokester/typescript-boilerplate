@@ -22,24 +22,24 @@
     "lint:fix": "eslint '**/*.@(ts|js|tsx|jsx)' 'bin/*' --fix"
   },
   "dependencies": {
-    "uuidv4": "^6.0.2"
+    "uuidv4": "^6.0.2",
+    "tslib": "^1.10.0"
   },
   "devDependencies": {
     "@types/aws-lambda": "^8.10.40",
     "@types/aws-sdk": "^2.7.0",
-    "@types/jest": "^24",
-    "@types/node": "<11",
-    "@typescript-eslint/eslint-plugin": "^2.3.3",
-    "@typescript-eslint/parser": "^2.3.3",
-    "eslint": "6.5.1",
-    "eslint-config-prettier": "^6.4.0",
-    "eslint-plugin-prettier": "^3.1.1",
-    "jest": "^24",
-    "prettier": "^1.18.2",
+    "@types/jest": "^25",
+    "@types/node": "^12",
+    "@typescript-eslint/eslint-plugin": "^2.19.2",
+    "@typescript-eslint/parser": "^2.19.2",
+    "eslint": "6.8.0",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-plugin-prettier": "^3.1.2",
+    "jest": "^25",
+    "prettier": "^1.19.1",
     "serverless": "^1.63.0",
-    "ts-jest": "^24",
-    "ts-node": "^8.4.1",
-    "tslib": "^1.10.0",
-    "typescript": "^3.6.4"
+    "ts-jest": "^25",
+    "ts-node": "^8.6.2",
+    "typescript": "^3.7"
   }
 }
