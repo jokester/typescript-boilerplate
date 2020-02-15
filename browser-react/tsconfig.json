@@ -1,33 +1,19 @@
 {
+  "extends": "./tsconfig.base.json",
   "compilerOptions": {
-    "allowJs": true,
-    "allowSyntheticDefaultImports": true,
-    "alwaysStrict": true,
-    "checkJs": true,
-    "emitDecoratorMetadata": true,
-    "esModuleInterop": true,
-    "experimentalDecorators": true,
-    "forceConsistentCasingInFileNames": true,
-    "importHelpers": true,
     "isolatedModules": true,
     "jsx": "preserve",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "outDir": "build/dist",
+    "rootDir": "src",
+    "target": "esnext",
     "lib": [
       "dom",
       "dom.iterable",
       "esnext"
     ],
-    "module": "esnext",
-    "moduleResolution": "node",
-    "noEmit": true,
-    "noImplicitReturns": true,
-    "noUnusedLocals": false,
-    "outDir": "build/dist",
-    "resolveJsonModule": true,
-    "rootDir": "src",
-    "skipLibCheck": false,
-    "sourceMap": true,
-    "strict": true,
-    "target": "esnext"
+    "noEmit": true
   },
   "exclude": [
     "node_modules",
