@@ -15,5 +15,3 @@ vimdiff */.prettierrc.js
 vimdiff */jest.config.js
 vimdiff */.browserslistrc
 vimdiff */tsconfig.json
-
-
