@@ -1,0 +1,45 @@
+{
+  "name": "aws-api-gateway",
+  "version": "0.1.0",
+  "author": "Wang Guan <momocraft@gmail.com>",
+  "private": true,
+  "index": "build/lib/index",
+  "files": [
+    "bin",
+    "build",
+    "!build/__test__/"
+  ],
+  "scripts": {
+    "build": "rm -rvf build && tsc",
+    "deploy": "rm -rf build && tsc && sls deploy",
+    "local:install": "yarn build && yarn global add $PWD",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "typecheck": "tsc --noEmit",
+    "typecheck:watch": "tsc --watch --noEmit",
+    "lint": "    eslint '**/*.@(ts|js|tsx|jsx)' 'bin/*'",
+    "lint:fix": "eslint '**/*.@(ts|js|tsx|jsx)' 'bin/*' --fix"
+  },
+  "dependencies": {
+    "uuidv4": "^6.0.2"
+  },
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.40",
+    "@types/aws-sdk": "^2.7.0",
+    "@types/jest": "^24",
+    "@types/node": "<11",
+    "@typescript-eslint/eslint-plugin": "^2.3.3",
+    "@typescript-eslint/parser": "^2.3.3",
+    "eslint": "6.5.1",
+    "eslint-config-prettier": "^6.4.0",
+    "eslint-plugin-prettier": "^3.1.1",
+    "jest": "^24",
+    "prettier": "^1.18.2",
+    "serverless": "^1.63.0",
+    "ts-jest": "^24",
+    "ts-node": "^8.4.1",
+    "tslib": "^1.10.0",
+    "typescript": "^3.6.4"
+  }
+}
