@@ -5,8 +5,6 @@
     "jsx": "preserve",
     "module": "esnext",
     "moduleResolution": "node",
-    "outDir": "build/dist",
-    "rootDir": "src",
     "target": "esnext",
     "lib": [
       "dom",
