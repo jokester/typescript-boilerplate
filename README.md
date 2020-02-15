@@ -55,7 +55,7 @@ Node.js library / CLI:
 
 Mobile:
 
-- [mobile-react-native](mobile-react-native/)
+- [mobile-react-native](obsolete/mobile-react-native/)
     - not updated recently. PRs welcome.
 
 ## LICENSE
