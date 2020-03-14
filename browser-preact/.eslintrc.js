@@ -1,6 +1,6 @@
 module.exports =  {
   parser:  '@typescript-eslint/parser',
-  plugins: [ '@typescript-eslint' ],
+  plugins: [ '@typescript-eslint', 'react-hooks', ],
   extends:  [
     'react-app',
     // "eslint:recommended", // not enabling: it reports many TS idioms as error
@@ -27,6 +27,8 @@ module.exports =  {
     "@typescript-eslint/no-namespace": 0,
     "@typescript-eslint/no-empty-function": 0,
     "@typescript-eslint/no-explicit-any": 0,
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
   },
   settings:  {
     react:  {
