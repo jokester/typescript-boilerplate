@@ -2,7 +2,6 @@ const withPlugins = require('next-compose-plugins');
 
 const webpack = require('webpack');
 const withSourceMap = require('@zeit/next-source-maps');
-const sass = require('@zeit/next-sass');
 const optimizedImages = require('next-optimized-images');
 const withBundleAnalyzer = require('@zeit/next-bundle-analyzer');
 const withTM = require('next-transpile-modules');
@@ -46,7 +45,6 @@ const nextConf = {
 
 module.exports = withPlugins(
   [
-    [sass],
     [optimizedImages, { optimizeImages: false }],
     [withBundleAnalyzer],
     // [withSourceMap],  // this does not work
