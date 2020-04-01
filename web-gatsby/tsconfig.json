@@ -1,0 +1,33 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "noEmit": true,
+    "target": "esnext",
+    "typeRoots": [
+      "vendor/types",
+      "node_modules/@types"
+    ],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ]
+  },
+  "exclude": [
+    "node_modules",
+    "scripts",
+    "coverage",
+    "build",
+    "__test__",
+    "bin",
+    "jest.config.js"
+  ],
+  "include": [
+    "pages",
+    "src"
+  ]
+}
