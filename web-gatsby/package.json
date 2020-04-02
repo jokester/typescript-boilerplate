@@ -1,0 +1,47 @@
+{
+  "name": "web-gatsby",
+  "version": "0.1.0",
+  "description": "Gatsby example site demonstrating how to use TypeScript with Gatsby",
+  "private": "true",
+  "license": "WTFPL",
+  "scripts": {
+    "dev": "gatsby develop",
+    "build": "gatsby build",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "typecheck": "tsc --noEmit",
+    "typecheck:watch": "tsc --watch --noEmit",
+    "lint": "    eslint '**/*.@(ts|js|tsx|jsx)'",
+    "lint:fix": "eslint '**/*.@(ts|js|tsx|jsx)' --fix"
+  },
+  "dependencies": {
+    "gatsby": "^2.18.0",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0"
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "@babel/plugin-proposal-decorators": "^7.8.3",
+    "@types/jest": "^25",
+    "@types/node": "^12",
+    "@types/react": "^16.9.23",
+    "@types/react-dom": "^16.9.5",
+    "@typescript-eslint/eslint-plugin": "^2.24.0",
+    "@typescript-eslint/parser": "^2.24.0",
+    "autoprefixer": "^9.7.4",
+    "eslint": "6.8.0",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-plugin-prettier": "^3.1.2",
+    "eslint-plugin-react-hooks": "^2.5.0",
+    "gatsby-cli": "^2.11.4",
+    "gatsby-plugin-postcss": "^2.2.1",
+    "gatsby-plugin-sass": "^2.2.1",
+    "gatsby-plugin-typescript": "^2.1.18",
+    "jest": "^25",
+    "prettier": "^1.19.1",
+    "sass": "^1.26.3",
+    "ts-jest": "^25",
+    "typescript": "^3.7"
+  }
+}

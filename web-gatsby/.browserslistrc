@@ -1,0 +1,6 @@
+# ref: https://github.com/browserslist/browserslist#config-file
+# used by postcss
+> 0.2%
+not dead
+not ie <= 11
+not op_mini all
