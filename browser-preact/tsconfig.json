@@ -7,7 +7,6 @@
     "moduleResolution": "node",
     "skipLibCheck": true,
     "target": "esnext",
-    "lib": ["dom", "dom.iterable", "esnext"],
     "noEmit": true
   },
   "exclude": [
