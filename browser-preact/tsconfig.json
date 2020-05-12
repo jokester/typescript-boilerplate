@@ -7,7 +7,12 @@
     "moduleResolution": "node",
     "skipLibCheck": true,
     "target": "esnext",
-    "noEmit": true
+    "noEmit": true,
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ]
   },
   "exclude": [
     "node_modules",
@@ -22,5 +27,7 @@
     "jest",
     "src/setupTests.ts"
   ],
-  "include": ["src"]
+  "include": [
+    "src"
+  ]
 }

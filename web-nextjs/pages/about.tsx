@@ -1,6 +1,7 @@
 import { PreJson } from '../src/dummy/pre-json';
 import { PageType } from '../src/next-types';
 import { ExampleLinks } from '../src/dummy/example-links';
+import * as React from 'react';
 
 /**
  * URL params from route (path) and query
@@ -17,7 +18,7 @@ interface PageProps {
   renderedBy: string;
 }
 
-const UnnamedPage: PageType<UrlParam, PageProps> = props => {
+const UnnamedPage: PageType<UrlParam, PageProps> = (props) => {
   return (
     <>
       <ExampleLinks />
@@ -27,7 +28,7 @@ const UnnamedPage: PageType<UrlParam, PageProps> = props => {
   );
 };
 
-UnnamedPage.getInitialProps = async ctx => ({
+UnnamedPage.getInitialProps = async (ctx) => ({
   renderedAt: Date.now(),
   renderedBy: ctx.req ? 'server' : 'browser',
 });

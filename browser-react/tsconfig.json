@@ -6,7 +6,12 @@
     "module": "esnext",
     "moduleResolution": "node",
     "target": "esnext",
-    "noEmit": true
+    "noEmit": true,
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ]
   },
   "exclude": [
     "node_modules",

@@ -1,3 +1,4 @@
+/* eslint @typescript-eslint/no-var-requires: 0 */
 const withPlugins = require('next-compose-plugins');
 
 const webpack = require('webpack');
@@ -20,20 +21,31 @@ const nextConf = {
     },
   },
 
+  env: {
+    // becomes process.env.SOME_CONSTANT : boolean
+    SOME_CONSTANT: 'SOME_CONSTANT',
+  },
+
+  devIndicators: {
+    autoPrerender: false,
+  },
+
   // see https://nextjs.org/docs/#customizing-webpack-config
   webpack(config, { buildId, dev, isServer }) {
     config.plugins.push(
       new webpack.DefinePlugin({
+        // becomes process.env.NEXT_DEV : boolean
         'process.env.NEXT_DEV': JSON.stringify(!!dev),
         'process.env.NEXT_SERVER': JSON.stringify(!!isServer),
       }),
     );
 
-    config.plugins = config.plugins.map(p => {
+    config.plugins = config.plugins.map((p) => {
       return p;
     });
 
     config.node = {
+      // allow use of __file / __dirname
       ...config.node,
       __filename: true,
     };
@@ -42,13 +54,12 @@ const nextConf = {
   },
 };
 
-
 module.exports = withPlugins(
   [
     [optimizedImages, { optimizeImages: false }],
     [withBundleAnalyzer],
     // [withSourceMap],  // this does not work
-    [withTM, { transpileModules: ['lodash-es'] }],
+    withTM([/* ES modules used in server code */ 'lodash-es']),
   ],
   withSourceMap(nextConf),
 );
