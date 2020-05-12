@@ -1,4 +1,3 @@
-build
-vendor
-out
-*.js
+/public
+/.cache
+

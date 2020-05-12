@@ -14,6 +14,10 @@ export default class extends App {
       route: { pathname, asPath, query },
     };
 
-    return <Component {...pageProps} />;
+    return (
+      <React.StrictMode>
+        <Component {...pageProps} />
+      </React.StrictMode>
+    );
   }
 }

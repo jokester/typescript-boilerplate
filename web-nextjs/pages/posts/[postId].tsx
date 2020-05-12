@@ -11,7 +11,7 @@ interface PageProps {
   postContent: string;
 }
 
-const PostsShowPage: PageType<UrlParam, PageProps> = props => (
+const PostsShowPage: PageType<UrlParam, PageProps> = (props) => (
   <div>
     <pre>{__filename}</pre>
     <ExampleLinks />
@@ -23,7 +23,7 @@ const PostsShowPage: PageType<UrlParam, PageProps> = props => (
   </div>
 );
 
-PostsShowPage.getInitialProps = async ctx => {
+PostsShowPage.getInitialProps = async (ctx) => {
   return { postId: ctx.query.postId, postContent: `content for pageId=${ctx.query.postId}` };
 };
 
