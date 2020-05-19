@@ -48,6 +48,6 @@
     "prettier": "^2.0.5",
     "sass": "^1.26.5",
     "ts-jest": "^25",
-    "typescript": "^3.8"
+    "typescript": "^3.9"
   }
 }
