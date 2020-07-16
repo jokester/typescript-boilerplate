@@ -18,36 +18,41 @@
     "lint:fix": "eslint '**/*.@(ts|js|tsx|jsx)' --fix"
   },
   "dependencies": {
-    "next": "^9.4.0",
+    "next": "^9.4.4",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "tslib": "^1.11.2"
+    "tslib": "^2.0.0"
   },
   "devDependencies": {
-    "@babel/plugin-proposal-class-properties": "^7.8.3",
-    "@babel/plugin-proposal-decorators": "^7.8.3",
-    "@types/jest": "^25",
+    "@babel/plugin-proposal-class-properties": "^7.10.4",
+    "@babel/plugin-proposal-decorators": "^7.10.4",
+    "@types/jest": "^26",
     "@types/node": "^12",
-    "@types/react": "^16.9.35",
+    "@types/react": "^16.9.41",
     "@types/react-dom": "^16.9.8",
-    "@typescript-eslint/eslint-plugin": "^2.32.0",
-    "@typescript-eslint/parser": "^2.32.0",
+    "@types/webpack": "^4.41.21",
+    "@typescript-eslint/eslint-plugin": "^3.6.0",
+    "@typescript-eslint/parser": "^3.6.0",
     "@zeit/next-bundle-analyzer": "^0.1.2",
     "@zeit/next-source-maps": "^0.0.3",
-    "autoprefixer": "^9.7.6",
+    "autoprefixer": "^9.8.4",
     "babel-plugin-const-enum": "^1.0.1",
-    "eslint": "7.0.0",
+    "eslint": "7.4.0",
     "eslint-config-prettier": "^6.11.0",
-    "eslint-plugin-prettier": "^3.1.3",
-    "eslint-plugin-react": "^7.19.0",
-    "eslint-plugin-react-hooks": "^4.0.0",
-    "jest": "^25",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-react": "^7.20.3",
+    "eslint-plugin-react-hooks": "^4.0.6",
+    "jest": "^26",
     "next-compose-plugins": "^2.2.0",
-    "next-optimized-images": "^2.6.0",
+    "next-optimized-images": "^2.6.1",
     "next-transpile-modules": "^3.3.0",
     "prettier": "^2.0.5",
-    "sass": "^1.26.5",
-    "ts-jest": "^25",
-    "typescript": "^3.8"
+    "sass": "^1.26.10",
+    "ts-jest": "^26",
+    "typescript": "^3.9"
+  },
+  "resolutions": {
+    "@types/node": "12"
   }
 }
