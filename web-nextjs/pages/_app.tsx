@@ -9,7 +9,7 @@ export default class extends App {
     const { Component } = this.props;
 
     const { pathname, asPath, query } = this.props.router;
-    const pageProps: {} = {
+    const pageProps: Record<string, unknown> = {
       ...this.props.pageProps,
       route: { pathname, asPath, query },
     };

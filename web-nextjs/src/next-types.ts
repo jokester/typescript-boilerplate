@@ -6,11 +6,11 @@ type FullPageProps<UrlParam, PerPageProps> = PerPageProps & {
   route: Pick<NextPageContext, 'pathname' | 'asPath'> & { query: UrlParam & Record<string, string> };
 };
 
-type PageGetInitialProps<UrlParam = {}, PageProps = {}> = (
+type PageGetInitialProps<UrlParam = unknown, PageProps = unknown> = (
   ctx: NextPageContext & { query: UrlParam },
 ) => PageProps | Promise<PageProps>;
 
-export type PageType<UrlParam = {}, PageProps = {}> = ComponentType<FullPageProps<UrlParam, PageProps>> & {
+export type PageType<UrlParam = unknown, PageProps = unknown> = ComponentType<FullPageProps<UrlParam, PageProps>> & {
   getInitialProps?: PageGetInitialProps<UrlParam, PageProps>;
 };
 
