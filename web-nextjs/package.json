@@ -15,7 +15,9 @@
     "typecheck": "tsc --noEmit",
     "typecheck:watch": "tsc --watch --noEmit",
     "lint": "    eslint '**/*.@(ts|js|tsx|jsx)'",
-    "lint:fix": "eslint '**/*.@(ts|js|tsx|jsx)' --fix"
+    "lint:fix": "eslint '**/*.@(ts|js|tsx|jsx)' --fix",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "dependencies": {
     "next": "^9.4.4",
@@ -26,6 +28,10 @@
   "devDependencies": {
     "@babel/plugin-proposal-class-properties": "^7.10.4",
     "@babel/plugin-proposal-decorators": "^7.10.4",
+    "@storybook/addon-actions": "^5.3.19",
+    "@storybook/addon-links": "^5.3.19",
+    "@storybook/addons": "^5.3.19",
+    "@storybook/react": "^5.3.19",
     "@types/jest": "^26",
     "@types/node": "^12",
     "@types/react": "^16.9.41",
@@ -36,6 +42,7 @@
     "@zeit/next-bundle-analyzer": "^0.1.2",
     "@zeit/next-source-maps": "^0.0.3",
     "autoprefixer": "^9.8.4",
+    "babel-loader": "^8.1.0",
     "babel-plugin-const-enum": "^1.0.1",
     "eslint": "7.4.0",
     "eslint-config-prettier": "^6.11.0",
@@ -50,6 +57,7 @@
     "prettier": "^2.0.5",
     "sass": "^1.26.10",
     "ts-jest": "^26",
+    "ts-loader": "^8.0.1",
     "typescript": "^3.9"
   },
   "resolutions": {
