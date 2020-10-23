@@ -1,9 +1,8 @@
 import React from 'preact/compat';
-import { FunctionalComponent } from 'preact';
 import logo from './logo.svg';
 import './App.scss';
 
-const App: FunctionalComponent = () => {
+const App: React.FC = () => {
   return (
     <div className="App">
       <header className="App-header">

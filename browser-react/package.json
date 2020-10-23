@@ -16,28 +16,32 @@
     "lint:fix": "eslint '**/*.@(ts|js|tsx|jsx)' --fix"
   },
   "dependencies": {
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "tslib": "^1.11.2"
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "tslib": "^2.0.3"
   },
   "devDependencies": {
-    "@types/jest": "^25",
+    "@types/jest": "^26",
     "@types/node": "^12",
-    "@types/react": "^16.9.35",
+    "@types/react": "^16.9.53",
     "@types/react-dom": "^16.9.8",
-    "@typescript-eslint/eslint-plugin": "^2.32.0",
-    "@typescript-eslint/parser": "^2.32.0",
-    "eslint": "7.0.0",
-    "eslint-config-prettier": "^6.11.0",
-    "eslint-plugin-prettier": "^3.1.3",
-    "eslint-plugin-react": "^7.19.0",
-    "eslint-plugin-react-hooks": "^4.0.0",
-    "jest": "^25",
-    "prettier": "^2.0.5",
-    "react-scripts": "3.4.1",
-    "sass": "^1.26.5",
-    "source-map-explorer": "^2.4.2",
-    "ts-jest": "^25",
-    "typescript": "^3.8"
+    "@typescript-eslint/eslint-plugin": "^4.5.0",
+    "@typescript-eslint/parser": "^4.5.0",
+    "eslint": "7.11.0",
+    "eslint-config-prettier": "^6.14.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-react": "^7.21.5",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "jest": "^26",
+    "prettier": "^2.1.2",
+    "react-scripts": "3.4.4",
+    "sass": "^1.27.0",
+    "source-map-explorer": "^2.5.0",
+    "ts-jest": "^26",
+    "typescript": "^4.0"
+  },
+  "resolutions": {
+    "@types/node": "^12",
+    "@jest/types": "^26"
   }
 }
