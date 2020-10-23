@@ -44,5 +44,4 @@
     "@types/node": "^12",
     "@jest/types": "^26"
   }
-
 }
