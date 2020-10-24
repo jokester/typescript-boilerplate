@@ -38,7 +38,7 @@ Browser only: [browser-react](browser-react/)
 
 Browser + Web Server: [web-nextjs](web-nextjs/)
 
-- based on next.js 9.5 and its builtin ts support
+- based on Next.js 9.5 and its builtin ts support
 - contains configured plugins:
     - [next-sass](https://github.com/zeit/next-plugins/tree/master/packages/next-sass)
     - [next-optimized-images](https://www.npmjs.com/package/next-optimized-images)

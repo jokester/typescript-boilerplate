@@ -10,7 +10,7 @@ ensure-it-works () {
   popd
 }
 
-for d in node-lib web-nextjs web-gatsby browser-react browser-preact ; do
+for d in node-lib web-nextjs web-gatsby browser-react ; do
   echo "testing in '$d' . see 'TEST-$d.log' for result"
   ensure-it-works $d &> "TEST-$d.log" &
 done
