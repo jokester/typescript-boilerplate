@@ -1,6 +1,6 @@
 # typescript-boilerplate
 
-Boilerplates to write stuff in TypeScript, without bothered by configurations (until one really needs to).
+Boilerplates to start making stuff in TypeScript, without bothered by configurations (until one really needs to).
 
 All the variants contains:
 
@@ -28,36 +28,40 @@ The principles behind current (opinionated) settings are:
 
 ## Variants
 
-Browser:
+Browser only: [browser-react](browser-react/)
 
-- [browser-react](browser-react/)
-    - based on [create-react-app / template-typescript](https://github.com/facebook/create-react-app/tree/master/packages/react-scripts/template-typescript)
-    - use scss instead of css
-- [browser-preact](browser-preact/)
-    - almost same as browser-react, except using [preact](https://github.com/preactjs/preact) instead of React.
+- based on [create-react-app / template-typescript](https://github.com/facebook/create-react-app/tree/master/packages/react-scripts/template-typescript)
+- use scss instead of css
+- a switch to use [preact](https://github.com/preactjs/preact) instead of React.
 
-Browser + Web Server:
+---
 
-- [web-nextjs](web-nextjs/)
-    - based on next.js 9.1 and its builtin ts support
-    - contains configured plugins:
-        - [next-sass](https://github.com/zeit/next-plugins/tree/master/packages/next-sass)
-        - [next-optimized-images](https://www.npmjs.com/package/next-optimized-images)
-        - [next-bundle-analyzer](https://github.com/zeit/next-plugins/tree/master/packages/next-bundle-analyzer)
-        - [next-source-maps](https://github.com/zeit/next-plugins/tree/master/packages/next-source-maps)
-        - [next-transpile-modules](https://github.com/martpie/next-transpile-modules)
-    - contains a (opinionated) static typed dynamic routing, see [route definition](web-nextjs/src/typed-routes.ts) / [route consumer](web-nextjs/pages/posts/[postId].tsx)
-    - not including a custom server
+Browser + Web Server: [web-nextjs](web-nextjs/)
 
-Node.js library / CLI:
+- based on Next.js 9.5 and its builtin ts support
+- contains configured plugins:
+    - [next-sass](https://github.com/zeit/next-plugins/tree/master/packages/next-sass)
+    - [next-optimized-images](https://www.npmjs.com/package/next-optimized-images)
+    - [next-bundle-analyzer](https://github.com/zeit/next-plugins/tree/master/packages/next-bundle-analyzer)
+    - [next-source-maps](https://github.com/zeit/next-plugins/tree/master/packages/next-source-maps)
+    - [next-transpile-modules](https://github.com/martpie/next-transpile-modules)
+- contains a (opinionated) static typed dynamic routing, see [route definition](web-nextjs/src/typed-routes.ts) / [route consumer](web-nextjs/pages/posts/[postId].tsx)
+- not including a custom server
 
-- [node-lib](node-lib/)
+---
 
-Mobile:
+Node.js library / CLI  [node-lib](node-lib/)
 
-- [mobile-react-native](obsolete/mobile-react-native/)
-    - not updated recently. PRs welcome.
+- an empty npm package
+
+---
+
+(obsolete) Mobile / React Native: [mobile-react-native](obsolete/mobile-react-native/)
+
+- not updated recently. PRs welcome.
 
 ## LICENSE
 
-WTFPL unless upstream states other licenses.
+- work from upstream repositories follows their licenses
+- other contents are MIT licensed
+- other contents are WTFPL licensed too

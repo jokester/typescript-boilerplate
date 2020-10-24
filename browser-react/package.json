@@ -4,23 +4,26 @@
   "author": "Wang Guan <momocraft@gmail.com>",
   "private": true,
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "analyze": "react-scripts build && source-map-explorer 'build/static/js/*.js'",
-    "test": "CI=true react-scripts test",
-    "test:watch": "react-scripts test --watch",
-    "test:coverage": "CI=true react-scripts test --env=jsdom --coverage --watchAll=false --coverageReporters=json --coverageReporters=lcov --coverageReporters=text --coverageReporters=html",
+    "start": "craco start",
+    "build": "craco build",
+    "analyze": "craco build && source-map-explorer 'build/static/js/*.js'",
+    "test": "CI=true craco test",
+    "test:watch": "craco test --watch",
+    "test:coverage": "CI=true craco test --env=jsdom --coverage --watchAll=false --coverageReporters=json --coverageReporters=lcov --coverageReporters=text --coverageReporters=html",
     "typecheck": "tsc --noEmit",
     "typecheck:watch": "tsc --watch --noEmit",
     "lint": "    eslint '**/*.@(ts|js|tsx|jsx)'",
     "lint:fix": "eslint '**/*.@(ts|js|tsx|jsx)' --fix"
   },
   "dependencies": {
+    "preact": "^10.5.5",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "tslib": "^2.0.3"
   },
   "devDependencies": {
+    "@craco/craco": "^5.7.0",
+    "@testing-library/jest-dom": "^5.11.5",
     "@types/jest": "^26",
     "@types/node": "^12",
     "@types/react": "^16.9.53",
@@ -38,7 +41,8 @@
     "sass": "^1.27.0",
     "source-map-explorer": "^2.5.0",
     "ts-jest": "^26",
-    "typescript": "^4.0"
+    "typescript": "^4.0",
+    "web-vitals": "^0.2.4"
   },
   "resolutions": {
     "@types/node": "^12",
