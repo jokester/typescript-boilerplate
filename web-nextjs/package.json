@@ -33,8 +33,6 @@
     "@zeit/next-bundle-analyzer": "^0.1.2",
     "@zeit/next-source-maps": "^0.0.3",
     "autoprefixer": "^10",
-    "babel-loader": "^8.2.2",
-    "babel-plugin-const-enum": "^1.0.1",
     "eslint": "7.17.0",
     "eslint-config-prettier": "^7.1.0",
     "eslint-plugin-import": "^2.22.1",
