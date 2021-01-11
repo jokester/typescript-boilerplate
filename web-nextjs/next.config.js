@@ -59,7 +59,7 @@ module.exports = withPlugins(
     [optimizedImages, { optimizeImages: false }],
     [withBundleAnalyzer],
     // [withSourceMap],  // this does not work
-    withTM([/* ES modules used in server code */ 'lodash-es']),
+    withTM([/* ES modules used in server code */]),
   ],
   withSourceMap(nextConf),
 );
