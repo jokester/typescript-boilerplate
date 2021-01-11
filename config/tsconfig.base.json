@@ -19,6 +19,7 @@
     "strictBindCallApply": true,
     "strict": true,
     "pretty": true,
-    "noEmitOnError": true
+    "noEmitOnError": true,
+    "noFallthroughCasesInSwitch": false
   }
 }
