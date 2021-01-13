@@ -1,0 +1,146 @@
+openapi: 3.0.3
+info:
+  title: Todos
+  version: '1.0'
+paths:
+  /todos:
+    get:
+      operationId: getTodos
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Todo'
+        '404':
+          description: not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NotFound'
+    post:
+      operationId: postTodos
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/TodoCreateRequest'
+        required: true
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Todo'
+        '404':
+          description: not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NotFound'
+  /todos/{p1}:
+    post:
+      operationId: postTodosP1
+      parameters:
+      - name: p1
+        in: path
+        required: true
+        schema:
+          type: integer
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Todo'
+        '404':
+          description: not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NotFound'
+    delete:
+      operationId: deleteTodosP1
+      parameters:
+      - name: p1
+        in: path
+        required: true
+        schema:
+          type: integer
+      responses:
+        '200':
+          description: ''
+        '404':
+          description: not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NotFound'
+  /todos/todo/{p1}:
+    patch:
+      operationId: patchTodosTodoP1
+      parameters:
+      - name: p1
+        in: path
+        required: true
+        schema:
+          type: integer
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Todo'
+        required: true
+      responses:
+        '200':
+          description: ''
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Todo'
+        '404':
+          description: not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NotFound'
+components:
+  schemas:
+    NotFound:
+      required:
+      - what
+      type: object
+      properties:
+        what:
+          type: string
+    Todo:
+      required:
+      - id
+      - title
+      - desc
+      - finished
+      type: object
+      properties:
+        id:
+          type: integer
+        title:
+          type: string
+        desc:
+          type: string
+        finished:
+          type: boolean
+    TodoCreateRequest:
+      required:
+      - title
+      - desc
+      type: object
+      properties:
+        title:
+          type: string
+        desc:
+          type: string

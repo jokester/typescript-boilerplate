@@ -59,7 +59,7 @@ module.exports = withPlugins(
     [optimizedImages, { optimizeImages: false }],
     [withBundleAnalyzer],
     // [withSourceMap],  // this does not work
-    withTM([/* ES modules used in server code */]),
+    withTM([/* ES modules used in server code */ '@jokester/ts-commonutil']),
   ],
   withSourceMap(nextConf),
 );

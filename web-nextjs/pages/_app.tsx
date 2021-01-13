@@ -1,6 +1,7 @@
 import React from 'react';
 import App from 'next/app';
 import '../src/app.scss';
+import { ChakraProvider } from '@chakra-ui/react';
 
 export default class extends App {
   static getInitialProps = App.getInitialProps;
@@ -15,9 +16,11 @@ export default class extends App {
     };
 
     return (
-      <React.StrictMode>
-        <Component {...pageProps} />
-      </React.StrictMode>
+      <ChakraProvider>
+        <React.StrictMode>
+          <Component {...pageProps} />
+        </React.StrictMode>
+      </ChakraProvider>
     );
   }
 }

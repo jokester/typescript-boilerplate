@@ -1,19 +1,12 @@
-import React from 'react';
-import { ExampleLinks } from '../src/dummy/example-links';
-import { PreJson } from '../src/dummy/pre-json';
-import { PageType } from '../src/next-types';
-import { buildEnv, inServer, isDevBuild } from '../src/config/build-env';
+import React, { useState } from 'react';
+import { TodoList } from '../src/components/todo-list';
+import { Heading } from '@chakra-ui/react';
 
-const IndexPage: PageType = (props) => {
-  console.log('buildEnv', buildEnv, inServer, isDevBuild);
-  return (
-    <>
-      <ExampleLinks />
-      <PreJson value={props} />
-    </>
-  );
-};
+const TodoListPage: React.FC = () => (
+  <div>
+    <Heading as="h1">TODO</Heading>
+    <TodoList />
+  </div>
+);
 
-// IndexPage.getInitialProps = async ctx => ({});
-
-export default IndexPage;
+export default TodoListPage;

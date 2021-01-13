@@ -18,9 +18,16 @@
     "lint:fix": "eslint '**/*.@(ts|js|tsx|jsx)' --fix"
   },
   "dependencies": {
+    "@chakra-ui/react": "^1.1.4",
+    "@emotion/react": "^11.1.4",
+    "@emotion/styled": "^11.0.0",
+    "@jokester/ts-commonutil": "^0.2.3",
+    "framer-motion": "^3.2.1",
     "next": "^10.0.5",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "react-use": "^15.3.8",
+    "rxjs": "^6.6.3",
     "tslib": "^2.1.0"
   },
   "devDependencies": {
