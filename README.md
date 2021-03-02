@@ -38,14 +38,14 @@ Browser only: [browser-react](browser-react/)
 
 Browser + Web Server: [web-nextjs](web-nextjs/)
 
-- based on Next.js 9.5 and its builtin ts support
+- based on Next.js 10.5 and its builtin ts support
 - contains configured plugins:
-    - [next-sass](https://github.com/zeit/next-plugins/tree/master/packages/next-sass)
+    - [next-compose-plugins](https://github.com/cyrilwanner/next-compose-plugins)
     - [next-optimized-images](https://www.npmjs.com/package/next-optimized-images)
     - [next-bundle-analyzer](https://github.com/zeit/next-plugins/tree/master/packages/next-bundle-analyzer)
     - [next-source-maps](https://github.com/zeit/next-plugins/tree/master/packages/next-source-maps)
     - [next-transpile-modules](https://github.com/martpie/next-transpile-modules)
-- contains a (opinionated) static typed dynamic routing, see [route definition](web-nextjs/src/typed-routes.ts) / [route consumer](web-nextjs/pages/posts/[postId].tsx)
+- contains a (opinionated) static typed route definition, see [route definition](web-nextjs/src/typed-routes.ts) / [route consumer](web-nextjs/pages/posts/[postId].tsx)
 - not including a custom server
 
 ---

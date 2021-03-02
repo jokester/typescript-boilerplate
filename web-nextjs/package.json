@@ -19,6 +19,7 @@
   },
   "dependencies": {
     "next": "^10.0.5",
+    "next-compose-plugins": "^2.2.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "tslib": "^2.1.0"
@@ -40,15 +41,15 @@
     "eslint-plugin-react": "^7.22.0",
     "eslint-plugin-react-hooks": "^4.2.0",
     "jest": "^26",
-    "next-compose-plugins": "^2.2.1",
     "next-optimized-images": "^2.6.2",
     "next-transpile-modules": "^6.0.0",
     "prettier": "^2.2.1",
     "sass": "^1.32.2",
     "ts-jest": "^26",
-    "typescript": "^4.1"
+    "typescript": "^4.2"
   },
   "resolutions": {
-    "postcss": "^8"
+    "postcss": "^8",
+    "tslib": "^2"
   }
 }
