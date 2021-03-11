@@ -6,13 +6,7 @@ export default class extends App {
   static getInitialProps = App.getInitialProps;
 
   render() {
-    const { Component } = this.props;
-
-    const { pathname, asPath, query } = this.props.router;
-    const pageProps: Record<string, unknown> = {
-      ...this.props.pageProps,
-      route: { pathname, asPath, query },
-    };
+    const { Component, pageProps } = this.props;
 
     return (
       <React.StrictMode>
