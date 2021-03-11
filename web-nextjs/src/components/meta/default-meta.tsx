@@ -1,10 +1,8 @@
 import Head from 'next/head';
 
 import React from 'react';
-import { useBabylonDepsPreload } from '../../babylon-react/init-babylon';
 
 export const DefaultMeta: React.FC = () => {
-  useBabylonDepsPreload();
   return (
     <Head>
       <link

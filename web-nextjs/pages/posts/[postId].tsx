@@ -1,8 +1,8 @@
 import React from 'react';
 import { ExampleLinks } from '../../src/dummy/example-links';
 import { PreJson } from '../../src/dummy/pre-json';
-import { PageType } from '../../src/next-types';
 import { TypedRouteParam, TypedRoutes } from '../../src/typed-routes';
+import { NextPage } from 'next';
 
 type UrlParam = /* in path */ TypedRouteParam<typeof TypedRoutes.posts.show> & /* in query */ { timestamp: string };
 
@@ -11,7 +11,7 @@ interface PageProps {
   postContent: string;
 }
 
-const PostsShowPage: PageType<UrlParam, PageProps> = (props) => (
+const PostsShowPage: NextPage<PageProps> = (props) => (
   <div>
     <pre>{__filename}</pre>
     <ExampleLinks />
@@ -24,7 +24,7 @@ const PostsShowPage: PageType<UrlParam, PageProps> = (props) => (
 );
 
 PostsShowPage.getInitialProps = async (ctx) => {
-  return { postId: ctx.query.postId, postContent: `content for pageId=${ctx.query.postId}` };
+  return { postId: (ctx.query as UrlParam).postId, postContent: `content for pageId=${ctx.query.postId}` };
 };
 
 export default PostsShowPage;

@@ -1,14 +1,8 @@
 import { PreJson } from '../src/dummy/pre-json';
-import { PageType } from '../src/next-types';
 import { ExampleLinks } from '../src/dummy/example-links';
 import * as React from 'react';
-
-/**
- * URL params from route (path) and query
- */
-interface UrlParam {
-  x?: string;
-}
+import { NextPage } from 'next';
+import { useRouter } from 'next/router';
 
 /**
  *
@@ -18,19 +12,21 @@ interface PageProps {
   renderedBy: string;
 }
 
-const UnnamedPage: PageType<UrlParam, PageProps> = (props) => {
+const AboutPage: NextPage<PageProps> = (props) => {
+  const query = useRouter().query;
   return (
     <>
       <ExampleLinks />
       <h2>AboutPage in {__filename}</h2>
       <PreJson value={props} />
+      <PreJson value={query} />
     </>
   );
 };
 
-UnnamedPage.getInitialProps = async (ctx) => ({
+AboutPage.getInitialProps = async (ctx) => ({
   renderedAt: Date.now(),
   renderedBy: ctx.req ? 'server' : 'browser',
 });
 
-export default UnnamedPage;
+export default AboutPage;
