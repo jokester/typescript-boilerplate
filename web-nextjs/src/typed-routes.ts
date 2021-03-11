@@ -17,4 +17,4 @@ export const TypedRoutes = {
  */
 export type TypedRouteParam<RouteNode> = RouteNode extends (param: infer Param) => string
   ? Param & ParsedUrlQuery
-  : never;
+  : Record<never, string>;

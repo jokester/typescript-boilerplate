@@ -1,6 +1,6 @@
-import { PreJson } from '../src/dummy/pre-json';
-import { PageType } from '../src/next-types';
 import * as React from 'react';
+import { useRouter } from 'next/router';
+import { NextPage } from 'next';
 
 /**
  * URL params from route (path) and query
@@ -17,11 +17,13 @@ interface PageProps {
   renderedBy: string;
 }
 
-const UnnamedPage: PageType<UrlParam, PageProps> = (props) => {
+const UnnamedPage: NextPage<PageProps> = (props) => {
+  const query = useRouter().query as UrlParam;
+  console.debug('query', query);
+  console.debug('props', props);
   return (
     <>
       <h2>UnnamedPage in {__filename}</h2>
-      <PreJson value={props} />
     </>
   );
 };
