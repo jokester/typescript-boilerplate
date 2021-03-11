@@ -1,13 +1,12 @@
 import React from 'react';
-import { ExampleLinks } from '../src/dummy/example-links';
-import { PreJson } from '../src/dummy/pre-json';
-import { PageType } from '../src/next-types';
-import { buildEnv, inServer, isDevBuild } from '../src/config/build-env';
+import { isDevBuild } from '../src/config/build-env';
+import { NextPage } from 'next';
+import { DefaultMeta } from '../src/demo/components/default-meta';
 
-const IndexPage: PageType = (props) => {
-  console.log('buildEnv', buildEnv, inServer, isDevBuild);
+const IndexPage: NextPage = (props) => {
   return (
     <>
+      <DefaultMeta />
       <ExampleLinks />
       <PreJson value={props} />
     </>
