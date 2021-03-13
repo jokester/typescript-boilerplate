@@ -1,7 +1,7 @@
 import React from 'react';
 import { ExampleLinks } from '../../src/dummy/example-links';
 import { PreJson } from '../../src/dummy/pre-json';
-import { TypedRouteParam, TypedRoutes } from '../../src/typed-routes';
+import { TypedRouteParam, TypedRoutes } from '../../src/config/typed-routes';
 import { NextPage } from 'next';
 
 type UrlParam = /* in path */ TypedRouteParam<typeof TypedRoutes.posts.show> & /* in query */ { timestamp: string };

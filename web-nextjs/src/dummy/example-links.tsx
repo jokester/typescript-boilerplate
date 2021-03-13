@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { TypedRoutes } from '../typed-routes';
+import { TypedRoutes } from '../config/typed-routes';
 
 export const ExampleLinks: React.FunctionComponent = (props) => {
   const postId = Math.floor(Math.random() * 20);

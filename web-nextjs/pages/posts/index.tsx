@@ -1,6 +1,6 @@
 import { ExampleLinks } from '../../src/dummy/example-links';
 import { PreJson } from '../../src/dummy/pre-json';
-import { TypedRouteParam, TypedRoutes } from '../../src/typed-routes';
+import { TypedRouteParam, TypedRoutes } from '../../src/config/typed-routes';
 import * as React from 'react';
 import { NextPage } from 'next';
 
