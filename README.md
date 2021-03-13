@@ -45,7 +45,7 @@ Browser + Web Server: [web-nextjs](web-nextjs/)
     - [next-bundle-analyzer](https://github.com/zeit/next-plugins/tree/master/packages/next-bundle-analyzer)
     - [next-source-maps](https://github.com/zeit/next-plugins/tree/master/packages/next-source-maps)
     - [next-transpile-modules](https://github.com/martpie/next-transpile-modules)
-- contains a (opinionated) static typed route definition, see [route definition](web-nextjs/src/typed-routes.ts) / [route consumer](web-nextjs/pages/posts/[postId].tsx)
+- contains a (opinionated) static typed route definition, see [route definition](web-nextjs/src/config/typed-routes.ts) / [route consumer](web-nextjs/pages/posts/[postId].tsx)
 - not including a custom server
 
 ---
