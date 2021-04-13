@@ -18,38 +18,37 @@
     "lint:fix": "eslint '**/*.@(ts|js|tsx|jsx)' --fix"
   },
   "dependencies": {
-    "next": "^10.0.5",
+    "next": "^10.1.3",
     "next-compose-plugins": "^2.2.1",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
-    "tslib": "^2.1.0"
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "tslib": "^2.2.0"
   },
   "devDependencies": {
     "@types/jest": "^26",
     "@types/node": "^14",
-    "@types/react": "^17.0.0",
-    "@types/react-dom": "^17.0.0",
-    "@typescript-eslint/eslint-plugin": "^4.12.0",
-    "@typescript-eslint/parser": "^4.12.0",
+    "@types/react": "^17.0.3",
+    "@types/react-dom": "^17.0.3",
+    "@typescript-eslint/eslint-plugin": "^4.22.0",
+    "@typescript-eslint/parser": "^4.22.0",
     "@zeit/next-bundle-analyzer": "^0.1.2",
     "@zeit/next-source-maps": "^0.0.3",
     "autoprefixer": "^10",
-    "eslint": "7.17.0",
-    "eslint-config-prettier": "^7.1.0",
+    "eslint": "7.24.0",
+    "eslint-config-prettier": "^8.2.0",
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-prettier": "^3.3.1",
-    "eslint-plugin-react": "^7.22.0",
+    "eslint-plugin-react": "^7.23.2",
     "eslint-plugin-react-hooks": "^4.2.0",
     "jest": "^26",
     "next-optimized-images": "^2.6.2",
-    "next-transpile-modules": "^6.0.0",
+    "next-transpile-modules": "^6.4.0",
     "prettier": "^2.2.1",
-    "sass": "^1.32.2",
+    "sass": "^1.32.8",
     "ts-jest": "^26",
     "typescript": "^4.2"
   },
   "resolutions": {
-    "postcss": "^8",
     "tslib": "^2"
   }
 }
