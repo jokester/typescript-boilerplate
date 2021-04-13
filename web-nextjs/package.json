@@ -49,6 +49,7 @@
     "typescript": "^4.2"
   },
   "resolutions": {
+    "@types/node": "^14",
     "tslib": "^2"
   }
 }
