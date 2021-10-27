@@ -1,15 +1,14 @@
 module.exports = {
-  parser: '@typescript-eslint/parser',
-  plugins: ['@typescript-eslint'],
   extends: [
+    './node_modules/gts/',
     // "eslint:recommended", // not enabling: it reports many TS idioms as error
     'plugin:@typescript-eslint/eslint-recommended',
     'plugin:@typescript-eslint/recommended',
     // "plugin:@typescript-eslint/recommended-requiring-type-checking", // cant find for unknonw reason
-    'plugin:import/errors',
-    'plugin:import/warnings',
-    'plugin:import/typescript',
-    'plugin:prettier/recommended',
+    // 'plugin:import/errors',
+    // 'plugin:import/warnings',
+    // 'plugin:import/typescript',
+    // 'plugin:prettier/recommended',
   ],
   parserOptions: {
     ecmaVersion: 2018, // Allows for the parsing of modern ECMAScript features
@@ -30,5 +29,7 @@ module.exports = {
     '@typescript-eslint/no-namespace': 0,
     '@typescript-eslint/no-empty-function': 0,
     '@typescript-eslint/no-explicit-any': 0,
+    'no-empty': 0,
+    'no-constant-condition': 0,
   },
 };
