@@ -14,7 +14,6 @@
   ],
   "scripts": {
     "start": "node build/bin/example-bin",
-    "start:ts": "ts-node src/bin/example-bin",
     "build": "rm -rvf build && tsc",
     "local:install": "yarn build && yarn global add $PWD",
     "test": "jest",
@@ -22,29 +21,28 @@
     "test:coverage": "jest --coverage",
     "typecheck": "tsc --noEmit",
     "typecheck:watch": "tsc --watch --noEmit",
-    "lint": "    eslint '**/*.@(ts|js|tsx|jsx)' 'bin/*'",
-    "lint:fix": "eslint '**/*.@(ts|js|tsx|jsx)' 'bin/*' --fix"
+    "lint": "gts lint",
+    "lint:fix": "gts fix"
+  },
+  "engines": {
+    "node": ">=12"
   },
   "dependencies": {
-    "tslib": "^2.1.0"
+    "tslib": "^2.3.1"
   },
+  "peerDependencies": {},
   "devDependencies": {
-    "@types/jest": "^26",
+    "@types/jest": "^27",
     "@types/node": "^12",
-    "@typescript-eslint/eslint-plugin": "^4.15.2",
-    "@typescript-eslint/parser": "^4.15.2",
-    "eslint": "7.20.0",
-    "eslint-config-prettier": "^8.1.0",
-    "eslint-plugin-import": "^2.22.1",
-    "eslint-plugin-prettier": "^3.3.1",
-    "jest": "^26",
-    "prettier": "^2.2.1",
-    "ts-jest": "^26",
-    "ts-node": "^9.1.1",
-    "typescript": "^4.2"
+    "codecov": "^3.8.3",
+    "fp-ts": "<3",
+    "gts": "^3.1.0",
+    "jest": "^27",
+    "ts-jest": "^27",
+    "typescript": "^4.4",
+    "winston": "^3.3.3"
   },
   "resolutions": {
-    "@types/node": "^12",
-    "@jest/types": "^26"
+    "@types/node": "^12"
   }
 }
