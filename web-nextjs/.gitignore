@@ -6,6 +6,7 @@
 *.map
 /coverage
 /.next
+/.env
 node_modules
 
 npm-debug.log*
