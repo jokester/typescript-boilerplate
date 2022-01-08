@@ -7,16 +7,16 @@ export const ExampleLinks: React.FunctionComponent = (props) => {
   return (
     <div>
       <Link href={TypedRoutes.index}>
-        <button>index page</button>
+        <button type="button">index page</button>
       </Link>
       <Link href={TypedRoutes.about}>
-        <button>about page</button>
+        <button type="button">about page</button>
       </Link>
       <Link href={TypedRoutes.posts.index}>
-        <button>post index</button>
+        <button type="button">post index</button>
       </Link>
       <Link href={TypedRoutes.posts.show({ postId })}>
-        <button>post show (postId={postId})</button>
+        <button type="button">post show (postId={postId})</button>
       </Link>
     </div>
   );

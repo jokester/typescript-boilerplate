@@ -4,6 +4,7 @@ const { withPlugins, optional } = require('next-compose-plugins');
 const { PHASE_DEVELOPMENT_SERVER, PHASE_PRODUCTION_BUILD } = require('next/constants');
 
 const nextConf = {
+  poweredByHeader: false,
   analyzeServer: ['server', 'both'].includes(process.env.BUNDLE_ANALYZE),
   analyzeBrowser: ['browser', 'both'].includes(process.env.BUNDLE_ANALYZE),
   bundleAnalyzerConfig: {
@@ -27,13 +28,11 @@ const nextConf = {
   },
 
   // see https://nextjs.org/docs/#customizing-webpack-config
-  webpack(config, { buildId, dev, isServer }) {
-    const webpack = require('webpack');
+  webpack(config, { buildId, dev, isServer, webpack }) {
     config.plugins.push(
       new webpack.DefinePlugin({
         // becomes process.env.NEXT_DEV : boolean
         'process.env.NEXT_DEV': JSON.stringify(!!dev),
-        'process.env.NEXT_SERVER': JSON.stringify(!!isServer),
       }),
     );
 
@@ -50,19 +49,33 @@ const nextConf = {
     return config;
   },
 
-  future: {
-    webpack5: true,
+  images: {
+    disableStaticImages: true,
   },
+
+  webpack5: true,
+
+  // productionBrowserSourceMaps: true,
+
+  future: {},
 };
+
+const withBundleAnalyzer = require('@next/bundle-analyzer')({
+  enabled: !!process.env.BUNDLE_ANALYZE,
+});
 
 module.exports = withPlugins(
   [
-    [optional(() => require('next-optimized-images')), { optimizeImages: false }, [PHASE_PRODUCTION_BUILD]],
-    [optional(() => require('@zeit/next-bundle-analyzer')), {}, [PHASE_PRODUCTION_BUILD]],
-    [optional(() => require('@zeit/next-source-maps')), {}, [PHASE_PRODUCTION_BUILD]],
+    [withBundleAnalyzer], // no idea how to make it optional
+    [
+      optional(() => require('next-optimized-images')),
+      { optimizeImages: false },
+      [PHASE_DEVELOPMENT_SERVER, PHASE_PRODUCTION_BUILD],
+    ], // required after { disableStaticImages: true }
     [
       optional(() =>
         require('next-transpile-modules')([
+          'lodash-es',
           /* ES modules used in server code */
         ]),
       ),

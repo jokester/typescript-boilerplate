@@ -18,38 +18,47 @@
     "lint:fix": "eslint '**/*.@(ts|js|tsx|jsx)' --fix"
   },
   "dependencies": {
-    "next": "^10.1.3",
+    "@next/bundle-analyzer": "<12",
+    "classnames": "^2.3.1",
+    "date-fns": "^2.28.0",
+    "debug": "^4.3.3",
+    "fp-ts": "<3",
+    "immer": "^9.0.7",
+    "lodash-es": "^4.17.21",
+    "next": "<12",
     "next-compose-plugins": "^2.2.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "tslib": "^2.2.0"
+    "react-use": "^17.3.2",
+    "rxjs": "^7.5.1",
+    "tslib": "^2",
+    "use-constant": "^1.1.0"
   },
   "devDependencies": {
-    "@types/jest": "^26",
+
+    "@types/debug": "^4.1.7",
+    "@types/jest": "^27",
+    "@types/lodash-es": "^4.17.5",
     "@types/node": "^14",
-    "@types/react": "^17.0.3",
-    "@types/react-dom": "^17.0.3",
-    "@typescript-eslint/eslint-plugin": "^4.22.0",
-    "@typescript-eslint/parser": "^4.22.0",
-    "@zeit/next-bundle-analyzer": "^0.1.2",
-    "@zeit/next-source-maps": "^0.0.3",
+    "@types/react": "^17.0.38",
+    "@types/react-dom": "^17.0.11",
     "autoprefixer": "^10",
-    "eslint": "7.24.0",
-    "eslint-config-prettier": "^8.2.0",
-    "eslint-plugin-import": "^2.22.1",
-    "eslint-plugin-prettier": "^3.3.1",
-    "eslint-plugin-react": "^7.23.2",
-    "eslint-plugin-react-hooks": "^4.2.0",
-    "jest": "^26",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-react": "^7.28.0",
+    "eslint-plugin-react-hooks": "^4.3.0",
+    "gts": "^3.1.0",
+    "jest": "^27",
     "next-optimized-images": "^2.6.2",
-    "next-transpile-modules": "^6.4.0",
-    "prettier": "^2.2.1",
-    "sass": "^1.32.8",
-    "ts-jest": "^26",
-    "typescript": "^4.2"
+    "next-transpile-modules": "^9.0.0",
+    "sass": "^1.47.0",
+    "ts-jest": "^27",
+    "typescript": "^4.5"
   },
   "resolutions": {
     "@types/node": "^14",
     "tslib": "^2"
+  },
+  "engines": {
+    "node": ">=14"
   }
 }
