@@ -3,20 +3,23 @@ import Link from 'next/link';
 import { TypedRoutes } from '../config/typed-routes';
 
 export const ExampleLinks: React.FunctionComponent = (props) => {
-  const postId = Math.floor(Math.random() * 20);
   return (
-    <div>
+    <div className="space-x-2">
       <Link href={TypedRoutes.index}>
         <button type="button">index page</button>
       </Link>
+      /
       <Link href={TypedRoutes.about}>
         <button type="button">about page</button>
       </Link>
       <Link href={TypedRoutes.posts.index}>
         <button type="button">post index</button>
       </Link>
-      <Link href={TypedRoutes.posts.show({ postId })}>
-        <button type="button">post show (postId={postId})</button>
+      <Link href={TypedRoutes.posts.show({ postId: 1 })}>
+        <button type="button">post show (postId={1})</button>
+      </Link>
+      <Link href={TypedRoutes.posts.show({ postId: 2 })}>
+        <button type="button">post show (postId={2})</button>
       </Link>
     </div>
   );
