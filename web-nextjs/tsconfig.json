@@ -16,7 +16,8 @@
       "dom",
       "dom.iterable",
       "esnext"
-    ]
+    ],
+    "incremental": true
   },
   "exclude": [
     "node_modules",
