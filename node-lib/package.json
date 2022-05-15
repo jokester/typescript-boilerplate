@@ -29,10 +29,10 @@
   },
   "dependencies": {
     "date-fns": "^2.28.0",
-    "debug": "^4.3.3",
+    "debug": "^4.3.4",
     "fp-ts": "<3",
     "lodash-es": "^4.17.21",
-    "rxjs": "^7.5.1",
+    "rxjs": "^7.5.5",
     "tslib": "^2"
   },
   "peerDependencies": {},
@@ -40,12 +40,12 @@
     "@types/debug": "^4.1.7",
     "@types/jest": "^27",
     "@types/node": "^14",
-    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-import": "^2.26.0",
     "gts": "^3.1.0",
-    "jest": "^27",
-    "ts-jest": "^27",
-    "typescript": "^4.5",
-    "winston": "^3.3.3"
+    "jest": "^28",
+    "ts-jest": "^28",
+    "typescript": "^4.6",
+    "winston": "^3.7.2"
   },
   "resolutions": {
     "@types/node": "^14",
