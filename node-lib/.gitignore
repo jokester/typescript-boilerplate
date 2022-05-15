@@ -6,6 +6,7 @@
 .idea
 *.map
 /coverage
+*.tsbuildinfo
 
 npm-debug.log*
 yarn-debug.log*
