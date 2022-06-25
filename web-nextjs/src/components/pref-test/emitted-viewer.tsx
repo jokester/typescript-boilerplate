@@ -1,7 +1,19 @@
 import { Observable } from 'rxjs';
-import { FastEvent } from './fast-emitting';
+import { createEmitter, FastEvent } from './fast-emitting';
 import { useObservable } from 'react-use';
 import React, { useRef, useSyncExternalStore } from 'react';
+import useConstant from 'use-constant';
+
+export const ViewerDemo: React.FC = () => {
+  const o = useConstant(() => createEmitter(10, 1e3));
+
+  return (
+    <div>
+      <PlainViewer source={o} />
+      <ExternalStoreViewer source={o} />
+    </div>
+  );
+};
 
 export const PlainViewer: React.FC<{ source: Observable<FastEvent> }> = (props) => {
   const f = useObservable(props.source, null);
@@ -30,6 +42,7 @@ export const ExternalStoreViewer: React.FC<{ source: Observable<FastEvent> }> = 
       return () => s.unsubscribe();
     },
     () => lastEvent.current,
+    () => null,
   );
 
   return (
