@@ -536,6 +536,11 @@
     "@types/yargs" "^17.0.8"
     chalk "^4.0.0"
 
+"@jokester/ts-commonutil@^0.3.5":
+  version "0.3.5"
+  resolved "https://registry.yarnpkg.com/@jokester/ts-commonutil/-/ts-commonutil-0.3.5.tgz#32de58be0b2479d6ba7b74fe66fb8587a573b0ed"
+  integrity sha512-4wHthpSFh0x70cmcq7SYsnqr/oAxXs6qWGcYDmxgTbVAJVSVdOsom0yR7WwTCwXKynQxJdqmHFfxouJcfUGbSg==
+
 "@jridgewell/gen-mapping@^0.1.0":
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/@jridgewell/gen-mapping/-/gen-mapping-0.1.1.tgz#e5d2e450306a9491e3bd77e323e38d7aff315996"
