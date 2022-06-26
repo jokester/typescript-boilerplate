@@ -5,13 +5,17 @@ export interface FastEvent {
   count: number;
 }
 
+const enableLog = false;
+
 export function createEmitter(batchSize: number, batchDelay: number): Observable<FastEvent> {
   return new Observable((subscriber) => {
     let batchNum = 0;
     const onTick = () => {
       if (!subscriber.closed) {
         for (let i = 0; i < batchSize; i++) {
-          console.debug('emitting', { batchNum, count: i });
+          if (enableLog) {
+            console.debug('emitting', { batchNum, count: i });
+          }
           subscriber.next({ batchNum, count: i });
         }
         ++batchNum;
