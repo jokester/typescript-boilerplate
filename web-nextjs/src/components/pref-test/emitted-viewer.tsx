@@ -4,9 +4,10 @@ import { useCounter, useObservable } from 'react-use';
 import React, { useEffect, useRef, useState, useSyncExternalStore } from 'react';
 import useConstant from 'use-constant';
 import { useFps } from '../../hooks/use-fps';
+import {useExternalObservable, useTransitionObservable} from "../../hooks/use-external-observable";
 
 export const ViewerDemo: React.FC = () => {
-  const o = useConstant(() => createEmitter(10000, 0.01e3));
+  const o = useConstant(() => createEmitter(10000, 0.1e3));
   const fps = useFps(100);
 
   const [plainCount, plainCounter] = useCounter(0, 100, 0);
@@ -16,14 +17,14 @@ export const ViewerDemo: React.FC = () => {
   for (let i = 0; i < plainCount; i++) {
     children.push(
       <div key={`plain-${i}`}>
-        <PlainViewer source={o} />
+        <PlainViewer source={o}>{`PlainViewer #${i + 1} `}</PlainViewer>
       </div>,
     );
   }
   for (let i = 0; i < externalCount; i++) {
     children.push(
       <div key={`external-${i}`}>
-        <ExternalStoreViewer source={o} />
+          <ExternalStoreViewer source={o} >{`ExternalStoreViewer #${i + 1} `}</ExternalStoreViewer>
       </div>,
     );
   }
@@ -56,10 +57,10 @@ export const ViewerDemo: React.FC = () => {
   );
 };
 
-export const PlainViewer: React.FC<{ source: Observable<FastEvent> }> = (props) => {
-  const f = useObservable(props.source, null);
+export const PlainViewer: React.FC<{ source: Observable<FastEvent>; children?: string }> = (props) => {
+  const f = useTransitionObservable(props.source, null);
 
-  console.debug('PlainViewer rendering', f);
+  console.debug('PlainViewer rendering', props.children, f);
 
   useEffect(() => {
     console.debug('PlainViewer mounted');
@@ -71,7 +72,7 @@ export const PlainViewer: React.FC<{ source: Observable<FastEvent> }> = (props) 
   return (
     f && (
       <div>
-        PlainViewer:
+        {props.children}
         <span>batchNum = {f.batchNum}</span>
         <span>count = {f.count}</span>
       </div>
@@ -79,19 +80,7 @@ export const PlainViewer: React.FC<{ source: Observable<FastEvent> }> = (props) 
   );
 };
 
-export const ExternalStoreViewer: React.FC<{ source: Observable<FastEvent> }> = (props) => {
-  const lastEvent = useRef<null | FastEvent>(null);
-  const f = useSyncExternalStore<null | FastEvent>(
-    (reactSubscriber) => {
-      const s = props.source.subscribe((v) => {
-        lastEvent.current = v;
-        reactSubscriber();
-      });
-      return () => s.unsubscribe();
-    },
-    () => lastEvent.current,
-    () => null,
-  );
+export const ExternalStoreViewer: React.FC<{ source: Observable<FastEvent>; children?: string }> = (props) => {
   useEffect(() => {
     console.debug('ExternalStoreViewer mounted');
     return () => {
@@ -99,10 +88,12 @@ export const ExternalStoreViewer: React.FC<{ source: Observable<FastEvent> }> = 
     };
   }, []);
 
+  const f = useExternalObservable(props.source, null)
+
   return (
     f && (
       <div>
-        ExternalStoreViewer
+        {props.children}
         <span>batchNum = {f.batchNum}</span>
         <span>count = {f.count}</span>
       </div>

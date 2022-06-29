@@ -14,14 +14,14 @@ export function createEmitter(batchSize: number, batchDelay: number): Observable
       if (!subscriber.closed) {
         for (let i = 0; i < batchSize; i++) {
           if (enableLog) {
-            console.debug('emitting', { batchNum, count: i });
+            console.debug('Emitter emitting', { batchNum, count: i });
           }
           subscriber.next({ batchNum, count: i });
         }
         ++batchNum;
         setTimeout(onTick, batchDelay);
       } else {
-        console.debug('finished');
+        console.debug('Emitter finished');
       }
     };
 
