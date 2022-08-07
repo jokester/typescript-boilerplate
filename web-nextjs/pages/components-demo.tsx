@@ -4,6 +4,7 @@ import { Button } from '@mui/material';
 import { AccessAlarm, ThreeDRotation } from '@mui/icons-material';
 import { buildConfig } from '../src/config/build-config';
 import { serviceRuntimeConfig } from '../src/config/runtime-config';
+import { useEffect } from 'react';
 
 const tailwindComponents = (
   <>
@@ -40,6 +41,12 @@ const muiComponents = (
   </>
 );
 const ComponentsDemoPage: React.FC = () => {
+  useEffect(() => {
+    fetch('/api/server_config').then(async (res) => {
+      console.debug('server runtime config from API', await res.json());
+    });
+  }, []);
+
   console.debug('ComponentDemo', buildConfig, serviceRuntimeConfig);
   return (
     <>
