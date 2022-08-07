@@ -1,4 +1,6 @@
-// a fork of
+/**
+ * a fork of https://github.com/alii/nextkit
+ */
 import type { NextApiHandler, NextApiRequest, NextApiResponse } from 'next';
 
 export interface BaseAPIResponse {

@@ -58,7 +58,7 @@ module.exports = (phase, { defaultConfig }) => {
     merged = require('@next/bundle-analyzer')({ enabled: true, openAnalyzer: false })(merged);
   }
 
-  merged = require('next-transpile-modules')(['lodash-es', 'nextkit'])(merged);
+  merged = require('next-transpile-modules')(['lodash-es'])(merged);
 
   return merged;
 };
