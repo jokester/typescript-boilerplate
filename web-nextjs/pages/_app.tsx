@@ -7,7 +7,7 @@ import Head from 'next/head';
 const CustomApp: React.FC<AppProps> & Partial<Pick<typeof App, 'getInitialProps'>> = (props) => {
   const { Component, pageProps } = props;
   return (
-    <React.StrictMode>
+    <>
       <Head>
         <meta
           key="meta-viewport"
@@ -18,7 +18,7 @@ const CustomApp: React.FC<AppProps> & Partial<Pick<typeof App, 'getInitialProps'
 
       <DefaultMeta />
       <Component {...pageProps} />
-    </React.StrictMode>
+    </>
   );
 };
 

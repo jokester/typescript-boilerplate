@@ -9,7 +9,7 @@ const nextConf = {
   poweredByHeader: false,
 
   /**
-   * runtime configuration
+   * runtime server-only configuration
    */
   serverRuntimeConfig: {
     // becomes process.env.SOME_CONSTANT : boolean
@@ -43,6 +43,8 @@ const nextConf = {
 
   images: {},
 
+  productionBrowserSourceMaps: true,
+  reactStrictMode: true,
   future: {},
 };
 
