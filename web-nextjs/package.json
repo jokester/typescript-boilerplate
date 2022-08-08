@@ -14,13 +14,13 @@
     "test:coverage": "jest --coverage",
     "typecheck": "tsc --noEmit",
     "typecheck:watch": "tsc --watch --noEmit",
-    "lint": "    eslint '**/*.@(ts|js|tsx|jsx)'",
-    "lint:fix": "eslint '**/*.@(ts|js|tsx|jsx)' --fix"
+    "lint": "    eslint '@(src|pages)/**/*.@(ts|js|tsx|jsx)'",
+    "lint:fix": "eslint '@(src|pages)/**/*.@(ts|js|tsx|jsx)' --fix"
   },
   "dependencies": {
     "@emotion/react": "^11.10.0",
     "@emotion/styled": "^11.10.0",
-    "@jokester/ts-commonutil": "^0.3.5",
+    "@jokester/ts-commonutil": "^0.3.8",
     "@mui/icons-material": "^5.8.4",
     "@mui/material": "^5.9.3",
     "classnames": "^2.3.1",

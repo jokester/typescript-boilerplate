@@ -1,10 +1,10 @@
 import type React from 'react';
-import { dummyImages } from '../src/dummy/dummy-img';
 import { Button } from '@mui/material';
 import { AccessAlarm, ThreeDRotation } from '@mui/icons-material';
 import { buildConfig } from '../src/config/build-config';
 import { serviceRuntimeConfig } from '../src/config/runtime-config';
 import { useEffect } from 'react';
+import { dummyImages } from '@jokester/ts-commonutil/lib/frontend/dummy-img';
 
 const tailwindComponents = (
   <>

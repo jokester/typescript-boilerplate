@@ -15,7 +15,6 @@ const CustomApp: React.FC<AppProps> & Partial<Pick<typeof App, 'getInitialProps'
           content="width=device-width, initial-scale=1,maximum-scale=1.5,minimum-scale=1"
         />
       </Head>
-
       <DefaultMeta />
       <Component {...pageProps} />
     </>
