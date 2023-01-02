@@ -41,11 +41,12 @@ const nextConf = {
     return config;
   },
 
+  transpilePackages: ['lodash-es'],
+
   images: {},
 
   productionBrowserSourceMaps: true,
   reactStrictMode: true,
-  future: {},
 };
 
 module.exports = (phase, { defaultConfig }) => {
@@ -57,8 +58,6 @@ module.exports = (phase, { defaultConfig }) => {
   if (phase === PHASE_PRODUCTION_BUILD) {
     merged = require('@next/bundle-analyzer')({ enabled: true, openAnalyzer: false })(merged);
   }
-
-  merged = require('next-transpile-modules')(['lodash-es'])(merged);
 
   return merged;
 };
