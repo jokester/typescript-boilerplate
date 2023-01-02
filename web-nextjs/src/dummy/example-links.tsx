@@ -4,11 +4,10 @@ import { TypedRoutes } from '../config/typed-routes';
 
 export const ExampleLinks: React.FunctionComponent = (props) => {
   return (
-    <div className="space-x-2">
+    <div className="space-x-4">
       <Link href={TypedRoutes.index}>
         <button type="button">index page</button>
       </Link>
-      /
       <Link href={TypedRoutes.about}>
         <button type="button">about page</button>
       </Link>

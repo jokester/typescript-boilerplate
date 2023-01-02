@@ -47,7 +47,6 @@ const nextConf = {
 
   productionBrowserSourceMaps: true,
   reactStrictMode: true,
-  future: {},
 };
 
 module.exports = (phase, { defaultConfig }) => {
