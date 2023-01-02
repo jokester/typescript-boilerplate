@@ -41,7 +41,7 @@ const nextConf = {
     return config;
   },
 
-  transpilePackages: ['lodash-es'],
+  transpilePackages: ['lodash-es', '@jokester/ts-commonutil'],
 
   images: {},
 
