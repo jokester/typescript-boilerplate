@@ -8,8 +8,8 @@ module.exports = {
   coverageReporters: ['json', 'lcov', 'text', 'html'],
   moduleNameMapper: {
     '\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$':
-      '<rootDir>/src/test/__mocks__/resolves-to-path.json',
-    '\\.(css|less|scss|sass)$': '<rootDir>/src/test/__mocks__/resolves-to-path.json',
+      '<rootDir>/test/mocks/resolves-to-path.json',
+    '\\.(css|less|scss|sass)$': '<rootDir>/test/mocks/resolves-to-path.json',
   },
   globals: {
     'ts-jest': {
