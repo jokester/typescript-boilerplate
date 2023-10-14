@@ -1,0 +1,23 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "lib": ["es2020", "DOM"],
+    "module": "commonjs",
+    "jsx": "preserve",
+    "moduleResolution": "node",
+    "target": "es2020",
+    "outDir": "./build",
+    "rootDir": "./src"
+  },
+  "exclude": [
+    "public",
+    "node_modules",
+    "scripts",
+    "coverage",
+    "build",
+    "__test__",
+    "bin",
+    "jest.config.ts",
+    "tsup.config.ts"
+  ]
+}
