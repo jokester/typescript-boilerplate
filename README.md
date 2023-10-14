@@ -28,23 +28,18 @@ The principles behind current (opinionated) settings are:
 
 ## Variants
 
-Browser only: [browser-react](browser-react/)
+Browser only: [web-tsup](web-tsup/)
 
-- based on [create-react-app / template-typescript](https://github.com/facebook/create-react-app/tree/master/packages/react-scripts/template-typescript)
-- use scss instead of css
-- a switch to use [preact](https://github.com/preactjs/preact) instead of React.
+- React SPA with [egoist/tsup](https://github.com/egoist/tsup)
 
 ---
 
 Browser + Web Server: [web-nextjs](web-nextjs/)
 
-- based on Next.js 10.5 and its builtin ts support
+- based on Next.js 13 and its builtin ts support
 - contains configured plugins:
-    - [next-compose-plugins](https://github.com/cyrilwanner/next-compose-plugins)
-    - [next-optimized-images](https://www.npmjs.com/package/next-optimized-images)
+    - A hand-rollen alternative to [next-compose-plugins](https://github.com/cyrilwanner/next-compose-plugins)
     - [next-bundle-analyzer](https://github.com/zeit/next-plugins/tree/master/packages/next-bundle-analyzer)
-    - [next-source-maps](https://github.com/zeit/next-plugins/tree/master/packages/next-source-maps)
-    - [next-transpile-modules](https://github.com/martpie/next-transpile-modules)
 - contains a (opinionated) static typed route definition, see [route definition](web-nextjs/src/config/typed-routes.ts) / [route consumer](web-nextjs/pages/posts/[postId].tsx)
 - not including a custom server
 
