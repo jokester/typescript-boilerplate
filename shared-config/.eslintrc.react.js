@@ -10,6 +10,7 @@ const reactRules = {
 
 module.exports = {
   ...base,
+  plugins: [...base.plugins, 'react', 'react-hooks'],
   rules: {
     ...base.rules,
     ...reactRules,
