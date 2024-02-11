@@ -13,6 +13,7 @@
   "engineStrict": true,
   "devDependencies": {
     "@tsconfig/strictest": "^2.0.3",
+    "@types/jest": "^29.5.12",
     "@types/node": "^18",
     "@typescript-eslint/eslint-plugin": "*",
     "@typescript-eslint/parser": "*",
