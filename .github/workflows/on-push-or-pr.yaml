@@ -13,9 +13,9 @@ jobs:
         with:
           node-version: "18"
       - run: npm i
-      - run: scripts/smoke-test-monorepo.sh
+      - run: scripts/smoking-test-monorepo.sh
       - run: scripts/export-variants.sh
-      - run: scripts/smoke-test-exported.sh
+      - run: scripts/smoking-test-exported.sh
       - uses: softprops/action-gh-release@v1
         if: startsWith(github.ref, 'refs/tags/')
         with:
