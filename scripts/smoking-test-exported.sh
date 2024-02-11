@@ -4,6 +4,8 @@ set -ue
 set -o pipefail
 cd $(dirname "$0")/..
 
+rm -v package.json package-lock.json
+
 for d in empty next preact-spa hono-worker; do
   tar xf $d.tar.xz
   pushd $d
