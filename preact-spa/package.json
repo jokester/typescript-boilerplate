@@ -1,0 +1,52 @@
+{
+  "name": "preact-spa-template",
+  "description": "your next preact spa",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "build": "vite build",
+    "dev": "vite --host",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix .",
+    "preview": "vite preview",
+    "test": "jest",
+    "test:coverage": "jest --coverage",
+    "test:watch": "jest --watch",
+    "typecheck": "tsc --noEmit",
+    "typecheck:watch": "tsc --noEmit --watch"
+  },
+  "dependencies": {
+    "@jokester/ts-commonutil": "^0.5.0",
+    "clsx": "^2.1.0",
+    "debug": "^4.3.4",
+    "foxact": "^0.2.31",
+    "preact": "^10.19.3",
+    "preact-router": "^4.1.2"
+  },
+  "devDependencies": {
+    "@preact/preset-vite": "^2.8.1",
+    "@tsconfig/strictest": "*",
+    "@types/debug": "^4.1.12",
+    "@types/jest": "*",
+    "@types/node": "*",
+    "@types/react": "^18.2.51",
+    "@types/serve-handler": "^6.1.4",
+    "@typescript-eslint/eslint-plugin": "*",
+    "@typescript-eslint/parser": "*",
+    "autoprefixer": "^10.4.17",
+    "eslint": "*",
+    "gts": "*",
+    "jest": "*",
+    "postcss": "^8.4.33",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "sass": "^1.70.0",
+    "tailwindcss": "^3.4.1",
+    "ts-jest": "*",
+    "typescript": "*",
+    "vite": "^5.0.12"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

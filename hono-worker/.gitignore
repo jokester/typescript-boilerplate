@@ -1,0 +1,14 @@
+!.gitkeep
+/node_modules
+/dist
+/build
+/*.tgz
+.DS_Store
+.idea
+*.map
+/coverage
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+*.tsbuildinfo

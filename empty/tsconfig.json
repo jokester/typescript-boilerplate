@@ -1,0 +1,24 @@
+{
+  "extends": [
+    "@tsconfig/strictest",
+    "./tsconfig.base.json"
+  ],
+  "compilerOptions": {
+    "module": "Node16",
+    "moduleResolution": "Node16",
+    "incremental": true,
+    "target": "ES2022",
+    "outDir": "./build",
+    "rootDir": "./src"
+  },
+  "exclude": [
+    "node_modules",
+    "scripts",
+    "coverage",
+    "build",
+    "__test__",
+    "bin",
+    "./*.json",
+    "./*.js"
+  ]
+}

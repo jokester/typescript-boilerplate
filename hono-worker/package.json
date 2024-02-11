@@ -1,0 +1,37 @@
+{
+  "name": "hono-worker-template",
+  "description": "your next hono-worker package",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "build": "echo 'dummy: IDK how to build without logging into cloudflare'",
+    "deploy": "wrangler publish",
+    "dev": "wrangler dev --local --live-reload ./src/server.ts",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix .",
+    "test": "jest",
+    "test:coverage": "jest --coverage",
+    "test:watch": "jest --watch",
+    "typecheck": "tsc --noEmit",
+    "typecheck:watch": "tsc --watch --noEmit"
+  },
+  "dependencies": {
+    "hono": "^4.0.1"
+  },
+  "devDependencies": {
+    "@tsconfig/strictest": "*",
+    "@types/jest": "*",
+    "@typescript-eslint/eslint-plugin": "*",
+    "@typescript-eslint/parser": "*",
+    "eslint": "*",
+    "gts": "*",
+    "jest": "*",
+    "ts-jest": "*",
+    "ts-node": "*",
+    "typescript": "*",
+    "wrangler": "^3.28.1"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

@@ -1,59 +1,80 @@
 # typescript-boilerplate
 
-Boilerplates to start making stuff in TypeScript, without bothered by configurations (until one really needs to).
+TypeScript templates I use to immediately start doing something, with opinionated configuration.
 
-All the variants contains:
+## How To Use
 
-- known-to-work configurations
-    - `tsconfig.json`
-    - `jest` / `ts-jest` for testing
-    - `eslint` for linting
-    - `prettier` for formatting
-- known-to-work package versions (`yarn.lock`)
-- useful npm scripts (see `package.json` in each variant for exact list)
-    - `npm dev`
-    - `npm typecheck` / `npm typecheck:watch`
-    - `npm lint` / `npm lint:fix`
-    - `npm test` / `npm test:watch` / `npm test:coverage`
-    - `npm build` / `npm analyze`
-
-## Configurations
-
-The principles behind current (opinionated) settings are:
-
-- Be as strict as possible in TypeScript
-- When there is a upstream (like in the case of `create-react-app`), follow it
-    - When some upstream configuration can and often needs to be overridden, make it explicit
-- Only add really useful and non-conflicting plugins / configurations (webpack HMR for example)
+Download zip / tar.xz files from Github releases. Each file contains 1 variant.
 
 ## Variants
 
-Browser only: [web-tsup](web-tsup/)
+### `nextjs`, for a frontend + server monolith
 
-- React SPA with [egoist/tsup](https://github.com/egoist/tsup)
+Based on [create-next-app template](https://github.com/vercel/next.js/tree/canary/packages/create-next-app/templates/app/ts).
 
----
+Plugins:
 
-Browser + Web Server: [web-nextjs](web-nextjs/)
+- A hand-roll alternative to [next-compose-plugins](https://github.com/cyrilwanner/next-compose-plugins)
+- [next-bundle-analyzer](https://github.com/zeit/next-plugins/tree/master/packages/next-bundle-analyzer)
 
-- based on Next.js 13 and its builtin ts support
-- contains configured plugins:
-    - A hand-rollen alternative to [next-compose-plugins](https://github.com/cyrilwanner/next-compose-plugins)
-    - [next-bundle-analyzer](https://github.com/zeit/next-plugins/tree/master/packages/next-bundle-analyzer)
-- contains a (opinionated) static typed route definition, see [route definition](web-nextjs/src/config/typed-routes.ts) / [route consumer](web-nextjs/pages/posts/[postId].tsx)
-- not including a custom server
+Libraries:
 
----
+- [trpc](https://trpc.io/docs/client/nextjs/setup) for typed API
+- [tailwindcss](https://tailwindcss.com/docs/installation/using-postcss)
+- No CSS or UI libraries. User can freely bring own UI libraries.
+- util libraries: [clsx](https://github.com/lukeed/clsx) [foxact](https://foxact.skk.moe/) [lodash-es](https://www.npmjs.com/package/lodash-es) [@jokester/ts-commonutil](https://github.com/jokester/ts-commonutil)
 
-Node.js library / CLI  [node-lib](node-lib/)
+Not configured for serverless or SSG, I don't use Next.js for them.
 
-- an empty npm package
+### `vite-preact`, for frontend-only SPA
 
----
+based on [create-vite template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-preact-ts)
 
-(obsolete) Mobile / React Native: [mobile-react-native](obsolete/mobile-react-native/)
+Libraries:
 
-- not updated recently. PRs welcome.
+- [tailwindcss](https://tailwindcss.com)
+- [react-helmet]()
+- [preact-router]()
+
+If you need to host built assets with path rewriting,
+I recommend `hono-serverless` variant,
+or [serve-handler](https://github.com/vercel/serve-handler) ([example](https://github.com/jokester/limb/blob/master/server/main.ts)).
+
+### `hono-worker`, for edge-worker like environments
+
+- based on [hono](https://github.com/honojs/hono)
+- Capable of hosting SPA created by `vite-preact`
+
+### `empty`, an empty npm package
+
+- Can be used for any purpose, a new library or CLI or else.
+
+## Conventions shared by all variants
+
+All the variants contains a similar set of configurations and npm scripts:
+
+- `tsconfig.json`
+- `jest` / `ts-jest` for testing
+- `gts` `prettier` `eslint` for linting and formatting
+- `npm dev`
+- `npm typecheck` / `npm typecheck:watch`
+- `npm lint` / `npm lint:fix`
+- `npm test` / `npm test:watch` / `npm test:coverage`
+- `npm build` / `npm analyze`
+
+The principles behind current (opinionated) settings are:
+
+- Be strict as possible in TypeScript.
+- Be close to upstream defaults, but with some opinionated changes
+
+## Obsolete Variants
+
+- `obsolete/web-gatsby`
+- `obsolete/craco-react`
+- `obsolete/aws-api-gateway`
+- `obsolete/mobile-react-native`
+- `obsolete/web-tsup`
+  - Browser-only React SPA with [egoist/tsup](https://github.com/egoist/tsup)
 
 ## LICENSE
 

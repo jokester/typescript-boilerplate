@@ -1,0 +1,42 @@
+{
+  "name": "empty-package-template",
+  "description": "your next npm package",
+  "version": "0.1.0",
+  "private": true,
+  "index": "build/lib/index",
+  "bin": {
+    "example-bin": "bin/example-bin"
+  },
+  "files": [
+    "bin",
+    "build",
+    "!build/__test__/"
+  ],
+  "scripts": {
+    "build": "rm -rvf build && tsc",
+    "lint": "gts lint",
+    "lint:fix": "gts lint --fix",
+    "start": "node build/bin/example-bin",
+    "test": "jest",
+    "test:coverage": "jest --coverage",
+    "test:watch": "jest --watch",
+    "typecheck": "tsc --noEmit",
+    "typecheck:watch": "tsc --watch --noEmit"
+  },
+  "devDependencies": {
+    "@tsconfig/strictest": "*",
+    "@types/jest": "*",
+    "@types/node": "*",
+    "@typescript-eslint/eslint-plugin": "*",
+    "@typescript-eslint/parser": "*",
+    "eslint": "*",
+    "gts": "*",
+    "jest": "*",
+    "ts-jest": "*",
+    "ts-node": "*",
+    "typescript": "*"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
