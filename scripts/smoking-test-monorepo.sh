@@ -16,4 +16,3 @@ for d in empty next preact-spa hono-worker; do
 done
 
 wait
-
