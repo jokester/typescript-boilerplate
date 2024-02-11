@@ -3,7 +3,7 @@ jobs:
   build:
     working_directory: ~/typescript-boilerplate
     docker:
-      - image: circleci/node:18-stretch-browsers
+      - image: cimg/node:18
     steps:
       - checkout
       - run:
