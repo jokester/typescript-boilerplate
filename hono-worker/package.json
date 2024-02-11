@@ -4,7 +4,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "deploy": "wrangler publish ./server.ts",
+    "build": "echo 'dummy: IDK how to build without logging into cloudflare'",
+    "deploy": "wrangler publish",
     "dev": "wrangler dev --local --live-reload ./src/server.ts",
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
