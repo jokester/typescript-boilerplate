@@ -34,7 +34,12 @@ const mergedRules = {
   ...tsRules,
 };
 module.exports = {
+  parserOptions: {
+    ecmaVersion: 'latest',
+  },
+
   extends: [],
+  plugins: [],
   overrides: [
     {
       files: ['**/*.spec.ts', '**/*.test.ts', '**/*.spec.tsx', '**/*.test.tsx'],

@@ -35,6 +35,8 @@
     "@typescript-eslint/parser": "*",
     "autoprefixer": "^10.4.17",
     "eslint": "*",
+    "eslint-plugin-react": "*",
+    "eslint-plugin-react-hooks": "*",
     "gts": "*",
     "jest": "*",
     "postcss": "^8.4.33",
