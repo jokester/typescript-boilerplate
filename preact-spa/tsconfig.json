@@ -1,0 +1,15 @@
+{
+  "extends": ["@tsconfig/strictest", "./tsconfig.base.json"],
+  "compilerOptions": {
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "noEmit": true,
+    "target": "esnext",
+    "skipLibCheck": true,
+    "lib": ["dom", "esnext"],
+    "incremental": true,
+  },
+  "include": ["./main.tsx", "./src", "./pages", "./types"]
+}

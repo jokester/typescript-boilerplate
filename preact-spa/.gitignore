@@ -1,0 +1,16 @@
+!.gitkeep
+/node_modules
+/out
+/build
+/*.tgz
+.DS_Store
+.idea
+*.map
+/coverage
+/.next
+/.env
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+*.tsbuildinfo

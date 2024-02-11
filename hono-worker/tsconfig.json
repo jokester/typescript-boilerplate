@@ -1,0 +1,12 @@
+{
+  "extends": ["@tsconfig/strictest", "./tsconfig.base.json"],
+  "compilerOptions": {
+    "noEmit": true,
+    "incremental": true,
+    "moduleResolution": "node",
+    "skipLibCheck": true,
+    "target": "ES2022",
+    "rootDir": "./src"
+  },
+  "exclude": ["node_modules", "coverage", "public", "./*.json", "./*.js"]
+}

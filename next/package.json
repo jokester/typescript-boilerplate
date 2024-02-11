@@ -1,0 +1,60 @@
+{
+  "name": "nextjs-template",
+  "version": "0.1.0",
+  "author": "Wang Guan <momocraft@gmail.com>",
+  "private": true,
+  "scripts": {
+    "build": "next build",
+    "dev": "DEBUG=your-app:* next dev",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix .",
+    "start": "NODE_ENV=production next start",
+    "test": "jest",
+    "test:coverage": "jest --coverage",
+    "test:watch": "jest --watch",
+    "typecheck": "tsc --noEmit",
+    "typecheck:watch": "tsc --watch --noEmit"
+  },
+  "dependencies": {
+    "@jokester/ts-commonutil": "^0.5.0",
+    "@trpc/client": "^10.45.1",
+    "@trpc/next": "^10.45.1",
+    "@trpc/server": "^10.45.1",
+    "clsx": "^2.1.0",
+    "date-fns": "<3",
+    "debug": "^4.3.4",
+    "foxact": "^0.2.31",
+    "lodash-es": "^4.17.21",
+    "next": "^14.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "superjson": "^2.2.1",
+    "zod": "^3.22"
+  },
+  "devDependencies": {
+    "@next/bundle-analyzer": "^14.1",
+    "@next/eslint-plugin-next": "^14.1",
+    "@tsconfig/strictest": "^2.0.3",
+    "@types/debug": "^4.1.12",
+    "@types/lodash-es": "^4.17.12",
+    "@types/node": "^18",
+    "@types/react": "^18.2",
+    "@types/react-dom": "^18.2",
+    "autoprefixer": "^10.4.17",
+    "eslint": "*",
+    "eslint-config-next": "14.1.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "gts": "*",
+    "jest": "*",
+    "prettier": "*",
+    "sass": "^1.70.0",
+    "tailwindcss": "^3.4.1",
+    "ts-jest": "*",
+    "typescript": "*"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
