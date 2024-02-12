@@ -1,0 +1,781 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`cidr parsing extracts CIDR range from string: Cidr4.parse(head 192.168.0.1 tail) 1`] = `
+Object {
+  "consumed": "192.168.0.1",
+  "input": "head 192.168.0.1 tail",
+  "matchIndex": 5,
+  "remainder": " tail",
+  "result": Cidr4 {
+    "normalized": "192.168.0.1/32",
+    "raw": "192.168.0.1",
+    "segments": Array [
+      192,
+      168,
+      0,
+      1,
+    ],
+    "subnetMask": 32,
+  },
+}
+`;
+
+exports[`cidr parsing extracts CIDR range from string: Cidr4.parse(head 192.168.0.1/ tail) 1`] = `
+Object {
+  "consumed": "192.168.0.1",
+  "input": "head 192.168.0.1/ tail",
+  "matchIndex": 5,
+  "remainder": "/ tail",
+  "result": Cidr4 {
+    "normalized": "192.168.0.1/32",
+    "raw": "192.168.0.1",
+    "segments": Array [
+      192,
+      168,
+      0,
+      1,
+    ],
+    "subnetMask": 32,
+  },
+}
+`;
+
+exports[`cidr parsing extracts CIDR range from string: Cidr4.parse(head 192.168.0.1/0 tail) 1`] = `
+Object {
+  "consumed": "192.168.0.1/0",
+  "input": "head 192.168.0.1/0 tail",
+  "matchIndex": 5,
+  "remainder": " tail",
+  "result": Cidr4 {
+    "normalized": "192.168.0.1/0",
+    "raw": "192.168.0.1/0",
+    "segments": Array [
+      192,
+      168,
+      0,
+      1,
+    ],
+    "subnetMask": 0,
+  },
+}
+`;
+
+exports[`cidr parsing extracts CIDR range from string: Cidr4.parse(head 192.168.0.1/00 tail) 1`] = `
+Object {
+  "consumed": "192.168.0.1/00",
+  "input": "head 192.168.0.1/00 tail",
+  "matchIndex": 5,
+  "remainder": " tail",
+  "result": Cidr4 {
+    "normalized": "192.168.0.1/0",
+    "raw": "192.168.0.1/00",
+    "segments": Array [
+      192,
+      168,
+      0,
+      1,
+    ],
+    "subnetMask": 0,
+  },
+}
+`;
+
+exports[`cidr parsing extracts CIDR range from string: Cidr4.parse(head 192.168.0.1/01 tail) 1`] = `
+Object {
+  "consumed": "192.168.0.1/01",
+  "input": "head 192.168.0.1/01 tail",
+  "matchIndex": 5,
+  "remainder": " tail",
+  "result": Cidr4 {
+    "normalized": "192.168.0.1/1",
+    "raw": "192.168.0.1/01",
+    "segments": Array [
+      192,
+      168,
+      0,
+      1,
+    ],
+    "subnetMask": 1,
+  },
+}
+`;
+
+exports[`cidr parsing extracts CIDR range from string: Cidr4.parse(head 192.168.0.1/1 tail) 1`] = `
+Object {
+  "consumed": "192.168.0.1/1",
+  "input": "head 192.168.0.1/1 tail",
+  "matchIndex": 5,
+  "remainder": " tail",
+  "result": Cidr4 {
+    "normalized": "192.168.0.1/1",
+    "raw": "192.168.0.1/1",
+    "segments": Array [
+      192,
+      168,
+      0,
+      1,
+    ],
+    "subnetMask": 1,
+  },
+}
+`;
+
+exports[`cidr parsing extracts CIDR range from string: Cidr4.parse(head 192.168.0.1/2 tail) 1`] = `
+Object {
+  "consumed": "192.168.0.1/2",
+  "input": "head 192.168.0.1/2 tail",
+  "matchIndex": 5,
+  "remainder": " tail",
+  "result": Cidr4 {
+    "normalized": "192.168.0.1/2",
+    "raw": "192.168.0.1/2",
+    "segments": Array [
+      192,
+      168,
+      0,
+      1,
+    ],
+    "subnetMask": 2,
+  },
+}
+`;
+
+exports[`cidr parsing extracts CIDR range from string: Cidr4.parse(head 192.168.0.1/3 tail) 1`] = `
+Object {
+  "consumed": "192.168.0.1/3",
+  "input": "head 192.168.0.1/3 tail",
+  "matchIndex": 5,
+  "remainder": " tail",
+  "result": Cidr4 {
+    "normalized": "192.168.0.1/3",
+    "raw": "192.168.0.1/3",
+    "segments": Array [
+      192,
+      168,
+      0,
+      1,
+    ],
+    "subnetMask": 3,
+  },
+}
+`;
+
+exports[`cidr parsing extracts CIDR range from string: Cidr4.parse(head 192.168.0.1/4 tail) 1`] = `
+Object {
+  "consumed": "192.168.0.1/4",
+  "input": "head 192.168.0.1/4 tail",
+  "matchIndex": 5,
+  "remainder": " tail",
+  "result": Cidr4 {
+    "normalized": "192.168.0.1/4",
+    "raw": "192.168.0.1/4",
+    "segments": Array [
+      192,
+      168,
+      0,
+      1,
+    ],
+    "subnetMask": 4,
+  },
+}
+`;
+
+exports[`cidr parsing extracts CIDR range from string: Cidr4.parse(head 192.168.0.1/5 tail) 1`] = `
+Object {
+  "consumed": "192.168.0.1/5",
+  "input": "head 192.168.0.1/5 tail",
+  "matchIndex": 5,
+  "remainder": " tail",
+  "result": Cidr4 {
+    "normalized": "192.168.0.1/5",
+    "raw": "192.168.0.1/5",
+    "segments": Array [
+      192,
+      168,
+      0,
+      1,
+    ],
+    "subnetMask": 5,
+  },
+}
+`;
+
+exports[`cidr parsing extracts CIDR range from string: Cidr4.parse(head 192.168.0.1/6 tail) 1`] = `
+Object {
+  "consumed": "192.168.0.1/6",
+  "input": "head 192.168.0.1/6 tail",
+  "matchIndex": 5,
+  "remainder": " tail",
+  "result": Cidr4 {
+    "normalized": "192.168.0.1/6",
+    "raw": "192.168.0.1/6",
+    "segments": Array [
+      192,
+      168,
+      0,
+      1,
+    ],
+    "subnetMask": 6,
+  },
+}
+`;
+
+exports[`cidr parsing extracts CIDR range from string: Cidr4.parse(head 192.168.0.1/7 tail) 1`] = `
+Object {
+  "consumed": "192.168.0.1/7",
+  "input": "head 192.168.0.1/7 tail",
+  "matchIndex": 5,
+  "remainder": " tail",
+  "result": Cidr4 {
+    "normalized": "192.168.0.1/7",
+    "raw": "192.168.0.1/7",
+    "segments": Array [
+      192,
+      168,
+      0,
+      1,
+    ],
+    "subnetMask": 7,
+  },
+}
+`;
+
+exports[`cidr parsing extracts CIDR range from string: Cidr4.parse(head 192.168.0.1/8 tail) 1`] = `
+Object {
+  "consumed": "192.168.0.1/8",
+  "input": "head 192.168.0.1/8 tail",
+  "matchIndex": 5,
+  "remainder": " tail",
+  "result": Cidr4 {
+    "normalized": "192.168.0.1/8",
+    "raw": "192.168.0.1/8",
+    "segments": Array [
+      192,
+      168,
+      0,
+      1,
+    ],
+    "subnetMask": 8,
+  },
+}
+`;
+
+exports[`cidr parsing extracts CIDR range from string: Cidr4.parse(head 192.168.0.1/9 tail) 1`] = `
+Object {
+  "consumed": "192.168.0.1/9",
+  "input": "head 192.168.0.1/9 tail",
+  "matchIndex": 5,
+  "remainder": " tail",
+  "result": Cidr4 {
+    "normalized": "192.168.0.1/9",
+    "raw": "192.168.0.1/9",
+    "segments": Array [
+      192,
+      168,
+      0,
+      1,
+    ],
+    "subnetMask": 9,
+  },
+}
+`;
+
+exports[`cidr parsing extracts CIDR range from string: Cidr4.parse(head 192.168.0.1/10 tail) 1`] = `
+Object {
+  "consumed": "192.168.0.1/10",
+  "input": "head 192.168.0.1/10 tail",
+  "matchIndex": 5,
+  "remainder": " tail",
+  "result": Cidr4 {
+    "normalized": "192.168.0.1/10",
+    "raw": "192.168.0.1/10",
+    "segments": Array [
+      192,
+      168,
+      0,
+      1,
+    ],
+    "subnetMask": 10,
+  },
+}
+`;
+
+exports[`cidr parsing extracts CIDR range from string: Cidr4.parse(head 192.168.0.1/11 tail) 1`] = `
+Object {
+  "consumed": "192.168.0.1/11",
+  "input": "head 192.168.0.1/11 tail",
+  "matchIndex": 5,
+  "remainder": " tail",
+  "result": Cidr4 {
+    "normalized": "192.168.0.1/11",
+    "raw": "192.168.0.1/11",
+    "segments": Array [
+      192,
+      168,
+      0,
+      1,
+    ],
+    "subnetMask": 11,
+  },
+}
+`;
+
+exports[`cidr parsing extracts CIDR range from string: Cidr4.parse(head 192.168.0.1/12 tail) 1`] = `
+Object {
+  "consumed": "192.168.0.1/12",
+  "input": "head 192.168.0.1/12 tail",
+  "matchIndex": 5,
+  "remainder": " tail",
+  "result": Cidr4 {
+    "normalized": "192.168.0.1/12",
+    "raw": "192.168.0.1/12",
+    "segments": Array [
+      192,
+      168,
+      0,
+      1,
+    ],
+    "subnetMask": 12,
+  },
+}
+`;
+
+exports[`cidr parsing extracts CIDR range from string: Cidr4.parse(head 192.168.0.1/13 tail) 1`] = `
+Object {
+  "consumed": "192.168.0.1/13",
+  "input": "head 192.168.0.1/13 tail",
+  "matchIndex": 5,
+  "remainder": " tail",
+  "result": Cidr4 {
+    "normalized": "192.168.0.1/13",
+    "raw": "192.168.0.1/13",
+    "segments": Array [
+      192,
+      168,
+      0,
+      1,
+    ],
+    "subnetMask": 13,
+  },
+}
+`;
+
+exports[`cidr parsing extracts CIDR range from string: Cidr4.parse(head 192.168.0.1/14 tail) 1`] = `
+Object {
+  "consumed": "192.168.0.1/14",
+  "input": "head 192.168.0.1/14 tail",
+  "matchIndex": 5,
+  "remainder": " tail",
+  "result": Cidr4 {
+    "normalized": "192.168.0.1/14",
+    "raw": "192.168.0.1/14",
+    "segments": Array [
+      192,
+      168,
+      0,
+      1,
+    ],
+    "subnetMask": 14,
+  },
+}
+`;
+
+exports[`cidr parsing extracts CIDR range from string: Cidr4.parse(head 192.168.0.1/15 tail) 1`] = `
+Object {
+  "consumed": "192.168.0.1/15",
+  "input": "head 192.168.0.1/15 tail",
+  "matchIndex": 5,
+  "remainder": " tail",
+  "result": Cidr4 {
+    "normalized": "192.168.0.1/15",
+    "raw": "192.168.0.1/15",
+    "segments": Array [
+      192,
+      168,
+      0,
+      1,
+    ],
+    "subnetMask": 15,
+  },
+}
+`;
+
+exports[`cidr parsing extracts CIDR range from string: Cidr4.parse(head 192.168.0.1/16 tail) 1`] = `
+Object {
+  "consumed": "192.168.0.1/16",
+  "input": "head 192.168.0.1/16 tail",
+  "matchIndex": 5,
+  "remainder": " tail",
+  "result": Cidr4 {
+    "normalized": "192.168.0.1/16",
+    "raw": "192.168.0.1/16",
+    "segments": Array [
+      192,
+      168,
+      0,
+      1,
+    ],
+    "subnetMask": 16,
+  },
+}
+`;
+
+exports[`cidr parsing extracts CIDR range from string: Cidr4.parse(head 192.168.0.1/17 tail) 1`] = `
+Object {
+  "consumed": "192.168.0.1/17",
+  "input": "head 192.168.0.1/17 tail",
+  "matchIndex": 5,
+  "remainder": " tail",
+  "result": Cidr4 {
+    "normalized": "192.168.0.1/17",
+    "raw": "192.168.0.1/17",
+    "segments": Array [
+      192,
+      168,
+      0,
+      1,
+    ],
+    "subnetMask": 17,
+  },
+}
+`;
+
+exports[`cidr parsing extracts CIDR range from string: Cidr4.parse(head 192.168.0.1/18 tail) 1`] = `
+Object {
+  "consumed": "192.168.0.1/18",
+  "input": "head 192.168.0.1/18 tail",
+  "matchIndex": 5,
+  "remainder": " tail",
+  "result": Cidr4 {
+    "normalized": "192.168.0.1/18",
+    "raw": "192.168.0.1/18",
+    "segments": Array [
+      192,
+      168,
+      0,
+      1,
+    ],
+    "subnetMask": 18,
+  },
+}
+`;
+
+exports[`cidr parsing extracts CIDR range from string: Cidr4.parse(head 192.168.0.1/19 tail) 1`] = `
+Object {
+  "consumed": "192.168.0.1/19",
+  "input": "head 192.168.0.1/19 tail",
+  "matchIndex": 5,
+  "remainder": " tail",
+  "result": Cidr4 {
+    "normalized": "192.168.0.1/19",
+    "raw": "192.168.0.1/19",
+    "segments": Array [
+      192,
+      168,
+      0,
+      1,
+    ],
+    "subnetMask": 19,
+  },
+}
+`;
+
+exports[`cidr parsing extracts CIDR range from string: Cidr4.parse(head 192.168.0.1/20 tail) 1`] = `
+Object {
+  "consumed": "192.168.0.1/20",
+  "input": "head 192.168.0.1/20 tail",
+  "matchIndex": 5,
+  "remainder": " tail",
+  "result": Cidr4 {
+    "normalized": "192.168.0.1/20",
+    "raw": "192.168.0.1/20",
+    "segments": Array [
+      192,
+      168,
+      0,
+      1,
+    ],
+    "subnetMask": 20,
+  },
+}
+`;
+
+exports[`cidr parsing extracts CIDR range from string: Cidr4.parse(head 192.168.0.1/21 tail) 1`] = `
+Object {
+  "consumed": "192.168.0.1/21",
+  "input": "head 192.168.0.1/21 tail",
+  "matchIndex": 5,
+  "remainder": " tail",
+  "result": Cidr4 {
+    "normalized": "192.168.0.1/21",
+    "raw": "192.168.0.1/21",
+    "segments": Array [
+      192,
+      168,
+      0,
+      1,
+    ],
+    "subnetMask": 21,
+  },
+}
+`;
+
+exports[`cidr parsing extracts CIDR range from string: Cidr4.parse(head 192.168.0.1/22 tail) 1`] = `
+Object {
+  "consumed": "192.168.0.1/22",
+  "input": "head 192.168.0.1/22 tail",
+  "matchIndex": 5,
+  "remainder": " tail",
+  "result": Cidr4 {
+    "normalized": "192.168.0.1/22",
+    "raw": "192.168.0.1/22",
+    "segments": Array [
+      192,
+      168,
+      0,
+      1,
+    ],
+    "subnetMask": 22,
+  },
+}
+`;
+
+exports[`cidr parsing extracts CIDR range from string: Cidr4.parse(head 192.168.0.1/23 tail) 1`] = `
+Object {
+  "consumed": "192.168.0.1/23",
+  "input": "head 192.168.0.1/23 tail",
+  "matchIndex": 5,
+  "remainder": " tail",
+  "result": Cidr4 {
+    "normalized": "192.168.0.1/23",
+    "raw": "192.168.0.1/23",
+    "segments": Array [
+      192,
+      168,
+      0,
+      1,
+    ],
+    "subnetMask": 23,
+  },
+}
+`;
+
+exports[`cidr parsing extracts CIDR range from string: Cidr4.parse(head 192.168.0.1/24 tail) 1`] = `
+Object {
+  "consumed": "192.168.0.1/24",
+  "input": "head 192.168.0.1/24 tail",
+  "matchIndex": 5,
+  "remainder": " tail",
+  "result": Cidr4 {
+    "normalized": "192.168.0.1/24",
+    "raw": "192.168.0.1/24",
+    "segments": Array [
+      192,
+      168,
+      0,
+      1,
+    ],
+    "subnetMask": 24,
+  },
+}
+`;
+
+exports[`cidr parsing extracts CIDR range from string: Cidr4.parse(head 192.168.0.1/25 tail) 1`] = `
+Object {
+  "consumed": "192.168.0.1/25",
+  "input": "head 192.168.0.1/25 tail",
+  "matchIndex": 5,
+  "remainder": " tail",
+  "result": Cidr4 {
+    "normalized": "192.168.0.1/25",
+    "raw": "192.168.0.1/25",
+    "segments": Array [
+      192,
+      168,
+      0,
+      1,
+    ],
+    "subnetMask": 25,
+  },
+}
+`;
+
+exports[`cidr parsing extracts CIDR range from string: Cidr4.parse(head 192.168.0.1/26 tail) 1`] = `
+Object {
+  "consumed": "192.168.0.1/26",
+  "input": "head 192.168.0.1/26 tail",
+  "matchIndex": 5,
+  "remainder": " tail",
+  "result": Cidr4 {
+    "normalized": "192.168.0.1/26",
+    "raw": "192.168.0.1/26",
+    "segments": Array [
+      192,
+      168,
+      0,
+      1,
+    ],
+    "subnetMask": 26,
+  },
+}
+`;
+
+exports[`cidr parsing extracts CIDR range from string: Cidr4.parse(head 192.168.0.1/27 tail) 1`] = `
+Object {
+  "consumed": "192.168.0.1/27",
+  "input": "head 192.168.0.1/27 tail",
+  "matchIndex": 5,
+  "remainder": " tail",
+  "result": Cidr4 {
+    "normalized": "192.168.0.1/27",
+    "raw": "192.168.0.1/27",
+    "segments": Array [
+      192,
+      168,
+      0,
+      1,
+    ],
+    "subnetMask": 27,
+  },
+}
+`;
+
+exports[`cidr parsing extracts CIDR range from string: Cidr4.parse(head 192.168.0.1/28 tail) 1`] = `
+Object {
+  "consumed": "192.168.0.1/28",
+  "input": "head 192.168.0.1/28 tail",
+  "matchIndex": 5,
+  "remainder": " tail",
+  "result": Cidr4 {
+    "normalized": "192.168.0.1/28",
+    "raw": "192.168.0.1/28",
+    "segments": Array [
+      192,
+      168,
+      0,
+      1,
+    ],
+    "subnetMask": 28,
+  },
+}
+`;
+
+exports[`cidr parsing extracts CIDR range from string: Cidr4.parse(head 192.168.0.1/29 tail) 1`] = `
+Object {
+  "consumed": "192.168.0.1/29",
+  "input": "head 192.168.0.1/29 tail",
+  "matchIndex": 5,
+  "remainder": " tail",
+  "result": Cidr4 {
+    "normalized": "192.168.0.1/29",
+    "raw": "192.168.0.1/29",
+    "segments": Array [
+      192,
+      168,
+      0,
+      1,
+    ],
+    "subnetMask": 29,
+  },
+}
+`;
+
+exports[`cidr parsing extracts CIDR range from string: Cidr4.parse(head 192.168.0.1/30 tail) 1`] = `
+Object {
+  "consumed": "192.168.0.1/30",
+  "input": "head 192.168.0.1/30 tail",
+  "matchIndex": 5,
+  "remainder": " tail",
+  "result": Cidr4 {
+    "normalized": "192.168.0.1/30",
+    "raw": "192.168.0.1/30",
+    "segments": Array [
+      192,
+      168,
+      0,
+      1,
+    ],
+    "subnetMask": 30,
+  },
+}
+`;
+
+exports[`cidr parsing extracts CIDR range from string: Cidr4.parse(head 192.168.0.1/31 tail) 1`] = `
+Object {
+  "consumed": "192.168.0.1/31",
+  "input": "head 192.168.0.1/31 tail",
+  "matchIndex": 5,
+  "remainder": " tail",
+  "result": Cidr4 {
+    "normalized": "192.168.0.1/31",
+    "raw": "192.168.0.1/31",
+    "segments": Array [
+      192,
+      168,
+      0,
+      1,
+    ],
+    "subnetMask": 31,
+  },
+}
+`;
+
+exports[`cidr parsing extracts CIDR range from string: Cidr4.parse(head 192.168.0.1/32 tail) 1`] = `
+Object {
+  "consumed": "192.168.0.1/32",
+  "input": "head 192.168.0.1/32 tail",
+  "matchIndex": 5,
+  "remainder": " tail",
+  "result": Cidr4 {
+    "normalized": "192.168.0.1/32",
+    "raw": "192.168.0.1/32",
+    "segments": Array [
+      192,
+      168,
+      0,
+      1,
+    ],
+    "subnetMask": 32,
+  },
+}
+`;
+
+exports[`cidr parsing extracts CIDR range from string: Cidr4.parse(head 192.168.0.1/33 tail) 1`] = `
+Object {
+  "consumed": "",
+  "error": "invalid CIDR Range: 192.168.0.1/33",
+  "input": "head 192.168.0.1/33 tail",
+  "matchIndex": 5,
+  "remainder": "192.168.0.1/33 tail",
+}
+`;
+
+exports[`cidr parsing extracts CIDR range from string: Cidr4.parse(head 192.168.0.1/34 tail) 1`] = `
+Object {
+  "consumed": "",
+  "error": "invalid CIDR Range: 192.168.0.1/34",
+  "input": "head 192.168.0.1/34 tail",
+  "matchIndex": 5,
+  "remainder": "192.168.0.1/34 tail",
+}
+`;
+
+exports[`cidr parsing extracts CIDR range from string: Cidr4.parse(head 192.168.0.1/asd tail) 1`] = `
+Object {
+  "consumed": "192.168.0.1",
+  "input": "head 192.168.0.1/asd tail",
+  "matchIndex": 5,
+  "remainder": "/asd tail",
+  "result": Cidr4 {
+    "normalized": "192.168.0.1/32",
+    "raw": "192.168.0.1",
+    "segments": Array [
+      192,
+      168,
+      0,
+      1,
+    ],
+    "subnetMask": 32,
+  },
+}
+`;

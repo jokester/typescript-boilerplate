@@ -16,6 +16,7 @@
     "typecheck:watch": "tsc --watch --noEmit"
   },
   "dependencies": {
+    "@google-cloud/vision": "^4.0.3",
     "@jokester/ts-commonutil": "^0.5.0",
     "@trpc/client": "^10.45.1",
     "@trpc/next": "^10.45.1",
@@ -26,6 +27,7 @@
     "foxact": "^0.2.31",
     "lodash-es": "^4.17.21",
     "next": "^14.1",
+    "openai": "^4.27.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "superjson": "^2.2.1",
