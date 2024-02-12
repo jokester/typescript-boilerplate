@@ -1,4 +1,4 @@
-import { httpBatchLink } from '@trpc/client';
+import { httpLink } from '@trpc/client';
 import { createTRPCNext } from '@trpc/next';
 import type { AppRouter } from '../../server/api';
 import { inBrowser } from '../../shared/runtime-config';
@@ -12,7 +12,7 @@ function getBaseUrl() {
 }
 
 const links = [
-  httpBatchLink({
+  httpLink({
     url: `${getBaseUrl()}/api/trpc`,
     headers() {
       return {

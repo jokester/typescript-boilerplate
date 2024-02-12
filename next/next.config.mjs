@@ -1,4 +1,4 @@
-const { PHASE_DEVELOPMENT_SERVER, PHASE_PRODUCTION_BUILD } = require('next/constants');
+import { PHASE_DEVELOPMENT_SERVER, PHASE_PRODUCTION_BUILD } from 'next/constants.js';
 
 /**
  * when in problem, try to sync with {@link https://github.com/vercel/next.js/tree/canary/packages/create-next-app/templates/typescript}
@@ -65,14 +65,15 @@ const nextConf = {
   reactStrictMode: true,
 };
 
-module.exports = (phase, { defaultConfig }) => {
+export default async (phase, { defaultConfig }) => {
   /**
    * @type {import('next').NextConfig}
    */
   let merged = { ...nextConf };
 
   if (phase === PHASE_PRODUCTION_BUILD) {
-    merged = require('@next/bundle-analyzer')({ enabled: true, openAnalyzer: false })(merged);
+    const { default: analyzerPlugin } = await import('@next/bundle-analyzer');
+    merged = analyzerPlugin({ enabled: true, openAnalyzer: false })(merged);
   }
 
   return merged;
