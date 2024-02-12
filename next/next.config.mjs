@@ -65,14 +65,15 @@ const nextConf = {
   reactStrictMode: true,
 };
 
-export default (phase, { defaultConfig }) => {
+export default async (phase, { defaultConfig }) => {
   /**
    * @type {import('next').NextConfig}
    */
   let merged = { ...nextConf };
 
   if (phase === PHASE_PRODUCTION_BUILD) {
-    merged = require('@next/bundle-analyzer')({ enabled: true, openAnalyzer: false })(merged);
+    const { default: analyzerPlugin } = await import('@next/bundle-analyzer');
+    merged = analyzerPlugin({ enabled: true, openAnalyzer: false })(merged);
   }
 
   return merged;
