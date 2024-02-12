@@ -27,7 +27,6 @@ function logApiRequest(req: NextApiRequest, res: NextApiResponse) {
   const reqMethod = req.method!.toUpperCase();
   const reqUrl = req.url!.replace(/^([^?&]*)(.*)$/, (_, p1, p2) => `${p1}${p2 ? '?...' : ''}`);
   debugLogger(reqId, reqMethod, reqUrl);
-  // logger(`req.body`, req.body);
   res.once('close', () => {
     debugLogger(reqId, reqMethod, reqUrl, res.statusCode, Date.now() - start);
   });
