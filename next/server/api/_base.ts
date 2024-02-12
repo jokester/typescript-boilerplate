@@ -1,5 +1,6 @@
 import { initTRPC } from '@trpc/server';
 import superjson from 'superjson';
+import { ZodError } from 'zod';
 
 /**
  * A custom request context for all API requests
@@ -14,6 +15,17 @@ export interface ApiReqContext {
 
 export const t = initTRPC.context<ApiReqContext>().create({
   transformer: superjson,
-  // TODO understand tRPC error formatting
-  // errorFormatter(opt) {}
+
+  // serialize TRPCError into response
+  errorFormatter(opts) {
+    const { shape, error } = opts;
+    return {
+      ...shape,
+      // by default `shape.data` is serialized TRPCError?
+      data: {
+        ...shape.data,
+        zodError: error.code === 'BAD_REQUEST' && error.cause instanceof ZodError ? error.cause.flatten() : null,
+      },
+    };
+  },
 });

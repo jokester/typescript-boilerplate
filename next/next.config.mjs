@@ -1,4 +1,4 @@
-const { PHASE_DEVELOPMENT_SERVER, PHASE_PRODUCTION_BUILD } = require('next/constants');
+import { PHASE_DEVELOPMENT_SERVER, PHASE_PRODUCTION_BUILD } from 'next/constants.js';
 
 /**
  * when in problem, try to sync with {@link https://github.com/vercel/next.js/tree/canary/packages/create-next-app/templates/typescript}
@@ -65,7 +65,7 @@ const nextConf = {
   reactStrictMode: true,
 };
 
-module.exports = (phase, { defaultConfig }) => {
+export default (phase, { defaultConfig }) => {
   /**
    * @type {import('next').NextConfig}
    */

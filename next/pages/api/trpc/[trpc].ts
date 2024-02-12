@@ -1,9 +1,7 @@
 import * as trpcNext from '@trpc/server/adapters/next';
 import { appRouter } from '../../../server/api';
 import { ZodError } from 'zod';
-import { TRPCError } from '@trpc/server';
 import { createDebugLogger } from '../../../shared/logger';
-import { ClientBad } from '../../../server/api/errors';
 import { withApiRequestLog } from '../../../server/request-logger';
 
 import { ApiReqContext } from '../../../server/api/_base';
@@ -34,19 +32,16 @@ const handler = trpcNext.createNextApiHandler({
   },
 
   onError({ error, type, path, input, ctx, req }) {
+    debugLogger('error in trpc procedure', path, input, error);
     if (error.cause instanceof ZodError) {
-      debugLogger('trpc error', error.cause, path, input, ctx);
-      // we could rewrite error code / message here
-      throw new TRPCError({ message: error.cause.name, code: 'BAD_REQUEST' });
-    } else if (error instanceof ClientBad) {
-      debugLogger('client bad', path, input, ctx);
-    } else {
-      debugLogger('error', error, type, path, ctx);
+      // rewrite error message to be more user-friendly
+      const messages = error.cause.errors.map((err) => `${err.message} at ${err.path.join('.')}`);
+      error.message = `zod validation error: ${messages.join(', ')}`;
     }
   },
 
   batching: {
-    enabled: true,
+    enabled: false,
   },
 });
 
