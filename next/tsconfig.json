@@ -8,16 +8,11 @@
     "noEmit": true,
     "target": "esnext",
     "skipLibCheck": true,
-    "typeRoots": ["node_modules/@types"],
     "lib": ["dom", "esnext"],
     "incremental": true,
-    "plugins": [
-      {
-        "name": "next"
-      }
-    ],
+    "plugins": [{ "name": "next" }],
     "strictNullChecks": true
   },
   "exclude": ["node_modules", "scripts", "coverage", "build", "__test__", "bin", "./*.json", "./*.js"],
-  "include": ["apps", "pages", "src", "server", ".next/types/**/*.ts"]
+  "include": ["apps", "pages", "src", "server", "shared", ".next/types/**/*.ts"]
 }

@@ -1,11 +1,16 @@
-import { t } from './common/_base';
+import { t } from './_base';
 import { serverRuntimeConfig } from '../runtime-config';
+import { createDebugLogger } from '../../shared/logger';
+
+const debugLogger = createDebugLogger(__filename);
 
 export const appRouter = t.router({
   siteMeta: t.router({
-    getSiteInfo: t.procedure.query(({}) => {
+    getSiteInfo: t.procedure.query((input) => {
+      debugLogger('getSiteInfo', input.ctx);
       return {
         serverStartAt: new Date(serverRuntimeConfig.serverStartAt),
+        userAgent: input.ctx.userAgent,
       };
     }),
   }),
