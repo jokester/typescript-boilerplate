@@ -12,8 +12,8 @@ function FileList(props: { path: string; onFileSelected: (path: string) => void 
       <h2>File List</h2>
       <ul>
         {files.data.files.map((f) => (
-          <li key={f} onClick={() => props.onFileSelected(f)}>
-            {f}
+          <li key={f} onClick={() => props.onFileSelected(f)} className="inline-block">
+            <img src={f} className="object-cover w-32 h-32 cursor-pointer" />
           </li>
         ))}
       </ul>
@@ -30,6 +30,7 @@ function MoeflowAssistedTranslatorPage() {
   return (
     <div>
       <h1>Moeflow Assisted Translator</h1>
+      {imgPath && <ImgPreview path={imgPath} />}
       <FileList path="demo-images" onFileSelected={setImagPath} />
     </div>
   );

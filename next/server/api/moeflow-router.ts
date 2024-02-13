@@ -5,8 +5,9 @@ import { createDebugLogger } from '../../shared/logger';
 import path from 'node:path';
 import fsp from 'node:fs/promises';
 import { TRPCError } from '@trpc/server';
+import { serverRuntimeConfig } from '../runtime-config';
 
-const publicDir = path.join(__dirname, '../../public');
+const publicDir = path.join(serverRuntimeConfig.projectRoot, 'public');
 
 async function ocrText(bytes: Buffer) {
   const client = new vision.ImageAnnotatorClient();
@@ -41,13 +42,15 @@ export const moeflowRouter = t.router({
 
       const files = await fsp.readdir(dir, { withFileTypes: true });
 
+      debugLogger('files', files);
+
       return {
         /**
          * List of files in the directory, relative to site root
          */
         files: files
           .filter((f) => f.isFile() && ['.jpg', '.jpeg', '.png'].includes(path.extname(f.name)))
-          .map((f) => path.relative(dir, f.path)),
+          .map((f) => '/' + path.join(input.dir, f.name)),
       };
     }),
 

@@ -1,4 +1,8 @@
 import { PHASE_DEVELOPMENT_SERVER, PHASE_PRODUCTION_BUILD } from 'next/constants.js';
+import path from 'node:path';
+import url from 'node:url';
+
+const ___dirname = path.dirname(url.fileURLToPath(import.meta.url));
 
 /**
  * when in problem, try to sync with {@link https://github.com/vercel/next.js/tree/canary/packages/create-next-app/templates/typescript}
@@ -14,6 +18,7 @@ const nextConf = {
    */
   serverRuntimeConfig: {
     serverStartAt: new Date().toISOString(),
+    projectRoot: ___dirname,
   },
   /**
    * runtime shared configuration
