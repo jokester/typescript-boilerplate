@@ -2,6 +2,11 @@ import { z } from 'zod';
 import { t } from './_base';
 import vision from '@google-cloud/vision';
 import { createDebugLogger } from '../../shared/logger';
+import path from 'node:path';
+import fsp from 'node:fs/promises';
+import { TRPCError } from '@trpc/server';
+
+const publicDir = path.join(__dirname, '../../public');
 
 async function ocrText(bytes: Buffer) {
   const client = new vision.ImageAnnotatorClient();
@@ -22,6 +27,30 @@ async function ocrDocumentText(bytes: Buffer) {
 const debugLogger = createDebugLogger(__filename);
 
 export const moeflowRouter = t.router({
+  listImages: t.procedure
+    .input(
+      z.object({
+        dir: z.string(),
+      }),
+    )
+    .query(async ({ input }) => {
+      const dir = path.join(publicDir, input.dir);
+      if (!dir.startsWith(publicDir)) {
+        throw new TRPCError({ message: 'Invalid directory', code: 'FORBIDDEN' });
+      }
+
+      const files = await fsp.readdir(dir, { withFileTypes: true });
+
+      return {
+        /**
+         * List of files in the directory, relative to site root
+         */
+        files: files
+          .filter((f) => f.isFile() && ['.jpg', '.jpeg', '.png'].includes(path.extname(f.name)))
+          .map((f) => path.relative(dir, f.path)),
+      };
+    }),
+
   extractText: t.procedure.input(z.object({ imgBytes: z.string() })).query(async ({ input }) => {
     const ocrTextResult = await ocrText(Buffer.from(input.imgBytes, 'base64'));
 
@@ -30,5 +59,6 @@ export const moeflowRouter = t.router({
       fullTextAnnotations: ocrTextResult.fullTextAnnotation && {},
     };
   }),
+
   translateBalloon: t.procedure.input(z.object({ text: z.string(), targetLang: z.string() })).query(({ input }) => {}),
 });
