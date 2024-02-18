@@ -30,7 +30,7 @@ function MoeflowAssistedTranslatorPage() {
   return (
     <div>
       <h1>Moeflow Assisted Translator</h1>
-      {imgPath && <ImgPreview path={imgPath} />}
+      {imgPath && <ImgPreview key={imgPath} path={imgPath} />}
       <FileList path="demo-images" onFileSelected={setImagPath} />
     </div>
   );
