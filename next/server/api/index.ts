@@ -4,6 +4,7 @@ import { createDebugLogger } from '../../shared/logger';
 import { z } from 'zod';
 import { ApiError } from './errors';
 import { TRPCError } from '@trpc/server';
+import { moeflowRouter } from './moeflow-router';
 
 const debugLogger = createDebugLogger(__filename);
 
@@ -43,6 +44,7 @@ export const appRouter = t.router({
       };
     }),
   }),
+  moeflow: moeflowRouter,
 });
 
 // Export type router type signature,

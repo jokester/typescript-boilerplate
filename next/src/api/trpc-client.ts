@@ -1,8 +1,9 @@
-import { httpLink } from '@trpc/client';
+import { createTRPCClient, createTRPCProxyClient, httpLink } from '@trpc/client';
 import { createTRPCNext } from '@trpc/next';
 import type { AppRouter } from '../../server/api';
 import { inBrowser } from '../../shared/runtime-config';
 import superjson from 'superjson';
+
 function getBaseUrl() {
   if (inBrowser) {
     // browser should use relative path
@@ -33,4 +34,9 @@ export const trpcClient = createTRPCNext<AppRouter>({
    * @link https://trpc.io/docs/v11/ssr
    **/
   ssr: false,
+});
+
+export const trpcClient$ = createTRPCProxyClient<AppRouter>({
+  links,
+  transformer: superjson,
 });
