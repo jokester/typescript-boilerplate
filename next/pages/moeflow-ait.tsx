@@ -1,5 +1,8 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { trpcClient } from '../src/api/trpc-client';
+import { createDebugLogger } from '../shared/logger';
+
+const debugLogger = createDebugLogger(__filename)
 
 function FileList(props: { path: string; onFileSelected: (path: string) => void }) {
   const files = trpcClient.moeflow.listImages.useQuery({ dir: props.path });
@@ -22,6 +25,12 @@ function FileList(props: { path: string; onFileSelected: (path: string) => void 
 }
 
 function ImgPreview(props: { path: string }) {
+  const mutated = trpcClient.moeflow.extractText.useQuery({ file: props.path });
+  useEffect(() => {
+    if (mutated.status === 'success') {
+      debugLogger('mutated', mutated.data);
+    }
+  }, [mutated])
   return <img src={props.path} />;
 }
 
