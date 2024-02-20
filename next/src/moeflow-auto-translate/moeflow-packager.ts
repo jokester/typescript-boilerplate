@@ -59,6 +59,10 @@ export async function createMoeflowProjectZip(meta: MoeflowProjectMeta, files: M
     await zipWriter.add('translations.txt', new zip.BlobReader(blob));
   }
 
+  for (const f of files) {
+    await zipWriter.add(`images/${f.lp.file_name}`, new zip.BlobReader(f.image));
+  }
+
   await zipWriter.add('project.json', new zip.TextReader(JSON.stringify(meta, null, 2)));
 
   return zipWriter.close();
