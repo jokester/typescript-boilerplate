@@ -16,6 +16,10 @@
     "typecheck:watch": "tsc --watch --noEmit"
   },
   "dependencies": {
+    "@blueprintjs/core": "^5.9.1",
+    "@chakra-ui/react": "^2.8.2",
+    "@emotion/react": "^11.11.3",
+    "@emotion/styled": "^11.11.0",
     "@google-cloud/vision": "^4.0.3",
     "@jokester/ts-commonutil": "^0.5.0",
     "@trpc/client": "^10.45.1",
@@ -25,11 +29,13 @@
     "date-fns": "<3",
     "debug": "^4.3.4",
     "foxact": "^0.2.31",
+    "framer-motion": "^11.0.5",
     "lodash-es": "^4.17.21",
     "next": "^14.1",
     "openai": "^4.27.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-use": "^17.5.0",
     "superjson": "^2.2.1",
     "zod": "^3.22"
   },
