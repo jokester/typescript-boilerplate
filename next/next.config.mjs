@@ -18,7 +18,6 @@ const nextConf = {
    */
   serverRuntimeConfig: {
     serverStartAt: new Date().toISOString(),
-    openaiApiKey: `TODO`,
     projectRoot: ___dirname,
   },
   /**

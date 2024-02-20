@@ -4,6 +4,9 @@ import { wait } from '@jokester/ts-commonutil/lib/concurrency/timing';
 import clsx from 'clsx';
 import { useCounter } from '@chakra-ui/react';
 import { createMoeflowProjectZip } from './moeflow-packager';
+import { ResourcePool } from '@jokester/ts-commonutil/lib/concurrency/resource-pool';
+import { translateImgFile } from './manga-translator';
+import { TRPCError } from '@trpc/server';
 
 export function FilePicker(props: { disabled?: boolean; onFilesLoaded?(files: File[]): void }) {
   return (
@@ -16,6 +19,10 @@ export function FilePicker(props: { disabled?: boolean; onFilesLoaded?(files: Fi
           onChange={(ev) => {
             const input = ev.target as HTMLInputElement;
             if (input.files?.length) {
+              if (input.files.length >= 5) {
+                alert('一次最多只能上传5张图片');
+                return;
+              }
               props.onFilesLoaded?.(Array.from(input.files));
             }
           }}
@@ -87,6 +94,16 @@ export function Downloader({ built }: { built?: File }) {
 
 export async function build(files: File[]): Promise<File> {
   const filename = `moeflow-project-${Date.now()}-${files[0]!.name}.zip`;
+
+  const throttler = ResourcePool.multiple([1, 2, 3]);
+
+  const translated = await Promise.all(files.map((f) => throttler.use(() => translateImgFile(f)))).catch((e) => {
+    if (e instanceof TRPCError) {
+      alert(`翻译失败: ${e.code} ${e.message}`);
+    }
+    throw e;
+  });
+
   const bytes = await createMoeflowProjectZip(
     {
       name: `${files[0]!.name}`,
@@ -98,7 +115,7 @@ export async function build(files: File[]): Promise<File> {
       source_language: 'ja',
       output_language: 'zh-TW',
     },
-    files.map((f) => ({ lp: { file_name: f.name, labels: [] }, image: f })),
+    translated,
   );
   return new File([bytes], filename);
 }

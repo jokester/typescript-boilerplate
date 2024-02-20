@@ -7,6 +7,9 @@ import fsp from 'node:fs/promises';
 import { TRPCError } from '@trpc/server';
 import { serverRuntimeConfig } from '../runtime-config';
 import openai from 'openai';
+import { withRetry } from '@jokester/ts-commonutil/lib/util/with-retry';
+// @ts-ignore
+import { toJson } from 'really-relaxed-json';
 
 const publicDir = path.join(serverRuntimeConfig.projectRoot, 'public');
 
@@ -45,8 +48,8 @@ function orgText(
 async function aiRebuild(annotations: OcrResult): Promise<{ x: number; y: number; text: string }[]> {
   const blocks = orgText(annotations);
   const prompt = `
-これは漫画ページをOCRにかけたものから、吹き出しごとに文言を抽出するための処理です。
-OCRで抽出されたテキストは以下の形式に従います: (x座標, y座標): {OCRで抽出されたテキスト} 。入力テキストは ### の後に続くものとします。
+これは漫画ページから、吹き出しごとに文言を抽出するための処理です。
+入力テキストは以下の形式に従います: (x座標, y座標): {テキスト}。
 漫画の文字方向と配置を考慮しつつ、テキストの内容と座標を確認しながら、吹き出しの境界を検出し、吹き出しごとのテキストを抽出します。抽出されたテキストは以下のJSON配列で返してください：
 {
     "x": number, // 吹き出しのx座標
@@ -54,6 +57,7 @@ OCRで抽出されたテキストは以下の形式に従います: (x座標, y�
     "text": string // 吹き出しの内容
 }
 
+入力テキストは ### の後に続くものとします。
 ###
 
 ${blocks.map((b) => `(${b.leftTop.x}, ${b.leftTop.y}): {${b.text}}`).join('\n')}
@@ -74,8 +78,15 @@ ${blocks.map((b) => `(${b.leftTop.x}, ${b.leftTop.y}): {${b.text}}`).join('\n')}
   });
 
   debugLogger('completion', completion);
+  const shouldBeJson = `[` + completion.choices[0]?.message?.content + `]`;
 
-  return JSON.parse(completion.choices[0]?.message!.content!);
+  debugLogger('shouldBeJson', shouldBeJson);
+  const jsonized = JSON.parse(toJson(shouldBeJson));
+  debugLogger('toJson(shouldBeJson)', jsonized);
+  if (!Array.isArray(jsonized)) {
+    throw new Error(`fail early`);
+  }
+  return jsonized;
 }
 
 async function openaiTranslate(texts: string[]): Promise<string[]> {
@@ -138,22 +149,26 @@ export const moeflowRouter = t.router({
     }),
 
   extractText: t.procedure.input(z.object({ imgBytes: z.string() })).mutation(async ({ input }) => {
-    const fullpath = path.join(publicDir, input.file);
-    if (!fullpath.startsWith(publicDir)) {
-      throw new TRPCError({ message: 'Invalid directory', code: 'FORBIDDEN' });
-    }
-    const ocrTextResult = await ocrText(Buffer.from(input.imgBytes, 'base64'));
-
-    const bytes = await fsp.readFile(fullpath);
-    const ocrTextResult = await ocrText(bytes);
-
-    const rebuilt = await aiRebuild(ocrTextResult);
-    const translated = await openaiTranslate(rebuilt.map((b) => b.text));
+    const ocrTextResult = await withRetry(() => ocrText(Buffer.from(input.imgBytes, 'base64')));
+    const rebuilt = await withRetry(() => aiRebuild(ocrTextResult), {
+      maxAttempts: 10,
+      shouldBreak(error: unknown, tried: number): boolean | PromiseLike<boolean> {
+        console.error('aiRebuild failed', error, tried);
+        return false;
+      },
+    });
+    debugLogger('rebuilt', typeof rebuilt, rebuilt);
+    const translated = await withRetry(() => openaiTranslate(rebuilt.map((b) => b.text)), {
+      maxAttempts: 10,
+      shouldBreak(error: unknown, tried: number): boolean | PromiseLike<boolean> {
+        console.error('openaiTranslate failed', error, tried);
+        return false;
+      },
+    });
     return {
       ...ocrTextResult,
       blocks: orgText(ocrTextResult),
-      rebuilt,
-      translated,
+      translated: rebuilt.map((b, i) => ({ ...b, translated: translated[i] ?? '????' })),
     };
   }),
 
