@@ -10,7 +10,7 @@ interface LPLabel {
   translation: string; // singleline
 }
 
-interface LPFile {
+export interface LPFile {
   file_name: string; // img filename (basename)
   labels: LPLabel[];
 }

@@ -54,7 +54,7 @@ export const moeflowRouter = t.router({
       };
     }),
 
-  extractText: t.procedure.input(z.object({ imgBytes: z.string() })).query(async ({ input }) => {
+  extractText: t.procedure.input(z.object({ imgBytes: z.string() })).mutation(async ({ input }) => {
     const ocrTextResult = await ocrText(Buffer.from(input.imgBytes, 'base64'));
 
     return {
