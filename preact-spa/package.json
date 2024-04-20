@@ -16,7 +16,7 @@
     "typecheck:watch": "tsc --noEmit --watch"
   },
   "dependencies": {
-    "@jokester/ts-commonutil": "^0.5.0",
+    "@jokester/ts-commonutil": "^0.6.0",
     "clsx": "^2.1.0",
     "debug": "^4.3.4",
     "foxact": "^0.2.31",
