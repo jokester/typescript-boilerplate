@@ -12,21 +12,21 @@
   },
   "engineStrict": true,
   "devDependencies": {
-    "@tsconfig/strictest": "^2.0.3",
+    "@tsconfig/strictest": "^2.0.5",
     "@types/jest": "<30",
-    "@types/node": "^18",
+    "@types/node": "^20",
     "@typescript-eslint/eslint-plugin": "*",
     "@typescript-eslint/parser": "*",
     "eslint": "*",
-    "eslint-plugin-import": "^2.26.0",
-    "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-import": "^2.29.0",
+    "eslint-plugin-react": "^7.34.1",
     "eslint-plugin-react-hooks": "^4.6.0",
-    "gts": "^5.2.0",
+    "gts": "^5.3.0",
     "jest": "<30",
     "prettier": "*",
     "ts-jest": "<30",
     "ts-node": "<11",
-    "typescript": "^5.3"
+    "typescript": "^5.4"
   },
   "workspaces": [
     "empty",
