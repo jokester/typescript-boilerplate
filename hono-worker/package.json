@@ -7,8 +7,8 @@
     "build": "echo 'dummy: IDK how to build without logging into cloudflare'",
     "deploy": "wrangler publish",
     "dev": "wrangler dev --local --live-reload ./src/server.ts",
-    "lint": "eslint .",
-    "lint:fix": "eslint --fix .",
+    "lint": "eslint src",
+    "lint:fix": "eslint --fix src",
     "test": "jest",
     "test:coverage": "jest --coverage",
     "test:watch": "jest --watch",
@@ -19,16 +19,17 @@
     "hono": "^4.0.1"
   },
   "devDependencies": {
+    "@eslint-react/eslint-plugin": "*",
+    "@eslint/js": "*",
     "@tsconfig/strictest": "*",
     "@types/jest": "*",
-    "@typescript-eslint/eslint-plugin": "*",
-    "@typescript-eslint/parser": "*",
     "eslint": "*",
-    "gts": "*",
+    "eslint-plugin-import-x": "*",
     "jest": "*",
     "ts-jest": "*",
     "ts-node": "*",
     "typescript": "*",
+    "typescript-eslint": "*",
     "wrangler": "^3.28.1"
   },
   "engines": {

@@ -6,8 +6,8 @@
   "scripts": {
     "build": "next build",
     "dev": "DEBUG=your-app:* next dev",
-    "lint": "eslint .",
-    "lint:fix": "eslint --fix .",
+    "lint": "eslint src pages shared",
+    "lint:fix": "eslint --fix src pages shared",
     "start": "NODE_ENV=production next start",
     "test": "jest",
     "test:coverage": "jest --coverage",
@@ -32,8 +32,8 @@
     "zod": "^3.22"
   },
   "devDependencies": {
-    "@next/bundle-analyzer": "^14.1",
     "@next/eslint-plugin-next": "^14.1",
+    "@next/bundle-analyzer": "^14.1",
     "@tsconfig/strictest": "^2.0.3",
     "@types/debug": "^4.1.12",
     "@types/jest": "*",
@@ -42,14 +42,7 @@
     "@types/react": "^18.2",
     "@types/react-dom": "^18.2",
     "autoprefixer": "^10.4.17",
-    "eslint": "*",
-    "eslint-config-next": "14.1.0",
-    "eslint-plugin-import": "*",
-    "eslint-plugin-react": "*",
-    "eslint-plugin-react-hooks": "*",
-    "gts": "*",
     "jest": "*",
-    "prettier": "*",
     "sass": "^1.70.0",
     "tailwindcss": "^3.4.1",
     "typescript": "*"

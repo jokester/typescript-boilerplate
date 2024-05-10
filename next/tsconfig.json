@@ -13,6 +13,6 @@
     "plugins": [{ "name": "next" }],
     "strictNullChecks": true
   },
-  "exclude": ["node_modules", "scripts", "coverage", "build", "__test__", "bin", "./*.json", "./*.js"],
-  "include": ["apps", "pages", "src", "server", "shared", ".next/types/**/*.ts"]
+  "exclude": ["node_modules", "scripts", "coverage", "build", "__test__", "bin"],
+  "include": ["apps", "pages", "src", "server", "shared"]
 }
