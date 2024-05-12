@@ -32,6 +32,7 @@
     "zod": "^3.22"
   },
   "devDependencies": {
+    "@eslint-react/eslint-plugin": "*",
     "@next/eslint-plugin-next": "^14.1",
     "@next/bundle-analyzer": "^14.1",
     "@tsconfig/strictest": "^2.0.3",
