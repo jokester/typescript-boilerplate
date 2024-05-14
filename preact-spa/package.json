@@ -25,6 +25,8 @@
     "preact-router": "^4.1.2"
   },
   "devDependencies": {
+    "@eslint/js": "*",
+    "@eslint-react/eslint-plugin": "*",
     "@preact/preset-vite": "^2.8.1",
     "@tsconfig/strictest": "*",
     "@types/debug": "^4.1.12",
@@ -33,6 +35,10 @@
     "@types/react": "^18.2.51",
     "@types/serve-handler": "^6.1.4",
     "autoprefixer": "^10.4.17",
+    "dprint": "*",
+    "eslint": "*",
+    "tslib": "^2",
+    "eslint-plugin-import-x": "*",
     "jest": "*",
     "postcss": "^8.4.33",
     "react": "^18.2.0",
@@ -41,7 +47,8 @@
     "tailwindcss": "^3.4.1",
     "ts-jest": "*",
     "typescript": "*",
-    "vite": "^5.0.12"
+    "vite": "^5.0.12",
+    "typescript-eslint": "*"
   },
   "engines": {
     "node": ">=18"

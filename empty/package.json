@@ -31,6 +31,7 @@
     "@types/node": "*",
     "dprint": "*",
     "eslint": "*",
+    "tslib": "^2",
     "eslint-plugin-import-x": "*",
     "jest": "*",
     "ts-jest": "*",
