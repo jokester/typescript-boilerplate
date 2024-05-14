@@ -29,11 +29,11 @@ export const appRouter = t.router({
     }),
     mutationExample: t.procedure.input(postBodySchema).mutation((input) => {
       if (input.input.triggerError) {
-        const { trpcCode, httpStatusCode } = input.input;
+        const {trpcCode, httpStatusCode} = input.input;
         if (httpStatusCode) {
-          throw new ApiError({ message: `asked by client`, httpStatus: httpStatusCode });
+          throw new ApiError({message: `asked by client`, httpStatus: httpStatusCode});
         } else if (trpcCode) {
-          throw new TRPCError({ message: `asked by client`, code: trpcCode, cause: new Error(`user asked`) });
+          throw new TRPCError({message: `asked by client`, code: trpcCode, cause: new Error(`user asked`)});
         } else {
           throw new Error(`generic server error`);
         }

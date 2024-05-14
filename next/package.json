@@ -8,6 +8,7 @@
     "dev": "DEBUG=your-app:* next dev",
     "lint": "eslint src pages shared",
     "lint:fix": "eslint --fix src pages shared",
+    "format": "dprint fmt",
     "start": "NODE_ENV=production next start",
     "test": "jest",
     "test:coverage": "jest --coverage",

@@ -8,6 +8,7 @@
     "dev": "vite --host",
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
+    "format": "dprint fmt",
     "preview": "vite preview",
     "test": "jest",
     "test:coverage": "jest --coverage",

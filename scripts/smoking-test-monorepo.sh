@@ -10,6 +10,7 @@ for d in empty next preact-spa hono-worker; do
   pushd $d
   npm run lint
   npm run typecheck
+  npm run format
   npm test
   npm run build
   popd

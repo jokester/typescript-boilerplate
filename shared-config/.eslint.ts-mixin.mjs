@@ -14,6 +14,8 @@ const tsRules = {
   '@typescript-eslint/no-var-requires': 1,
   '@typescript-eslint/require-await': 1,
   '@typescript-eslint/no-unsafe-member-access': 1,
+  "@typescript-eslint/no-unsafe-assignment": 1,
+  "@typescript-eslint/no-unsafe-argument": 1,
 };
 
 const eslintConfig = {

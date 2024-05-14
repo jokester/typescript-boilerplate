@@ -31,7 +31,7 @@ const nextConf = {
     builtAt: new Date().toISOString(),
   },
   // see https://nextjs.org/docs/#customizing-webpack-config
-  webpack(config, { buildId, dev, isServer, webpack }) {
+  webpack(config, {buildId, dev, isServer, webpack}) {
     config.plugins.push(
       new webpack.DefinePlugin({
         /**
@@ -65,15 +65,15 @@ const nextConf = {
   reactStrictMode: true,
 };
 
-export default async (phase, { defaultConfig }) => {
+export default async (phase, {defaultConfig}) => {
   /**
    * @type {import('next').NextConfig}
    */
-  let merged = { ...nextConf };
+  let merged = {...nextConf};
 
   if (phase === PHASE_PRODUCTION_BUILD) {
-    const { default: analyzerPlugin } = await import('@next/bundle-analyzer');
-    merged = analyzerPlugin({ enabled: true, openAnalyzer: false })(merged);
+    const {default: analyzerPlugin} = await import('@next/bundle-analyzer');
+    merged = analyzerPlugin({enabled: true, openAnalyzer: false})(merged);
   }
 
   return merged;
