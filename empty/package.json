@@ -16,6 +16,7 @@
     "build": "rm -rvf build && tsc",
     "lint": "eslint src",
     "lint:fix": "eslint --fix src",
+    "format": "dprint fmt",
     "start": "node build/bin/example-bin",
     "test": "jest",
     "test:coverage": "jest --coverage",
