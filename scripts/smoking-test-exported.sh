@@ -4,7 +4,7 @@ set -ue
 set -o pipefail
 cd $(dirname "$0")/..
 
-rm -v package.json package-lock.json
+rm -rvf package.json package-lock.json node_modules */node_modules
 
 for d in empty next preact-spa hono-worker; do
   tar xf $d.tar.xz
