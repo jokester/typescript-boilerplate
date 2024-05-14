@@ -17,7 +17,7 @@
     "typecheck:watch": "tsc --watch --noEmit"
   },
   "dependencies": {
-    "hono": "^4.0.1"
+    "hono": "^4.3.6"
   },
   "devDependencies": {
     "@eslint-react/eslint-plugin": "*",
@@ -33,7 +33,7 @@
     "ts-node": "*",
     "typescript": "*",
     "typescript-eslint": "*",
-    "wrangler": "^3.28.1"
+    "wrangler": "^3.56.0"
   },
   "engines": {
     "node": ">=18.0.0"
