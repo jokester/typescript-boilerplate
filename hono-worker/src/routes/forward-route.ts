@@ -1,7 +1,7 @@
 import { Hono } from 'hono';
 import { MyBindings } from '../config';
 
-export const forwardOpenaiRoute = new Hono<{ Bindings: MyBindings }>({});
+export const forwardOpenaiRoute = new Hono<{Bindings: MyBindings}>({});
 
 forwardOpenaiRoute.use('/*', async (c) => {
   const incomingHeaders = new Headers(c.req.raw.headers);
