@@ -17,6 +17,7 @@ const tsRules = {
   "@typescript-eslint/no-unsafe-assignment": 1,
   "@typescript-eslint/no-unsafe-argument": 1,
   "@typescript-eslint/no-unsafe-return": 1,
+  "@typescript-eslint/no-unsafe-call": 1,
 };
 
 const eslintConfig = {
