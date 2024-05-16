@@ -1,1 +1,0 @@
-../shared-config/.eslintrc.base.js

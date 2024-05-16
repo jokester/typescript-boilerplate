@@ -1,3 +1,6 @@
 import { cliMain } from '../lib';
 
-cliMain();
+cliMain().catch(e => {
+  console.error(e);
+  process.exit(1);
+});

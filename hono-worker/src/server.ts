@@ -6,7 +6,7 @@ import { jsonRoute } from './routes/json-route';
 import { MyBindings } from './config';
 import { forwardOpenaiRoute } from './routes/forward-route';
 
-const app = new Hono<{ Bindings: MyBindings }>();
+const app = new Hono<{Bindings: MyBindings}>();
 
 app.get(
   '/*',

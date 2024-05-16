@@ -1,0 +1,19 @@
+{
+  "typescript": {
+    "quoteStyle": "preferSingle",
+    "binaryExpression.operatorPosition": "sameLine",
+    "module.sortImportDeclarations": "maintain",
+    "spaceSurroundingProperties": "false"
+  },
+  "json": {
+    "indentWidth": 2
+  },
+  "excludes": [
+    "**/node_modules",
+    "**/*-lock.json"
+  ],
+  "plugins": [
+    "https://plugins.dprint.dev/typescript-0.90.5.wasm",
+    "https://plugins.dprint.dev/json-0.19.2.wasm"
+  ]
+}

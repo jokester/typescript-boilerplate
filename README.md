@@ -26,7 +26,7 @@ Libraries:
 
 Not configured for serverless or SSG, I don't use Next.js for them.
 
-### `vite-preact`, for frontend-only SPA
+### `preact-spa`, for frontend-only SPA
 
 based on [create-vite template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-preact-ts)
 
@@ -37,7 +37,7 @@ Libraries:
 - [preact-router]()
 
 If you need to host built assets with path rewriting,
-I recommend `hono-serverless` variant,
+I recommend `hono-worker` variant,
 or [serve-handler](https://github.com/vercel/serve-handler) ([example](https://github.com/jokester/limb/blob/master/server/main.ts)).
 
 ### `hono-worker`, for edge-worker like environments

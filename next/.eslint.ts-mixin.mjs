@@ -1,0 +1,1 @@
+../shared-config/.eslint.ts-mixin.mjs

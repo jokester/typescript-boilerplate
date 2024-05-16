@@ -11,5 +11,5 @@ export function NotFoundPage(props: any) {
       clearTimeout(timer);
     };
   }, [navigate]);
-  return <div className="container py-8 text-center">Page not found... You will be redirected in 5s.</div>;
+  return <div className='container py-8 text-center'>Page not found... You will be redirected in 5s.</div>;
 }

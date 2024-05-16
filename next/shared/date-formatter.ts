@@ -9,7 +9,7 @@ function relativeTime(date: Date, baseDate = Date.now()) {
 }
 
 function naturalTime(date: Date, now = Date.now()) {
-  return formatDistance(date, now, { addSuffix: true });
+  return formatDistance(date, now, {addSuffix: true});
 }
 
 export const datetimeFormatter = {

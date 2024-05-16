@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   roots: ['pages', 'src'],
   transformIgnorePatterns: ['<rootDir>/node_modules/.*\\.js', '<rootDir>/build/.*\\.js'],
   testMatch: ['**/*\\.(spec|test)\\.(ts|js|tsx|jsx)'],

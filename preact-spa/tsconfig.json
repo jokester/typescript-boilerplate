@@ -9,7 +9,7 @@
     "target": "esnext",
     "skipLibCheck": true,
     "lib": ["dom", "esnext"],
-    "incremental": true,
+    "incremental": true
   },
-  "include": ["./main.tsx", "./src", "./pages", "./types"]
+  "include": ["**/*.ts", "**/*.tsx", "**/*.mts", "./*.mjs", "./*.js", "./src", "./pages", "./types"]
 }

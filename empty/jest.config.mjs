@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   roots: ['src'],
   transformIgnorePatterns: ['<rootDir>/node_modules/.*\\.js', '<rootDir>/build/.*\\.js'],
   testMatch: ['**/*\\.(spec|test)\\.(ts|js|tsx|jsx)'],
@@ -11,7 +11,7 @@ module.exports = {
       {
         isolatedModules: true,
         // to workaround https://github.com/kulshekhar/ts-jest/issues/4198
-        tsconfig: { moduleResolution: 'node', module: 'commonjs' },
+        tsconfig: {moduleResolution: 'node', module: 'commonjs'},
       },
     ],
   },
