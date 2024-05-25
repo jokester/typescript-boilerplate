@@ -18,7 +18,7 @@ export const t = initTRPC.context<ApiReqContext>().create({
 
   // serialize TRPCError into response
   errorFormatter(opts) {
-    const { shape, error } = opts;
+    const {shape, error} = opts;
     return {
       ...shape,
       // by default `shape.data` is serialized TRPCError?

@@ -1,8 +1,8 @@
-import { PageProps } from "./_shared";
+import { PageProps } from './_shared';
 
 export function IndexPage(props: PageProps) {
   return (
-    <div className="container">
+    <div className='container'>
       <h1>vite + preact template</h1>
     </div>
   );

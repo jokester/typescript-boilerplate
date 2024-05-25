@@ -8,14 +8,14 @@ import { trpcClient } from '../src/api/trpc-client';
 interface PageProps {}
 
 const CustomApp: AppType<PageProps> = (props) => {
-  const { Component, pageProps } = props;
+  const {Component, pageProps} = props;
   return (
     <>
       <Head>
         <meta
-          key="meta-viewport"
-          name="viewport"
-          content="width=device-width, initial-scale=1,maximum-scale=1.5,minimum-scale=1"
+          key='meta-viewport'
+          name='viewport'
+          content='width=device-width, initial-scale=1,maximum-scale=1.5,minimum-scale=1'
         />
       </Head>
       <DefaultMeta />

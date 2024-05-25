@@ -21,7 +21,7 @@ const handler = trpcNext.createNextApiHandler({
     };
   },
 
-  responseMeta({ ctx, errors, paths, type }) {
+  responseMeta({ctx, errors, paths, type}) {
     // NOTE this is where you can tune http headers
     return {
       headers: {
@@ -31,7 +31,7 @@ const handler = trpcNext.createNextApiHandler({
     };
   },
 
-  onError({ error, type, path, input, ctx, req }) {
+  onError({error, type, path, input, ctx, req}) {
     debugLogger('error in trpc procedure', path, input, error);
     if (error.cause instanceof ZodError) {
       // rewrite error message to be more user-friendly

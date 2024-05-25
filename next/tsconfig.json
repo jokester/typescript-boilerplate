@@ -1,5 +1,8 @@
 {
-  "extends": ["@tsconfig/strictest", "./tsconfig.base.json"],
+  "extends": [
+    "@tsconfig/strictest",
+    "./tsconfig.base.json"
+  ],
   "compilerOptions": {
     "isolatedModules": true,
     "jsx": "preserve",
@@ -8,11 +11,32 @@
     "noEmit": true,
     "target": "esnext",
     "skipLibCheck": true,
-    "lib": ["dom", "esnext"],
+    "lib": [
+      "dom",
+      "esnext"
+    ],
     "incremental": true,
-    "plugins": [{ "name": "next" }],
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
     "strictNullChecks": true
   },
-  "exclude": ["node_modules", "scripts", "coverage", "build", "__test__", "bin", "./*.json", "./*.js"],
-  "include": ["apps", "pages", "src", "server", "shared", ".next/types/**/*.ts"]
+  "exclude": [
+    "node_modules",
+    "scripts",
+    "coverage",
+    "build",
+    "__test__",
+    "bin"
+  ],
+  "include": [
+    "apps",
+    "pages",
+    "src",
+    "server",
+    "shared",
+    ".next/types/**/*.ts"
+  ]
 }

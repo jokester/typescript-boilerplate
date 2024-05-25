@@ -14,8 +14,9 @@
   ],
   "scripts": {
     "build": "rm -rvf build && tsc",
-    "lint": "gts lint",
-    "lint:fix": "gts lint --fix",
+    "lint": "eslint src",
+    "lint:fix": "eslint --fix src",
+    "format": "dprint fmt",
     "start": "node build/bin/example-bin",
     "test": "jest",
     "test:coverage": "jest --coverage",
@@ -24,17 +25,19 @@
     "typecheck:watch": "tsc --watch --noEmit"
   },
   "devDependencies": {
+    "@eslint/js": "*",
     "@tsconfig/strictest": "*",
     "@types/jest": "*",
     "@types/node": "*",
-    "@typescript-eslint/eslint-plugin": "*",
-    "@typescript-eslint/parser": "*",
+    "dprint": "*",
     "eslint": "*",
-    "gts": "*",
+    "tslib": "^2",
+    "eslint-plugin-import-x": "*",
     "jest": "*",
     "ts-jest": "*",
     "ts-node": "*",
-    "typescript": "*"
+    "typescript": "*",
+    "typescript-eslint": "*"
   },
   "engines": {
     "node": ">=18"
