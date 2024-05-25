@@ -21,7 +21,6 @@
     "eslint": "^8.57.0",
     "eslint-plugin-import-x": "^0.5.0",
     "jest": "<30",
-    "prettier": "*",
     "ts-jest": "<30",
     "ts-node": "<11",
     "typescript": "^5.4",
