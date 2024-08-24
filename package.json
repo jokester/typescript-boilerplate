@@ -23,6 +23,7 @@
     "jest": "<30",
     "ts-jest": "<30",
     "ts-node": "<11",
+    "tsx": "^4.19.0",
     "typescript": "^5.4",
     "typescript-eslint": "^7.9.0"
   },

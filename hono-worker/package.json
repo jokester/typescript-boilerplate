@@ -6,7 +6,8 @@
   "scripts": {
     "build": "wrangler deploy --dry-run --outdir=build",
     "deploy": "wrangler publish",
-    "dev": "wrangler dev --local --live-reload ./src/server.ts",
+    "dev": "wrangler dev --local --live-reload ./src/app.ts",
+    "dev:node": "tsx src/node-server",
     "lint": "eslint src",
     "lint:fix": "eslint --fix src",
     "format": "dprint fmt",
@@ -17,7 +18,8 @@
     "typecheck:watch": "tsc --watch --noEmit"
   },
   "dependencies": {
-    "hono": "^4.3.6"
+    "hono": "^4.5.10",
+    "@hono/node-server": "^1.12.2"
   },
   "devDependencies": {
     "@eslint-react/eslint-plugin": "*",
@@ -31,9 +33,10 @@
     "jest": "*",
     "ts-jest": "*",
     "ts-node": "*",
+    "tsx": "*",
     "typescript": "*",
     "typescript-eslint": "*",
-    "wrangler": "^3.56.0"
+    "wrangler": "^3.73.0"
   },
   "engines": {
     "node": ">=18.0.0"
