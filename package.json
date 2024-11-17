@@ -21,6 +21,7 @@
     "eslint": "^8.57.0",
     "eslint-plugin-import-x": "^0.5.1",
     "jest": "<30",
+    "taze": "^0.18.0",
     "ts-jest": "<30",
     "ts-node": "<11",
     "typescript": "^5.4",

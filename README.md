@@ -4,7 +4,13 @@ TypeScript templates I use to immediately start doing something, with opinionate
 
 ## How To Use
 
-Download zip / tar.xz files from Github releases. Each file contains 1 variant.
+If you need monorepo:
+
+download the whole repo , duplicate or remove variant subpackages as needed
+
+else:
+
+download zip / tar.xz files from Github releases. Each file contains 1 exported variant.
 
 ## Variants
 
