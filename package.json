@@ -4,16 +4,17 @@
   "description": "TypeScript templates I use to immediately start doing something, with opinionated configuration.",
   "main": "index.js",
   "scripts": {
-    "batch-update-versions": "tsx scripts/batch-update-versions.ts"
+    "versions:update": "cd shared-config && taze",
+    "versions:apply": "tsx scripts/batch-update-versions.ts"
   },
   "engines": {
-    "node": ">=18",
+    "node": ">=20",
     "npm": "^10"
   },
   "engineStrict": true,
   "devDependencies": {
     "taze": "^0.18.0",
-    "tsx": "^4.19.0",
+    "tsx": "^4.19.2",
     "typescript": "<5.7"
   },
   "workspaces": [
