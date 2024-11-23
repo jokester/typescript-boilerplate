@@ -1,12 +1,13 @@
 {
-  "name": "hono-worker-template",
-  "description": "your next hono-worker package",
+  "name": "hono-template",
+  "description": "your next hono package",
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "build": "wrangler deploy --dry-run --outdir=build",
-    "deploy": "wrangler publish",
-    "dev": "wrangler dev --local --live-reload ./src/server.ts",
+    "cf:build": "wrangler deploy --dry-run --outdir=build",
+    "cf:deploy": "wrangler publish",
+    "cf:dev": "wrangler dev --local --live-reload ./src/app.ts",
+    "dev": "tsx -- ./src/node-server.ts",
     "lint": "eslint src",
     "lint:fix": "eslint --fix src",
     "format": "dprint fmt",
