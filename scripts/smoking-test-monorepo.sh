@@ -6,16 +6,13 @@ cd $(dirname "$0")/..
 
 npm i
 
-for d in empty next preact-spa hono-worker; do
+for d in empty next preact-spa hono; do
   pushd $d
   npm run lint
   npm run typecheck
   npm run format
   npm test
-  if [[ $d != hono-worker ]]; then
-    # skip hono-worker: `wrangler build` requires login now
-    npm run build
-  fi
+  npm run build
   popd
 done
 

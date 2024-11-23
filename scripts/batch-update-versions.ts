@@ -30,7 +30,7 @@ async function main() {
         '..',
         '../empty',
         '../next',
-        '../hono-worker',
+        '../hono',
         '../preact-spa',
     ]) {
         const packageManifestPath = path.join(__dirname, `${dir}/package.json`)

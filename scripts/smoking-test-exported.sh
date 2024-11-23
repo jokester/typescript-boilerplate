@@ -13,10 +13,7 @@ for d in empty next preact-spa hono-worker; do
   npm run lint
   npm run typecheck
   npm test
-  if [[ $d != hono-worker ]]; then
-    # skip hono-worker: `wrangler build` requires login now
-    npm run build
-  fi
+  npm run build
   popd
 done
 
