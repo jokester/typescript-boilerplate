@@ -4,7 +4,13 @@ TypeScript templates I use to immediately start doing something, with opinionate
 
 ## How To Use
 
-Download zip / tar.xz files from Github releases. Each file contains 1 variant.
+If you need monorepo:
+
+start with the whole repo , duplicate or remove variant subpackages as needed
+
+else:
+
+start with a package subdirectory, or download ejected zip / tar.xz from Github releases.
 
 ## Variants
 
@@ -37,13 +43,13 @@ Libraries:
 - [preact-router]()
 
 If you need to host built assets with path rewriting,
-I recommend `hono-worker` variant,
+check `hono-worker` variant,
 or [serve-handler](https://github.com/vercel/serve-handler) ([example](https://github.com/jokester/limb/blob/master/server/main.ts)).
 
-### `hono-worker`, for edge-worker like environments
+### `hono`, for node.js or edge servers
 
 - based on [hono](https://github.com/honojs/hono)
-- Capable of hosting SPA created by `vite-preact`
+- Capable of hosting SPA created by `preact-spa`
 
 ### `empty`, an empty npm package
 
@@ -65,7 +71,7 @@ All the variants contains a similar set of configurations and npm scripts:
 The principles behind current (opinionated) settings are:
 
 - Be strict as possible in TypeScript.
-- Be close to upstream defaults, but with some opinionated changes
+- Be close to upstream defaults
 
 ## Obsolete Variants
 
@@ -78,6 +84,4 @@ The principles behind current (opinionated) settings are:
 
 ## LICENSE
 
-- work from upstream repositories follows their licenses
-- other contents are MIT licensed
-- other contents are WTFPL licensed too
+- MIT

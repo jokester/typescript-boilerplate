@@ -6,7 +6,7 @@ cd $(dirname "$0")/..
 
 rm -rf package.json package-lock.json node_modules */node_modules
 
-for d in empty next preact-spa hono-worker; do
+for d in empty next preact-spa hono; do
   tar xf $d.tar.xz
   pushd $d
   npm i

@@ -6,7 +6,7 @@ cd $(dirname "$0")/..
 
 npm i
 
-for d in empty next preact-spa hono-worker; do
+for d in empty next preact-spa hono; do
   pushd $d
   npm run lint
   npm run typecheck

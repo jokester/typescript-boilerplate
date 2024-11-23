@@ -29,7 +29,7 @@
     "@zip.js/zip.js": "^2.7.34",
     "clsx": "^2.1.1",
     "date-fns": "^3",
-    "debug": "^4.3.4",
+    "debug": "^4.3.7",
     "foxact": "^0.2.33",
     "framer-motion": "^11.0.5",
     "lodash-es": "^4.17.21",
