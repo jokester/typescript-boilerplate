@@ -36,11 +36,11 @@ async function main(archiveRoot, variant) {
   const variantManifest = path.join(archiveRoot, variant, "package.json");
 
   const rootManifestContent = JSON.parse(
-    await fsp.readFile(rootManifest, "utf-8"),
+    await fsp.readFile(rootManifest, {encoding: "utf-8"}),
   );
 
   const variantManifestContent = JSON.parse(
-    await fsp.readFile(variantManifest, "utf-8"),
+    await fsp.readFile(variantManifest, {encoding: "utf-8"}),
   );
 
   // console.debug(variantManifestContent)

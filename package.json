@@ -20,7 +20,7 @@
     "empty",
     "next",
     "preact-spa",
-    "hono-worker"
+    "hono"
   ],
   "author": "Wang Guan <momocraft@gmail.com>",
   "license": "ISC"

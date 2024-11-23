@@ -1,0 +1,7 @@
+name = "hono-in-worker"
+compatibility_date = "2024-11-01"
+
+main = "./src/app.ts"
+
+[site]
+bucket = "./build"

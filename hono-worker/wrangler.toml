@@ -1,7 +1,0 @@
-name = "hono-worker"
-compatibility_date = "2023-01-01"
-
-main = "./src/app.ts"
-
-[site]
-bucket = "./build"
