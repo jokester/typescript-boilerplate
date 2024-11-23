@@ -14,8 +14,7 @@
   "engineStrict": true,
   "devDependencies": {
     "taze": "^0.18.0",
-    "tsx": "^4.19.2",
-    "typescript": "<5.7"
+    "tsx": "^4.19.2"
   },
   "workspaces": [
     "empty",

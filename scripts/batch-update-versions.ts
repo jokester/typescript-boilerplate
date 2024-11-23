@@ -21,7 +21,7 @@ async function updatePackageManifest(versionManifestPath: string, packageManifes
             packageManifest.devDependencies[d] = v
         }
     }
-    await fsp.writeFile(packageManifestPath, JSON.stringify(packageManifest, null, 2))
+    await fsp.writeFile(packageManifestPath, JSON.stringify(packageManifest, null, 2) + "\n")
 }
 async function main() {
     const versionManifestPath = path.join(__dirname, "../shared-config/package.json")
