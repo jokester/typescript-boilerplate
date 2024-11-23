@@ -11,5 +11,6 @@
     "lib": ["dom", "esnext"],
     "incremental": true
   },
-  "include": ["**/*.ts", "**/*.tsx", "**/*.mts", "./*.mjs", "./*.js", "./src", "./pages", "./types"]
+  "include": ["**/*.ts", "**/*.tsx", "**/*.mts", "./*.mjs", "./*.js", "./src", "./pages", "./types"],
+  "exclude": ["node_modules", "build", "dist"]
 }

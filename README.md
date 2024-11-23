@@ -49,7 +49,7 @@ or [serve-handler](https://github.com/vercel/serve-handler) ([example](https://g
 ### `hono-worker`, for edge-worker like environments
 
 - based on [hono](https://github.com/honojs/hono)
-- Capable of hosting SPA created by `vite-preact`
+- Capable of hosting SPA created by `preact-spa`
 
 ### `empty`, an empty npm package
 
@@ -71,7 +71,7 @@ All the variants contains a similar set of configurations and npm scripts:
 The principles behind current (opinionated) settings are:
 
 - Be strict as possible in TypeScript.
-- Be close to upstream defaults, but with some opinionated changes
+- Be close to upstream defaults
 
 ## Obsolete Variants
 
