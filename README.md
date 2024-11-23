@@ -43,10 +43,10 @@ Libraries:
 - [preact-router]()
 
 If you need to host built assets with path rewriting,
-I recommend `hono-worker` variant,
+check `hono-worker` variant,
 or [serve-handler](https://github.com/vercel/serve-handler) ([example](https://github.com/jokester/limb/blob/master/server/main.ts)).
 
-### `hono-worker`, for edge-worker like environments
+### `hono`, for node.js or edge servers
 
 - based on [hono](https://github.com/honojs/hono)
 - Capable of hosting SPA created by `preact-spa`
@@ -84,6 +84,4 @@ The principles behind current (opinionated) settings are:
 
 ## LICENSE
 
-- work from upstream repositories follows their licenses
-- other contents are MIT licensed
-- other contents are WTFPL licensed too
+- MIT
