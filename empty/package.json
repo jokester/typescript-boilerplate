@@ -25,19 +25,19 @@
     "typecheck:watch": "tsc --watch --noEmit"
   },
   "devDependencies": {
-    "@eslint/js": "*",
-    "@tsconfig/strictest": "*",
-    "@types/jest": "*",
-    "@types/node": "*",
-    "dprint": "*",
-    "eslint": "*",
+    "@eslint/js": "^9.2.0",
+    "@tsconfig/strictest": "^2.0.5",
+    "@types/jest": "<30",
+    "@types/node": "^20",
+    "dprint": "^0.45.1",
+    "eslint": "^8.57.0",
     "tslib": "^2",
-    "eslint-plugin-import-x": "*",
-    "jest": "*",
-    "ts-jest": "*",
-    "ts-node": "*",
-    "typescript": "*",
-    "typescript-eslint": "*"
+    "eslint-plugin-import-x": "^0.5.1",
+    "jest": "<30",
+    "ts-jest": "<30",
+    "ts-node": "<11",
+    "typescript": "^5.4",
+    "typescript-eslint": "^7.9.0"
   },
   "engines": {
     "node": ">=18"
