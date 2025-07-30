@@ -12,13 +12,7 @@ export default {
   },
   transform: {
     '^.+\\.(js|jsx|ts|tsx)$': [
-      'ts-jest',
-      {
-        isolatedModules: true,
-        tsconfig: {
-          jsx: 'react',
-        },
-      },
+      '@swc-node/jest',
     ],
   },
 };

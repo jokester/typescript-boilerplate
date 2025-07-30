@@ -17,7 +17,6 @@
     "hono": "^4.6.11",
     "jest": "<30",
     "taze": "^0.18.0",
-    "ts-jest": "<30",
     "tsx": "^4.19.2",
     "typescript": "<5.7",
     "typescript-eslint": "^8.15.0",

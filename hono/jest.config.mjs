@@ -6,13 +6,6 @@ export default {
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json'],
   coverageReporters: ['json', 'lcov', 'text', 'html'],
   transform: {
-    '^.+\\.(ts|tsx)$': [
-      'ts-jest',
-      {
-        isolatedModules: true,
-        // to workaround https://github.com/kulshekhar/ts-jest/issues/4198
-        tsconfig: {moduleResolution: 'node', module: 'commonjs'},
-      },
-    ],
+    '^.+\\.(ts|tsx)$': ['@swc-node/jest', {module: 'commonjs'}],
   },
 };

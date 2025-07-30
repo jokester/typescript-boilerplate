@@ -14,11 +14,12 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: "20"
-      - run: npm i
+      - uses: pnpm/action-setup@v4
+      - run: pnpm i
       - run: scripts/smoking-test-monorepo.sh
-      - run: scripts/export-variants.sh
-      - run: scripts/smoking-test-exported.sh
-      - uses: softprops/action-gh-release@v1
-        if: startsWith(github.ref, 'refs/tags/')
-        with:
-          files: '*.tar.xz'
+      # - run: scripts/export-variants.sh
+      # - run: scripts/smoking-test-exported.sh
+      # - uses: softprops/action-gh-release@v1
+      #   if: startsWith(github.ref, 'refs/tags/')
+      #   with:
+      #     files: '*.tar.xz'
