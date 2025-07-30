@@ -4,15 +4,15 @@ set -ue
 set -o pipefail
 cd $(dirname "$0")/..
 
-npm i
+pnpm i
 
 for d in empty next preact-spa hono; do
   pushd $d
-  npm run lint
-  npm run typecheck
-  npm run format
-  npm test
-  npm run build
+  pnpm run lint
+  pnpm run typecheck
+  pnpm run format
+  pnpm test
+  pnpm run build
   popd
 done
 
