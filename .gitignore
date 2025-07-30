@@ -27,3 +27,6 @@ yarn-error.log*
 !.gitkeep
 /*.log
 /*.tar.xz
+*.sqlite
+
+.env

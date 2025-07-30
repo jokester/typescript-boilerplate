@@ -1,27 +1,31 @@
 {
   "name": "@jokester/typescript-templates",
+  "private": true,
   "version": "0.9.0",
-  "description": "TypeScript templates I use to immediately start doing something, with opinionated configuration.",
+  "description": "TypeScript templates to immediately start building, with opinionated configuration.",
   "main": "index.js",
   "scripts": {
-    "versions:update": "cd shared-config && taze",
-    "versions:apply": "tsx scripts/batch-update-versions.ts"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "engines": {
     "node": ">=20",
-    "npm": "^10"
+    "pnpm": "^10"
   },
   "engineStrict": true,
   "devDependencies": {
-    "taze": "^0.18.0",
-    "tsx": "^4.19.2"
+    "@eslint-react/eslint-plugin": "catalog:dev-deps",
+    "@eslint/js": "catalog:dev-deps",
+    "@tsconfig/strictest": "catalog:dev-deps",
+    "@types/debug": "catalog:dev-deps",
+    "dprint": "catalog:dev-deps",
+    "eslint": "catalog:dev-deps",
+    "eslint-plugin-import-x": "catalog:dev-deps",
+    "taze": "^19.1.0",
+    "tsx": "catalog:dev-deps",
+    "typescript": "catalog:dev-deps",
+    "typescript-eslint": "catalog:dev-deps"
   },
-  "workspaces": [
-    "empty",
-    "next",
-    "preact-spa",
-    "hono"
-  ],
   "author": "Wang Guan <momocraft@gmail.com>",
-  "license": "ISC"
+  "license": "ISC",
+  "packageManager": "pnpm@10.13.1"
 }

@@ -9,6 +9,7 @@ const logger = debug('app:main');
 
 function RootRouter() {
   return (
+    // @ts-ignore
     <Router>
       <IndexPage path='/' />
       <NotFoundPage default />
