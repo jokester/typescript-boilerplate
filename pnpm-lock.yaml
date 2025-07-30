@@ -31,6 +31,9 @@ catalogs:
     '@hono/node-server':
       specifier: ^1.17.1
       version: 1.17.1
+    hono:
+      specifier: ^4.8.10
+      version: 4.8.10
   deps-react:
     '@trpc/client':
       specifier: ^10.45.2
@@ -248,6 +251,9 @@ importers:
       dotenv:
         specifier: catalog:deps
         version: 17.2.1
+      hono:
+        specifier: catalog:deps-hono
+        version: 4.8.10
     devDependencies:
       '@eslint-react/eslint-plugin':
         specifier: catalog:dev-deps

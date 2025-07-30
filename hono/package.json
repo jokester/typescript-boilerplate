@@ -21,7 +21,8 @@
   "dependencies": {
     "@hono/node-server": "catalog:deps-hono",
     "debug": "catalog:deps",
-    "dotenv": "catalog:deps"
+    "dotenv": "catalog:deps",
+    "hono": "catalog:deps-hono"
   },
   "devDependencies": {
     "@eslint-react/eslint-plugin": "catalog:dev-deps",
